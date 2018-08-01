@@ -1,6 +1,6 @@
-/* mu_tree.c --- 
- * Filename: mu_tree.c
- * Created: Mon Jul 30 23:01:11 2018 (+0800)
+/* utl_tree.h --- 
+ * Filename: utl_tree.h
+ * Created: Wed Aug  1 22:18:26 2018 (+0800)
  */
 
 /* Copyright Hamlet zheng.
@@ -18,32 +18,24 @@
  * OF THIS SOFTWARE.
  */
 
-#include "minunit.h"
-#include "mu_suites.h"
-#include "utl_tree.h"
+#ifndef UTL_TREE_H_
+#define UTL_TREE_H_
 
-char* mu_init_tree()
-{
-    string s = "1#23";
-    int pos = -1;
-    struct TreeNode* t;
-    t = utl_init_tree(s, pos);
-    utl_preorder_r(t);
-    mu_assert(NULL != t, "");
-    mu_assert(NULL == t->left, "");
+#include <vector>
+#include <string>
+#include <iostream>
 
-    return 0;
-}
+using namespace std;
 
-char* mu_midorder_tree()
-{
+struct TreeNode {
+     int val;
+     struct TreeNode *left;
+     struct TreeNode *right;
+     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
 
-    return 0;
-}
+struct TreeNode* utl_init_tree(string& s, int &pos);
 
-char* tree_suits()
-{
-    mu_run_test(mu_init_tree);
-    mu_run_test(mu_midorder_tree);
-    return 0;
-}
+void utl_preorder_r(struct TreeNode* t);
+
+#endif

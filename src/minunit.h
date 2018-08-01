@@ -30,7 +30,7 @@
   do {                                                                  \
     if( !(x) ) {                                                        \
       fprintf( stdout, "[    FAILED] %s : %d, "fmt"\n", __FILE__, __LINE__, ##__VA_ARGS__ ); \
-      return 1;                                                         \
+      return "error";                                                         \
     }                                                                   \
   } while(0);
 
