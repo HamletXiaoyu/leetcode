@@ -1,5 +1,5 @@
-/* mu_tree.c --- 
- * Filename: mu_tree.c
+/* mu_tree.cpp --- 
+ * Filename: mu_tree.cpp
  * Created: Mon Jul 30 23:01:11 2018 (+0800)
  */
 
@@ -29,7 +29,14 @@ char* mu_init_tree()
     struct TreeNode* t;
     t = utl_init_tree(s, pos);
     utl_preorder_r(t);
+    printf("\n");
+    utl_midorder_r(t);
+    printf("\n");
+    utl_postorder_r(t);
+    printf("\n");
+
     mu_assert(NULL != t, "");
+    mu_assert(1 == t->val, "");
     mu_assert(NULL == t->left, "");
 
     return 0;
@@ -37,7 +44,19 @@ char* mu_init_tree()
 
 char* mu_midorder_tree()
 {
+    string s = "1#23";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
 
+    vector<int> ret;
+    ret = inorderTraversal(t);
+
+    mu_assert(ret.size() == 3, "");
+    mu_assert(ret[0] == 1, "");
+    mu_assert(ret[1] == 3, "");
+    mu_assert(ret[2] == 2, "");
+    
     return 0;
 }
 

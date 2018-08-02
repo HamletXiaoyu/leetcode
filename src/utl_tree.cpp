@@ -49,3 +49,48 @@ void utl_preorder_r(struct TreeNode* t)
         utl_preorder_r(t->right);
     }
 }
+
+void utl_midorder_r(struct TreeNode* t)
+{
+    if (NULL != t) {
+        utl_midorder_r(t->left);
+        printf("%d ", t->val);
+        utl_midorder_r(t->right);
+    }
+}
+
+void utl_postorder_r(struct TreeNode* t)
+{
+    if (NULL != t) {
+        utl_postorder_r(t->left);
+        utl_postorder_r(t->right);
+        printf("%d ", t->val);
+    }
+}
+
+vector<int> inorderTraversal(TreeNode* root)
+{
+    vector<int> res;
+    if (!root)
+        return res;
+    TreeNode *cur, *pre;
+    cur = root;
+    while (cur) {
+        if (!cur->left) {
+            res.push_back(cur->val);
+            cur = cur->right;
+        } else {
+            pre = cur->left;
+            while (pre->right && pre->right != cur) pre = pre->right;
+            if (!pre->right) {
+                pre->right = cur;
+                cur = cur->left;
+            } else {
+                pre->right = NULL;
+                res.push_back(cur->val);
+                cur = cur->right;
+            }
+        }
+    }
+    return res;
+}

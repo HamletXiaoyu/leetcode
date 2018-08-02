@@ -36,7 +36,10 @@ $(BIN) : $(OBJS)
 	$(CXX) $(OBJS) -o $@ -Llib  -lutltree
 
 $(BUILDDIR)/%.o : %.c
-	$(CXX)  $(CXXFLAGS) -o $@ $< -L ./lib -lutltree
+	$(CXX)  $(CXXFLAGS) -o $@ $<
+
+$(BUILDDIR)/%.o : %.cpp
+	$(CXX)  $(CXXFLAGS) -o $@ $< 
 
 $(LIBDIR)/%.o : %.cpp
 	$(CXX)  $(CXXFLAGS) -o $@ $<
