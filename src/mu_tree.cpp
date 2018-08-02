@@ -60,9 +60,34 @@ char* mu_midorder_tree()
     return 0;
 }
 
+char* mu_max_depth_of_tree()
+{
+    {
+        string s = "1#23";
+        int pos = -1;
+        struct TreeNode* t;
+        t = utl_init_tree(s, pos);
+        int ret = max_depth_of_tree(t);
+
+        mu_assert(ret == 3, "");
+    }
+    {
+        string s = "39##25##7##";
+        int pos = -1;
+        struct TreeNode* t;
+        t = utl_init_tree(s, pos);
+        int ret = max_depth_of_tree(t);
+        mu_assert(ret == 3, "");
+    }
+    
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
     mu_run_test(mu_midorder_tree);
+    mu_run_test(mu_max_depth_of_tree);
+    
     return 0;
 }

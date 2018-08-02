@@ -94,3 +94,14 @@ vector<int> inorderTraversal(TreeNode* root)
     }
     return res;
 }
+
+int max_depth_of_tree(TreeNode* root)
+{
+    if (NULL == root)
+        return 0;
+    int left, right;
+    left = max_depth_of_tree(root->left);
+    right = max_depth_of_tree(root->right);
+    
+    return left > right ? left+1 : right+1;
+}
