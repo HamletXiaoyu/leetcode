@@ -46,5 +46,6 @@ vector<int> inorderTraversal(TreeNode* root);
 
 //depth
 int max_depth_of_tree(TreeNode* root);
+int min_depth_of_tree(TreeNode* root);
 
 #endif

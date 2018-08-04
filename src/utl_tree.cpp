@@ -105,3 +105,20 @@ int max_depth_of_tree(TreeNode* root)
     
     return left > right ? left+1 : right+1;
 }
+
+int min_depth_of_tree(TreeNode* root)
+{
+    if (NULL == root)
+        return 0;
+    if (NULL == root->left && NULL == root->right)
+        return 1;
+    if (NULL == root->left)
+        return min_depth_of_tree(root->right) + 1;
+    else if (NULL == root->right)
+        return min_depth_of_tree(root->left) + 1;
+    else {
+        int left = min_depth_of_tree(root->left);
+        int right = min_depth_of_tree(root->right);
+        return left < right ? left + 1 : right + 1;
+    }
+}
