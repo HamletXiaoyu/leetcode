@@ -1,4 +1,8 @@
-*
+*.o
+*~
+*.so
+.DS_Store
+build
 !*.c
 !*.cpp
 !*.h

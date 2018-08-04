@@ -50,7 +50,7 @@ char* mu_midorder_tree()
     t = utl_init_tree(s, pos);
 
     vector<int> ret;
-    ret = inorderTraversal(t);
+    ret = inorder_traversal(t);
 
     mu_assert(ret.size() == 3, "");
     mu_assert(ret[0] == 1, "");
@@ -106,12 +106,33 @@ char* mu_min_depth_of_tree()
     return 0;
 }
 
+char* mu_level_order2()
+{
+    string s = "39##25##7##";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
+    vector<vector<int> > ret = level_order2(t);
+
+    mu_assert(ret.size() == 3, "");
+    mu_assert(ret[0].size() == 2, "");
+    mu_assert(ret[1].size() == 2, "");
+    mu_assert(ret[2].size() == 1, "");
+    mu_assert(ret[0][0] == 5, "");
+    mu_assert(ret[0][1] == 7, "");
+    mu_assert(ret[1][0] == 9, "");
+    mu_assert(ret[1][1] == 2, "");
+    mu_assert(ret[2][0] == 3, "");
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
     mu_run_test(mu_midorder_tree);
     mu_run_test(mu_max_depth_of_tree);
     mu_run_test(mu_min_depth_of_tree);
-    
+    mu_run_test(mu_level_order2);
+
     return 0;
 }
