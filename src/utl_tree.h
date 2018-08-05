@@ -51,4 +51,9 @@ vector<vector<int> > level_order2(TreeNode* root);
 int max_depth_of_tree(TreeNode* root);
 int min_depth_of_tree(TreeNode* root);
 
+// leetcode 100
+bool is_same_tree(struct TreeNode* p, struct TreeNode* q);
+// leetcode 101
+bool is_symmetric(TreeNode *root);
+
 #endif

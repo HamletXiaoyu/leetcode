@@ -147,3 +147,31 @@ vector<vector<int> > level_order2(TreeNode* root)
     }
     return ret;
 }
+
+bool is_same_tree(struct TreeNode* p, struct TreeNode* q)
+{
+    if (NULL==p && NULL==q)
+        return true;
+    if (NULL==p || NULL==q)
+        return false;
+    if (p->val == q->val)
+        return is_same_tree(p->left, q->left) && is_same_tree(p->right,q->right);
+    else
+        return false;
+}
+
+bool symmetric_func(TreeNode *left, TreeNode *right)
+{
+    if (!left && !right)
+        return true;
+    if (left && !right || !left && right || left->val != right->val)
+        return false;
+    return symmetric_func(left->left, right->right) && symmetric_func(left->right, right->left);
+}
+
+bool is_symmetric(TreeNode *root)
+{
+    if (NULL == root)
+        return true;
+    return symmetric_func(root->left, root->right);
+}
