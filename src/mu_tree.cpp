@@ -126,6 +126,13 @@ char* mu_level_order2()
     return 0;
 }
 
+char* mu_num_trees()
+{
+    int ret = num_trees(3);
+    mu_assert(ret == 5, "");
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -133,6 +140,7 @@ char* tree_suits()
     mu_run_test(mu_max_depth_of_tree);
     mu_run_test(mu_min_depth_of_tree);
     mu_run_test(mu_level_order2);
-
+    mu_run_test(mu_num_trees);
+    
     return 0;
 }

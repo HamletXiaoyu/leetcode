@@ -55,5 +55,7 @@ int min_depth_of_tree(TreeNode* root);
 bool is_same_tree(struct TreeNode* p, struct TreeNode* q);
 // leetcode 101
 bool is_symmetric(TreeNode *root);
+// leetcode 96
+int num_trees(int n);
 
 #endif
