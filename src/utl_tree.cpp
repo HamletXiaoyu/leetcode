@@ -220,3 +220,21 @@ vector<vector<int> > zigzag_level_order(TreeNode *root)
     }
     return res;
 }
+
+int postorder_for_tilt(TreeNode* node, int& res)
+{
+    if (!node)
+        return 0;
+    int left_sum = postorder_for_tilt(node->left, res);
+    int right_sum = postorder_for_tilt(node->right, res);
+    res += abs(left_sum - right_sum);
+    return left_sum + right_sum + node->val;
+}
+
+int tilt_of_tree(TreeNode* root)
+{
+    int res = 0;
+    postorder_for_tilt(root, res);
+    return res;
+}
+

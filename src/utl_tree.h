@@ -59,5 +59,7 @@ bool is_same_tree(struct TreeNode* p, struct TreeNode* q);
 bool is_symmetric(TreeNode *root);
 // leetcode 96
 int num_trees(int n);
+//leetcode 563
+int tilt_of_tree(TreeNode* root);
 
 #endif

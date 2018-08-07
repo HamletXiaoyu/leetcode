@@ -133,6 +133,18 @@ char* mu_num_trees()
     return 0;
 }
 
+char* mu_tilt_of_tree()
+{
+    string s = "12##3##";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
+    int tilt = tilt_of_tree(t);
+    mu_assert(tilt == 1, "");
+    
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -141,6 +153,7 @@ char* tree_suits()
     mu_run_test(mu_min_depth_of_tree);
     mu_run_test(mu_level_order2);
     mu_run_test(mu_num_trees);
+    mu_run_test(mu_tilt_of_tree);
     
     return 0;
 }
