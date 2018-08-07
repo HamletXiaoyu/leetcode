@@ -238,3 +238,12 @@ int tilt_of_tree(TreeNode* root)
     return res;
 }
 
+TreeNode* invert_tree(TreeNode* root)
+{
+    if (!root)
+        return NULL;
+    TreeNode *tmp = root->left;
+    root->left  = invert_tree(root->right);
+    root->right = invert_tree(tmp);
+    return root;
+}
