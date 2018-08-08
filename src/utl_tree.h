@@ -36,6 +36,9 @@ struct TreeNode {
 
 struct TreeNode* utl_init_tree(string& s, int &pos);
 
+// leetcode 108
+TreeNode* sorted_array_to_bst(vector<int>& nums);
+
 // traversal
 void utl_preorder_r(struct TreeNode* t);
 void utl_midorder_r(struct TreeNode* t);

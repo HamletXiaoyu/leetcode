@@ -247,3 +247,20 @@ TreeNode* invert_tree(TreeNode* root)
     root->right = invert_tree(tmp);
     return root;
 }
+
+struct TreeNode* sorted_array_to_bst_func(vector<int>& nums, int left, int right)
+{
+    if (left > right)
+        return NULL;
+    TreeNode* root = (TreeNode*)malloc(sizeof(TreeNode));
+    root->val = nums[(int)((left+right)/2)];
+    root->left  = sorted_array_to_bst_func(nums, left, (int)((left+right)/2)-1);
+    root->right = sorted_array_to_bst_func(nums, (int)((left+right)/2)+1,right);
+    return root;
+}
+
+struct TreeNode* sorted_array_to_bst(vector<int>& nums)
+{
+    return sorted_array_to_bst_func(nums, 0, nums.size()-1);
+}
+

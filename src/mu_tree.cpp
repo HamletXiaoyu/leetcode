@@ -145,6 +145,21 @@ char* mu_tilt_of_tree()
     return 0;
 }
 
+char* mu_sorted_array_to_bst()
+{
+    int a[] = {-10,-3,0,5,9};
+    vector<int> nums;
+    for(int i=0; i<5; ++i)
+        nums.push_back(a[i]);
+    struct TreeNode* root = sorted_array_to_bst(nums);
+
+    mu_assert(NULL != root, "");
+    mu_assert(0 == root->val, "");
+    mu_assert(-10 == root->left->val, "");
+    mu_assert(5 == root->right->val, "");
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -154,6 +169,7 @@ char* tree_suits()
     mu_run_test(mu_level_order2);
     mu_run_test(mu_num_trees);
     mu_run_test(mu_tilt_of_tree);
+    mu_run_test(mu_sorted_array_to_bst);
     
     return 0;
 }
