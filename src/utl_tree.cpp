@@ -21,6 +21,7 @@
 #include "utl_tree.h"
 #include <queue>
 #include <stack>
+#include <algorithm>
 
 using namespace std;
 
@@ -263,4 +264,28 @@ struct TreeNode* sorted_array_to_bst(vector<int>& nums)
 {
     return sorted_array_to_bst_func(nums, 0, nums.size()-1);
 }
+
+int check_depth(TreeNode *root)
+{
+    if (!root)
+        return 0;
+    int left = check_depth(root->left);
+    if (left == -1)
+        return -1;
+    int right = check_depth(root->right);
+    if (right == -1)
+        return -1;
+    int diff = abs(left - right);
+    if (diff > 1)
+        return -1;
+    else return 1 + max(left, right);
+}
+
+bool is_balanced(TreeNode *root)
+{
+    if (check_depth(root) == -1)
+        return false;
+    else return true;
+}
+
 
