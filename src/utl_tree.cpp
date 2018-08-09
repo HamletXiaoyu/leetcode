@@ -288,4 +288,17 @@ bool is_balanced(TreeNode *root)
     else return true;
 }
 
+int sum_nembers_dfs(TreeNode *root, int num)
+{
+    if (!root)
+        return 0;
+    num = num * 10 + root->val;
+    if (!root->left && !root->right)
+        return num;
+    return sum_nembers_dfs(root->left, num) + sum_nembers_dfs(root->right, num);
+}
 
+int sum_nembers(TreeNode *root)
+{
+    return sum_nembers_dfs(root, 0);
+}

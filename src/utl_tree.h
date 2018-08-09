@@ -68,5 +68,7 @@ int tilt_of_tree(TreeNode* root);
 TreeNode* invert_tree(TreeNode* root);
 // leetcode 110
 bool is_balanced(TreeNode *root);
+// leetcode 129
+int sum_nembers(TreeNode *root);
 
 #endif

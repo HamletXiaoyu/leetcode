@@ -160,6 +160,17 @@ char* mu_sorted_array_to_bst()
     return 0;
 }
 
+char* mu_sum_nembers()
+{
+    string s = "495##1##0##";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
+    int num = sum_nembers(t);
+    mu_assert(num == 1026, "");
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -170,6 +181,6 @@ char* tree_suits()
     mu_run_test(mu_num_trees);
     mu_run_test(mu_tilt_of_tree);
     mu_run_test(mu_sorted_array_to_bst);
-    
+    mu_run_test(mu_sum_nembers);
     return 0;
 }
