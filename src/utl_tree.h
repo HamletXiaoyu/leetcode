@@ -70,5 +70,7 @@ TreeNode* invert_tree(TreeNode* root);
 bool is_balanced(TreeNode *root);
 // leetcode 129
 int sum_nembers(TreeNode *root);
+// leetcode 404
+int sum_of_left_leaf(TreeNode *root);
 
 #endif

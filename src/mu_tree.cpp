@@ -171,6 +171,18 @@ char* mu_sum_nembers()
     return 0;
 }
 
+char* mu_sum_of_left_leaf()
+{
+    string s = "495##1##0##";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
+    int num = sum_of_left_leaf(t);
+
+    mu_assert(num == 5, "");
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -182,5 +194,7 @@ char* tree_suits()
     mu_run_test(mu_tilt_of_tree);
     mu_run_test(mu_sorted_array_to_bst);
     mu_run_test(mu_sum_nembers);
+    mu_run_test(mu_sum_of_left_leaf);
+    
     return 0;
 }

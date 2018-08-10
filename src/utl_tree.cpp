@@ -302,3 +302,24 @@ int sum_nembers(TreeNode *root)
 {
     return sum_nembers_dfs(root, 0);
 }
+
+void sum_of_left_leaf_func(TreeNode *root, bool left, int &sum)
+{
+    if (!root)
+        return;
+    if (!root->left && !root->right && left)
+        sum += root->val;
+    sum_of_left_leaf_func(root->left, true, sum);
+    sum_of_left_leaf_func(root->right, false, sum);
+}
+
+int sum_of_left_leaf(TreeNode *root)
+{
+    if (!root || (!root->left && !root->right))
+        return 0;
+    int ret = 0;
+    sum_of_left_leaf_func(root->left, true, ret);
+    sum_of_left_leaf_func(root->right, false, ret);
+
+    return ret;
+}
