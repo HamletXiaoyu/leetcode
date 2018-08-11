@@ -72,5 +72,7 @@ bool is_balanced(TreeNode *root);
 int sum_nembers(TreeNode *root);
 // leetcode 404
 int sum_of_left_leaf(TreeNode *root);
+// leetcode 637
+vector<double> average_of_levels(TreeNode *root);
 
 #endif
