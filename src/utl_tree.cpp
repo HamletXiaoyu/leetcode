@@ -347,3 +347,20 @@ vector<double> average_of_levels(TreeNode *root)
     }
     return ret;
 }
+
+void flatten_tree_to_list(TreeNode *root)
+{
+    if (!root)
+        return;
+    if (root->left)
+        flatten_tree_to_list(root->left);
+    if (root->right)
+        flatten_tree_to_list(root->right);
+    
+    TreeNode *tmp = root->right;
+    root->right = root->left;
+    root->left = NULL;
+    while (root->right)
+        root = root->right;
+    root->right = tmp;
+}

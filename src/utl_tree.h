@@ -74,5 +74,7 @@ int sum_nembers(TreeNode *root);
 int sum_of_left_leaf(TreeNode *root);
 // leetcode 637
 vector<double> average_of_levels(TreeNode *root);
+// leetcode 114
+void flatten_tree_to_list(TreeNode *root);
 
 #endif
