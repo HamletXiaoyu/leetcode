@@ -98,6 +98,25 @@ vector<int> inorder_traversal(TreeNode* root)
     return res;
 }
 
+vector<int> post_order_traversal(TreeNode* root)
+{
+    vector<int> ret;
+    if (!root)
+        return ret;
+    stack<TreeNode*> s;
+    s.push(root);
+    while(!s.empty()) {
+        TreeNode* cur = s.top();
+        s.pop();
+        ret.insert(ret.begin(), cur->val);
+        if (cur->left)
+            s.push(cur->left);
+        if (cur->right)
+            s.push(cur->right);
+    }
+    return ret;
+}
+
 int max_depth_of_tree(TreeNode* root)
 {
     if (NULL == root)
