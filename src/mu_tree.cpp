@@ -199,6 +199,22 @@ char* mu_post_order_traversal()
     return 0;
 }
 
+char* mu_pre_order_traversal()
+{
+    string s = "1#23#";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
+    vector<int> ret = pre_order_traversal(t);
+
+    mu_assert(ret.size() == 3, "");
+    mu_assert(ret[0] == 1, "");
+    mu_assert(ret[1] == 2, "");
+    mu_assert(ret[2] == 3, "");
+    
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -212,6 +228,7 @@ char* tree_suits()
     mu_run_test(mu_sum_nembers);
     mu_run_test(mu_sum_of_left_leaf);
     mu_run_test(mu_post_order_traversal);    
-
+    mu_run_test(mu_pre_order_traversal);
+    
     return 0;
 }

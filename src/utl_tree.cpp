@@ -98,6 +98,25 @@ vector<int> inorder_traversal(TreeNode* root)
     return res;
 }
 
+vector<int> pre_order_traversal(TreeNode* root)
+{
+    vector<int> ret;
+    if (!root)
+        return ret;
+    stack<TreeNode*> s;
+    s.push(root);
+    while(!s.empty()) {
+        TreeNode* cur = s.top();
+        s.pop();
+        ret.push_back(cur->val);
+        if (cur->right)
+            s.push(cur->right);
+        if (cur->left)
+            s.push(cur->left);
+    }
+    return ret;
+}
+
 vector<int> post_order_traversal(TreeNode* root)
 {
     vector<int> ret;
