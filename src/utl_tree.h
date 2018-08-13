@@ -82,5 +82,7 @@ vector<double> average_of_levels(TreeNode *root);
 void flatten_tree_to_list(TreeNode *root);
 // leetcode 257
 vector<string> binary_tree_paths(TreeNode* root);
+// leetcode 112
+bool has_path_sum(struct TreeNode* root, int sum);
 
 #endif

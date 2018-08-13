@@ -420,3 +420,12 @@ vector<string> binary_tree_paths(TreeNode* root)
         binary_tree_paths_helper(root, "", res);
     return res;
 }
+
+bool has_path_sum(struct TreeNode* root, int sum)
+{
+    if (root == NULL) 
+        return false;
+    if (root->left == NULL && root->right == NULL && root->val == sum ) 
+        return true;
+    return has_path_sum(root->left, sum - root->val) || has_path_sum(root->right, sum - root->val);
+}

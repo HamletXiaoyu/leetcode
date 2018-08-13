@@ -229,6 +229,19 @@ char* mu_binary_tree_paths()
     return 0;
 }
 
+char* mu_has_path_sum()
+{
+    string s = "12#5##3##";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
+    mu_assert(has_path_sum(t, 8), "");
+    mu_assert(has_path_sum(t, 4), "");
+    mu_assert(!has_path_sum(t, 5), "");
+    
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -244,6 +257,7 @@ char* tree_suits()
     mu_run_test(mu_post_order_traversal);    
     mu_run_test(mu_pre_order_traversal);
     mu_run_test(mu_binary_tree_paths);
+    mu_run_test(mu_has_path_sum);
     
     return 0;
 }
