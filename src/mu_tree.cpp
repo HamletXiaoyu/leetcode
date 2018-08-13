@@ -215,6 +215,20 @@ char* mu_pre_order_traversal()
     return 0;
 }
 
+char* mu_binary_tree_paths()
+{
+    string s = "12#5##3##";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
+    vector<string> ret = binary_tree_paths(t);
+
+    mu_assert(ret.size() == 2, "");
+    mu_assert(ret[0] == "1->2->5", "");
+    mu_assert(ret[1] == "1->3", "");
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -229,6 +243,7 @@ char* tree_suits()
     mu_run_test(mu_sum_of_left_leaf);
     mu_run_test(mu_post_order_traversal);    
     mu_run_test(mu_pre_order_traversal);
+    mu_run_test(mu_binary_tree_paths);
     
     return 0;
 }

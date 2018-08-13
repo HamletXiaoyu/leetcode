@@ -80,5 +80,7 @@ int sum_of_left_leaf(TreeNode *root);
 vector<double> average_of_levels(TreeNode *root);
 // leetcode 114
 void flatten_tree_to_list(TreeNode *root);
+// leetcode 257
+vector<string> binary_tree_paths(TreeNode* root);
 
 #endif

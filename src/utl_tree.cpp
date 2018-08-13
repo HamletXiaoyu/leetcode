@@ -402,3 +402,21 @@ void flatten_tree_to_list(TreeNode *root)
         root = root->right;
     root->right = tmp;
 }
+
+void binary_tree_paths_helper(TreeNode* node, string out, vector<string>& res)
+{
+    if (!node->left && !node->right)
+        res.push_back(out + to_string(node->val));
+    if (node->left)
+        binary_tree_paths_helper(node->left, out + to_string(node->val) + "->", res);
+    if (node->right)
+        binary_tree_paths_helper(node->right, out + to_string(node->val) + "->", res);
+}
+
+vector<string> binary_tree_paths(TreeNode* root)
+{
+    vector<string> res;
+    if (root)
+        binary_tree_paths_helper(root, "", res);
+    return res;
+}
