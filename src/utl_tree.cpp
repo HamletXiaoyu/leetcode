@@ -429,3 +429,56 @@ bool has_path_sum(struct TreeNode* root, int sum)
         return true;
     return has_path_sum(root->left, sum - root->val) || has_path_sum(root->right, sum - root->val);
 }
+
+void find_mode_helper(TreeNode* node, TreeNode*& pre,
+                      int& cnt, int& mx, vector<int>& res)
+{
+    if (!node)
+        return;
+    find_mode_helper(node->left, pre, cnt, mx, res);
+    if (pre) {
+        cnt = (node->val == pre->val) ? cnt + 1 : 1;
+    }
+    if (cnt >= mx) {
+        if (cnt > mx) res.clear();
+        res.push_back(node->val);
+        mx = cnt;
+    } 
+    pre = node;
+    find_mode_helper(node->right, pre, cnt, mx, res);
+}
+
+vector<int> find_mode(TreeNode* root)
+{
+    vector<int> res;
+    int mx = 0, cnt = 1;
+    TreeNode *pre = NULL;
+    find_mode_helper(root, pre, cnt, mx, res);
+    return res;
+}
+
+TreeNode *
+build_tree_from_pre_and_inorder_helper(vector<int> &preorder, int pLeft, int pRight,
+                                       vector<int> &inorder, int iLeft, int iRight)
+{
+    if (pLeft > pRight || iLeft > iRight)
+        return NULL;
+    int i = 0;
+    for (i = iLeft; i <= iRight; ++i) {
+        if (preorder[pLeft] == inorder[i]) break;
+    }
+    TreeNode *cur = new TreeNode(preorder[pLeft]);
+    cur->left = build_tree_from_pre_and_inorder_helper(preorder, pLeft + 1,
+                                                       pLeft + i - iLeft,
+                                                       inorder, iLeft, i - 1);
+    cur->right = build_tree_from_pre_and_inorder_helper(preorder, pLeft + i - iLeft + 1,
+                                                        pRight, inorder,
+                                                        i + 1, iRight);
+    return cur;
+}
+
+TreeNode *build_tree_from_pre_and_inorder(vector<int> &preorder, vector<int> &inorder)
+{
+    return build_tree_from_pre_and_inorder_helper(preorder, 0, preorder.size() - 1,
+                                                  inorder, 0, inorder.size() - 1);
+}

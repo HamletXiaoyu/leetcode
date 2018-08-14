@@ -84,5 +84,9 @@ void flatten_tree_to_list(TreeNode *root);
 vector<string> binary_tree_paths(TreeNode* root);
 // leetcode 112
 bool has_path_sum(struct TreeNode* root, int sum);
+// leetcode 501
+vector<int> find_mode(TreeNode* root);
+// leetcode 105
+TreeNode *build_tree_from_pre_and_inorder(vector<int> &preorder, vector<int> &inorder);
 
 #endif

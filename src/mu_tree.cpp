@@ -242,6 +242,34 @@ char* mu_has_path_sum()
     return 0;
 }
 
+char* mu_build_tree_from_pre_and_inorder()
+{
+    vector<int> preorder, inorder;
+
+    preorder.push_back(3);
+    preorder.push_back(9);
+    preorder.push_back(20);
+    preorder.push_back(15);
+    preorder.push_back(7);
+
+    inorder.push_back(9);
+    inorder.push_back(3);
+    inorder.push_back(15);
+    inorder.push_back(20);
+    inorder.push_back(7);
+  //   3
+  //  / \
+  // 9  20
+  //   /  \
+  //  15   7
+    TreeNode *t = build_tree_from_pre_and_inorder(preorder, inorder);
+    mu_assert(NULL != t, "");
+    mu_assert(3 == t->val, "");
+    mu_assert(9 == t->left->val, "");
+    mu_assert(20 == t->right->val, "");
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -258,6 +286,7 @@ char* tree_suits()
     mu_run_test(mu_pre_order_traversal);
     mu_run_test(mu_binary_tree_paths);
     mu_run_test(mu_has_path_sum);
+    mu_run_test(mu_build_tree_from_pre_and_inorder);
     
     return 0;
 }
