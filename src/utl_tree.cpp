@@ -482,3 +482,25 @@ TreeNode *build_tree_from_pre_and_inorder(vector<int> &preorder, vector<int> &in
     return build_tree_from_pre_and_inorder_helper(preorder, 0, preorder.size() - 1,
                                                   inorder, 0, inorder.size() - 1);
 }
+
+TreeNode *build_tree_from_post_and_inorder_helper(vector<int> &inorder, int iLeft, int iRight, vector<int> &postorder, int pLeft, int pRight)
+{
+    if (iLeft > iRight || pLeft > pRight)
+        return NULL;
+    TreeNode *cur = new TreeNode(postorder[pRight]);
+    int i = 0;
+    for (i = iLeft; i < inorder.size(); ++i) {
+        if (inorder[i] == cur->val) break;
+    }
+    cur->left = build_tree_from_post_and_inorder_helper(inorder, iLeft, i - 1,
+                                                        postorder, pLeft, pLeft + i - iLeft - 1);
+    cur->right = build_tree_from_post_and_inorder_helper(inorder, i + 1, iRight,
+                                                         postorder, pLeft + i - iLeft, pRight - 1);
+    return cur;
+}
+
+TreeNode *build_tree_from_post_and_inorder(vector<int> &inorder, vector<int> &postorder)
+{
+    return build_tree_from_post_and_inorder_helper(inorder, 0, inorder.size() - 1,
+                                                   postorder, 0, postorder.size() - 1);
+}

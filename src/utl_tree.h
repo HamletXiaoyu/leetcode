@@ -88,5 +88,7 @@ bool has_path_sum(struct TreeNode* root, int sum);
 vector<int> find_mode(TreeNode* root);
 // leetcode 105
 TreeNode *build_tree_from_pre_and_inorder(vector<int> &preorder, vector<int> &inorder);
+// leetcode 106
+TreeNode *build_tree_from_post_and_inorder(vector<int> &inorder, vector<int> &postorder);
 
 #endif
