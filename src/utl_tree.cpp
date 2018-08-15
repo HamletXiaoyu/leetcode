@@ -504,3 +504,26 @@ TreeNode *build_tree_from_post_and_inorder(vector<int> &inorder, vector<int> &po
     return build_tree_from_post_and_inorder_helper(inorder, 0, inorder.size() - 1,
                                                    postorder, 0, postorder.size() - 1);
 }
+
+int find_bottom_left_value(TreeNode *root)
+{
+    if (NULL == root)
+        return 0;
+    int ret;
+    queue<TreeNode*> q;
+    q.push(root);
+    while (!q.empty()) {
+        int size = q.size();
+        for (int i = 0; i<size; i++) {
+            TreeNode* node = q.front();
+            if (i == 0)
+                ret = node->val;
+            q.pop();
+            if (node->left)
+                q.push(node->left);
+            if (node->right)
+                q.push(node->right);
+        }
+    }
+    return ret;
+}
