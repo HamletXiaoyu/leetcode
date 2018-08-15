@@ -527,3 +527,19 @@ int find_bottom_left_value(TreeNode *root)
     }
     return ret;
 }
+
+int find_second_minimum_value_helper(TreeNode* node, int first)
+{
+    if (!node)
+        return -1;
+    if (node->val != first)
+        return node->val;
+    int left = find_second_minimum_value_helper(node->left, first);
+    int right = find_second_minimum_value_helper(node->right, first);
+    return (left == -1 || right == -1) ? max(left, right) : min(left, right);
+}
+
+int find_second_minimum_value(TreeNode* root)
+{
+    return find_second_minimum_value_helper(root, root->val);
+}

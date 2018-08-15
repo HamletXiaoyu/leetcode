@@ -92,5 +92,7 @@ TreeNode *build_tree_from_pre_and_inorder(vector<int> &preorder, vector<int> &in
 TreeNode *build_tree_from_post_and_inorder(vector<int> &inorder, vector<int> &postorder);
 // leetcode 513
 int find_bottom_left_value(TreeNode *root);
+// leetcode 671
+int find_second_minimum_value(TreeNode* root);
 
 #endif

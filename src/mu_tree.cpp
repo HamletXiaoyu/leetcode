@@ -289,6 +289,22 @@ char* mu_find_bottom_left_value()
     return 0;
 }
 
+char* mu_find_second_minimum_value()
+{
+  //   2
+  //  / \
+  // 2   5
+  //    / \
+  //   5   7
+    string s = "22##55##7##";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
+    int ret = find_second_minimum_value(t);
+    mu_assert(ret == 5, "");
+    
+    return 0;
+}
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -307,6 +323,7 @@ char* tree_suits()
     mu_run_test(mu_has_path_sum);
     mu_run_test(mu_build_tree_from_pre_and_inorder);
     mu_run_test(mu_find_bottom_left_value);
+    mu_run_test(mu_find_second_minimum_value);
     
     return 0;
 }
