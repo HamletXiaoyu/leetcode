@@ -51,10 +51,15 @@ vector<int> inorder_traversal(TreeNode* root);
 // leetcode 145
 vector<int> post_order_traversal(TreeNode* root);
 
-// level order - leetcode 107
+// level order
+// leetcode 107
 vector<vector<int> > level_order2(TreeNode* root);
 // leetcode 103
 vector<vector<int> > zigzag_level_order(TreeNode *root);
+// leetcode 199
+vector<int> right_side_view_of_tree(TreeNode* root);
+// leetcode 513
+int find_bottom_left_value(TreeNode *root);
 
 //depth
 int max_depth_of_tree(TreeNode* root);
@@ -90,8 +95,6 @@ vector<int> find_mode(TreeNode* root);
 TreeNode *build_tree_from_pre_and_inorder(vector<int> &preorder, vector<int> &inorder);
 // leetcode 106
 TreeNode *build_tree_from_post_and_inorder(vector<int> &inorder, vector<int> &postorder);
-// leetcode 513
-int find_bottom_left_value(TreeNode *root);
 // leetcode 671
 int find_second_minimum_value(TreeNode* root);
 

@@ -543,3 +543,26 @@ int find_second_minimum_value(TreeNode* root)
 {
     return find_second_minimum_value_helper(root, root->val);
 }
+
+vector<int> right_side_view_of_tree(TreeNode* root)
+{
+    vector<int> ret;
+    if (NULL == root)
+        return ret;
+    queue<TreeNode*> q;
+    q.push(root);
+    while (!q.empty()) {
+        int size = q.size();
+        for (int i = 0; i<size; i++) {
+            TreeNode* node = q.front();
+            if (i == size-1)
+                ret.push_back(node->val);
+            q.pop();
+            if (node->left)
+                q.push(node->left);
+            if (node->right)
+                q.push(node->right);
+        }
+    }
+    return ret;
+}

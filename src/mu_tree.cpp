@@ -305,6 +305,28 @@ char* mu_find_second_minimum_value()
     
     return 0;
 }
+
+char* mu_right_side_view_of_tree()
+{
+//    1            <---
+//  /   \
+// 2     3         <---
+//  \     \
+//   5     4       <---
+    string s = "12#5##3#4##";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
+    vector<int> ret = right_side_view_of_tree(t);
+
+    mu_assert(3 == ret.size(), "");
+    mu_assert(1 == ret[0], "");
+    mu_assert(3 == ret[1], "");
+    mu_assert(4 == ret[2], "");
+    
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -324,6 +346,7 @@ char* tree_suits()
     mu_run_test(mu_build_tree_from_pre_and_inorder);
     mu_run_test(mu_find_bottom_left_value);
     mu_run_test(mu_find_second_minimum_value);
+    mu_run_test(mu_right_side_view_of_tree);
     
     return 0;
 }
