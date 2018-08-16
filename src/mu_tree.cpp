@@ -353,6 +353,22 @@ char* mu_construct_maximum_binarytree()
     return 0;
 }
 
+char* mu_width_of_binarytree()
+{
+    //      1
+    //    /   \
+    //   3     2
+    //  / \     \  
+    // 5   3     9
+    string s = "135##3##2#9##";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
+    int wid = width_of_binarytree(t);
+    mu_assert(4 == wid, "");
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -374,6 +390,7 @@ char* tree_suits()
     mu_run_test(mu_find_second_minimum_value);
     mu_run_test(mu_right_side_view_of_tree);
     mu_run_test(mu_construct_maximum_binarytree);
+    mu_run_test(mu_width_of_binarytree);
     
     return 0;
 }

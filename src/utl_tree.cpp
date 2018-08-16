@@ -603,3 +603,21 @@ TreeNode* trim_bst(TreeNode* root, int L, int R)
     root->right = trim_bst(root->right, L, R);
     return root;
 }
+
+void width_of_binarytree_helper(TreeNode* node, int h, int idx, vector<int>& start, int& res) {
+    if (!node)
+        return;
+    if (h >= start.size())
+        start.push_back(idx);
+    res = max(res, idx - start[h] + 1);
+    width_of_binarytree_helper(node->left, h + 1, idx * 2, start, res);
+    width_of_binarytree_helper(node->right, h + 1, idx * 2 + 1, start, res);
+}
+
+int width_of_binarytree(TreeNode* root)
+{
+    int res = 0;
+    vector<int> start;
+    width_of_binarytree_helper(root, 0, 1, start, res);
+    return res;
+}

@@ -101,5 +101,7 @@ int find_second_minimum_value(TreeNode* root);
 TreeNode* construct_maximum_binarytree(vector<int>& nums);
 // leetcode 669
 TreeNode* trim_bst(TreeNode* root, int L, int R);
+// leetcode 662
+int width_of_binarytree(TreeNode* root);
 
 #endif
