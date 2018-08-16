@@ -369,6 +369,23 @@ char* mu_width_of_binarytree()
     return 0;
 }
 
+char* mu_count_nodes()
+{
+//     1
+//    / \
+//   2   3
+//  / \  /
+// 4  5 6
+    string s = "124##5##36###";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
+    int count = count_nodes(t);
+    mu_assert(count == 6, "");
+    
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -391,6 +408,7 @@ char* tree_suits()
     mu_run_test(mu_right_side_view_of_tree);
     mu_run_test(mu_construct_maximum_binarytree);
     mu_run_test(mu_width_of_binarytree);
+    mu_run_test(mu_count_nodes);
     
     return 0;
 }

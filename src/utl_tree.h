@@ -103,5 +103,7 @@ TreeNode* construct_maximum_binarytree(vector<int>& nums);
 TreeNode* trim_bst(TreeNode* root, int L, int R);
 // leetcode 662
 int width_of_binarytree(TreeNode* root);
+// leetcode 222
+int count_nodes(TreeNode* root);
 
 #endif

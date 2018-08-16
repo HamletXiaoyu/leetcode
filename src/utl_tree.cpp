@@ -22,6 +22,7 @@
 #include <queue>
 #include <stack>
 #include <algorithm>
+#include <math.h>
 
 using namespace std;
 
@@ -620,4 +621,21 @@ int width_of_binarytree(TreeNode* root)
     vector<int> start;
     width_of_binarytree_helper(root, 0, 1, start, res);
     return res;
+}
+
+int count_nodes(TreeNode* root)
+{
+    int hLeft = 0, hRight = 0;
+    TreeNode *pLeft = root, *pRight = root;
+    while (pLeft) {
+        ++hLeft;
+        pLeft = pLeft->left;
+    }
+    while (pRight) {
+        ++hRight;
+        pRight = pRight->right;
+    }
+    if (hLeft == hRight)
+        return pow(2, hLeft) - 1;
+    return count_nodes(root->left) + count_nodes(root->right) + 1;
 }
