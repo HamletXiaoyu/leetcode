@@ -590,3 +590,16 @@ TreeNode* construct_maximum_binarytree(vector<int>& nums)
 {
     return construct_maximum_binarytree_helper(nums, 0, nums.size()-1);
 }
+
+TreeNode* trim_bst(TreeNode* root, int L, int R)
+{
+    if (!root) 
+        return NULL;
+    if (root->val < L) 
+        return trim_bst(root->right, L, R);
+    if (root->val > R) 
+        return trim_bst(root->left, L, R);
+    root->left = trim_bst(root->left, L, R);
+    root->right = trim_bst(root->right, L, R);
+    return root;
+}
