@@ -327,6 +327,32 @@ char* mu_right_side_view_of_tree()
     return 0;
 }
 
+char* mu_construct_maximum_binarytree()
+{
+// [3,2,1,6,0,5]
+
+//       6
+//     /   \
+//    3     5
+//     \    / 
+//      2  0   
+//        \
+//         1
+    vector<int> nums;
+    nums.push_back(3);
+    nums.push_back(2);
+    nums.push_back(1);
+    nums.push_back(6);
+    nums.push_back(0);
+    nums.push_back(5);
+    TreeNode* t = construct_maximum_binarytree(nums);
+    mu_assert(NULL != t, "");
+    mu_assert(6 == t->val, "");
+    mu_assert(3 == t->left->val, "");
+    mu_assert(5 == t->right->val, "");
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -347,6 +373,7 @@ char* tree_suits()
     mu_run_test(mu_find_bottom_left_value);
     mu_run_test(mu_find_second_minimum_value);
     mu_run_test(mu_right_side_view_of_tree);
+    mu_run_test(mu_construct_maximum_binarytree);
     
     return 0;
 }

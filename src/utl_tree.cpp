@@ -566,3 +566,27 @@ vector<int> right_side_view_of_tree(TreeNode* root)
     }
     return ret;
 }
+    
+TreeNode* construct_maximum_binarytree_helper(vector<int>& nums, int left, int right)
+{
+    if (left > right)
+        return NULL;
+    int max = nums[left];
+    int index = left;
+    for(int i = left; i <= right; ++i) {
+        if(nums[i] > max){
+            max = nums[i];
+            index = i;
+        }
+    }
+    TreeNode *t = (TreeNode*)malloc(sizeof(TreeNode));
+    t->val = max;
+    t->left = construct_maximum_binarytree_helper(nums, left, index-1);
+    t->right = construct_maximum_binarytree_helper(nums, index+1, right);
+    return t;
+}
+
+TreeNode* construct_maximum_binarytree(vector<int>& nums)
+{
+    return construct_maximum_binarytree_helper(nums, 0, nums.size()-1);
+}

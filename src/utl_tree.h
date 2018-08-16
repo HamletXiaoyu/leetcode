@@ -97,5 +97,7 @@ TreeNode *build_tree_from_pre_and_inorder(vector<int> &preorder, vector<int> &in
 TreeNode *build_tree_from_post_and_inorder(vector<int> &inorder, vector<int> &postorder);
 // leetcode 671
 int find_second_minimum_value(TreeNode* root);
+// leetcode 654
+TreeNode* construct_maximum_binarytree(vector<int>& nums);
 
 #endif
