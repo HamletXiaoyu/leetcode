@@ -639,3 +639,28 @@ int count_nodes(TreeNode* root)
         return pow(2, hLeft) - 1;
     return count_nodes(root->left) + count_nodes(root->right) + 1;
 }
+
+TreeNode* insert_into_bst(TreeNode* root, int val)
+{
+    if (NULL == root) {
+        root = new TreeNode(val);
+        return root;
+    }
+            
+    TreeNode* cur, *parent;
+    cur = root;
+    while (cur) {
+        parent = cur;
+        if (cur->val > val)
+            cur = cur->left;
+        else if (cur->val < val)
+            cur = cur->right;
+    }
+
+    if (parent->val > val)
+        parent->left = new TreeNode(val);
+    else 
+        parent->right = new TreeNode(val);
+
+    return root;
+}
