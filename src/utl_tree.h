@@ -109,5 +109,7 @@ int count_nodes(TreeNode* root);
 TreeNode* insert_into_bst(TreeNode* root, int val);
 // leetcode 700
 TreeNode* search_bst(TreeNode* root, int val);
+// leetcode 235
+TreeNode* lowest_common_ancestor_in_bst(TreeNode* root, TreeNode* p, TreeNode* q);
 
 #endif

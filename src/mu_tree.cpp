@@ -386,6 +386,47 @@ char* mu_count_nodes()
     return 0;
 }
 
+char* mu_search_bst()
+{
+    //     4
+    //    / \
+    //   2   7
+    //  / \
+    // 1   3
+    string s = "421##3##7##";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
+    TreeNode* ret = search_bst(t, 2);
+
+    mu_assert(NULL != ret, "");
+    mu_assert(2 == ret->val, "");
+    mu_assert(1 == ret->left->val, "");
+    mu_assert(3 == ret->right->val, "");
+    return 0;
+}
+
+char* mu_lowest_common_ancestor_in_bst()
+{
+   //      _______6______
+   //     /              \
+   //  ___2__          ___8__
+   // /      \        /      \
+   // 0      _4       7       9
+   //       /  \
+   //       3   5
+    string s = "620##43##5##87##9##";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
+    struct TreeNode* p = new TreeNode(2);
+    struct TreeNode* q = new TreeNode(4);
+    TreeNode* ret = lowest_common_ancestor_in_bst(t, p, q);
+    mu_assert(NULL != ret, "");
+    mu_assert(2 == ret->val, "");
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -409,6 +450,8 @@ char* tree_suits()
     mu_run_test(mu_construct_maximum_binarytree);
     mu_run_test(mu_width_of_binarytree);
     mu_run_test(mu_count_nodes);
+    mu_run_test(mu_search_bst);
+    mu_run_test(mu_lowest_common_ancestor_in_bst);
     
     return 0;
 }

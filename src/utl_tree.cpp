@@ -676,3 +676,15 @@ TreeNode* search_bst(TreeNode* root, int val)
     else
         return search_bst(root->right, val);
 }
+
+TreeNode* lowest_common_ancestor_in_bst(TreeNode* root, TreeNode* p, TreeNode* q)
+{
+    if (!root) 
+        return NULL;
+    if (root->val > max(p->val, q->val)) 
+        return lowest_common_ancestor_in_bst(root->left, p, q);
+    else if (root->val < min(p->val, q->val)) 
+        return lowest_common_ancestor_in_bst(root->right, p, q);
+    else 
+        return root;
+}
