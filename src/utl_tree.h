@@ -107,5 +107,7 @@ int width_of_binarytree(TreeNode* root);
 int count_nodes(TreeNode* root);
 // leetcode 701
 TreeNode* insert_into_bst(TreeNode* root, int val);
+// leetcode 700
+TreeNode* search_bst(TreeNode* root, int val);
 
 #endif

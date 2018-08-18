@@ -664,3 +664,15 @@ TreeNode* insert_into_bst(TreeNode* root, int val)
 
     return root;
 }
+
+TreeNode* search_bst(TreeNode* root, int val)
+{
+    if (NULL == root)
+        return NULL;
+    if (root->val == val)
+        return root;
+    if (root->val > val)
+        return search_bst(root->left, val);
+    else
+        return search_bst(root->right, val);
+}
