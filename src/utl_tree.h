@@ -111,5 +111,7 @@ TreeNode* insert_into_bst(TreeNode* root, int val);
 TreeNode* search_bst(TreeNode* root, int val);
 // leetcode 235
 TreeNode* lowest_common_ancestor_in_bst(TreeNode* root, TreeNode* p, TreeNode* q);
+// leetcode 99
+void recover_bst(TreeNode *root);
 
 #endif

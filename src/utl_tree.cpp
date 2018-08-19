@@ -688,3 +688,26 @@ TreeNode* lowest_common_ancestor_in_bst(TreeNode* root, TreeNode* p, TreeNode* q
     else 
         return root;
 }
+
+void recover_bst_helper(TreeNode *root,
+                        vector<TreeNode*> &list,
+                        vector<int> &vals)
+{
+    if (!root)
+        return;
+    recover_bst_helper(root->left, list, vals);
+    list.push_back(root);
+    vals.push_back(root->val);
+    recover_bst_helper(root->right, list, vals);
+}
+
+void recover_bst(TreeNode *root)
+{
+    vector<TreeNode*> list;
+    vector<int> vals;
+    recover_bst_helper(root, list, vals);
+    sort(vals.begin(), vals.end());
+    for (int i = 0; i < list.size(); ++i) {
+        list[i]->val = vals[i];
+    }
+}
