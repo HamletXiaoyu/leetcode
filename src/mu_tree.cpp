@@ -427,6 +427,23 @@ char* mu_lowest_common_ancestor_in_bst()
     return 0;
 }
 
+char* mu_is_valid_bst()
+{
+  //   5
+  //  / \
+  // 1   4
+  //    / \
+  //   3   6
+    string s = "51##43##6##";
+    int pos = -1;
+    struct TreeNode* t;
+    t = utl_init_tree(s, pos);
+
+    mu_assert(false == is_valid_bst(t), "");
+    
+    return 0;
+}
+
 char* tree_suits()
 {
     mu_run_test(mu_init_tree);
@@ -452,6 +469,7 @@ char* tree_suits()
     mu_run_test(mu_count_nodes);
     mu_run_test(mu_search_bst);
     mu_run_test(mu_lowest_common_ancestor_in_bst);
+    mu_run_test(mu_is_valid_bst);
     
     return 0;
 }

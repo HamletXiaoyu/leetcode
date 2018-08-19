@@ -711,3 +711,26 @@ void recover_bst(TreeNode *root)
         list[i]->val = vals[i];
     }
 }
+
+void is_valid_bst_helper(TreeNode *root, vector<int> &vals)
+{
+    if (!root)
+        return;
+    is_valid_bst_helper(root->left, vals);
+    vals.push_back(root->val);
+    is_valid_bst_helper(root->right, vals);
+}
+
+bool is_valid_bst(TreeNode *root)
+{
+    if (!root) 
+        return true;
+    vector<int> vals;
+    is_valid_bst_helper(root, vals);
+    for (int i = 0; i < vals.size() - 1; ++i) {
+        if (vals[i] >= vals[i + 1]) 
+            return false;
+    }
+    return true;
+}
+

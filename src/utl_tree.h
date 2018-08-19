@@ -113,5 +113,7 @@ TreeNode* search_bst(TreeNode* root, int val);
 TreeNode* lowest_common_ancestor_in_bst(TreeNode* root, TreeNode* p, TreeNode* q);
 // leetcode 99
 void recover_bst(TreeNode *root);
+// leetcode 98
+bool is_valid_bst(TreeNode *root);
 
 #endif
