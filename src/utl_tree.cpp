@@ -744,3 +744,20 @@ TreeNode* lowest_common_ancestor(TreeNode* root, TreeNode* p, TreeNode* q)
         return root;
     return left ? left : right;
 }
+
+int diameter_of_binarytree_helper(TreeNode* node, int& res)
+{
+    if (!node)
+        return 0;
+    int left = diameter_of_binarytree_helper(node->left, res);
+    int right = diameter_of_binarytree_helper(node->right, res);
+    res = max(res, left + right);
+    return max(left, right) + 1;
+}
+
+int diameter_of_binarytree(TreeNode* root)
+{
+    int res = 0;
+    diameter_of_binarytree_helper(root, res);
+    return res;
+}

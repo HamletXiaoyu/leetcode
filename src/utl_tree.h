@@ -117,5 +117,7 @@ TreeNode* lowest_common_ancestor(TreeNode* root, TreeNode* p, TreeNode* q);
 void recover_bst(TreeNode *root);
 // leetcode 98
 bool is_valid_bst(TreeNode *root);
+// leetcode 543
+int diameter_of_binarytree(TreeNode* root);
 
 #endif
