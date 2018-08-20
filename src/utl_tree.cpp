@@ -734,3 +734,13 @@ bool is_valid_bst(TreeNode *root)
     return true;
 }
 
+TreeNode* lowest_common_ancestor(TreeNode* root, TreeNode* p, TreeNode* q)
+{
+    if (!root || p == root || q == root)
+        return root;
+    TreeNode *left = lowest_common_ancestor(root->left, p, q);
+    TreeNode *right = lowest_common_ancestor(root->right, p , q);
+    if (left && right)
+        return root;
+    return left ? left : right;
+}
