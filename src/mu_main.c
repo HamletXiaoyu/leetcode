@@ -32,6 +32,7 @@ char error_msg[256];
 int main( void )
 {
     mu_run_suite(tree_suits);
+    mu_run_suite(list_suits);
     if(0==failed_number)
         printf ( "total run %d suites, %d test, ALL PASSED\n", suites_number, tests_number );
     else

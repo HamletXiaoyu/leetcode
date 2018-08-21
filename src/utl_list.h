@@ -1,10 +1,9 @@
-/* mu_suites.h --- 
- * Filename: mu_suites.h
- * Author: Hamlet zheng
- * Created: Sun Apr  8 22:12:12 2018 (+0800)
+/* utl_list.h --- 
+ * Filename: utl_list.h
+ * Created: Tue Aug 21 21:41:34 2018 (+0800)
  */
 
-/* Copyright zhengdf.
+/* Copyright Hamlet zheng.
  * 
  * 允许免费使用，拷贝，修改，发布，但在所有的拷贝上必须保留上述
  * copyright部分和本使用声明部分，除非显示声明，copyright的持有者
@@ -19,10 +18,22 @@
  * OF THIS SOFTWARE.
  */
 
-#ifndef _MU_SUITES_H_
-#define _MU_SUITES_H_
+#ifndef UTL_LIST_H_
+#define UTL_LIST_H_
 
-char* tree_suits();
-char* list_suits();
+#include <vector>
 
-#endif /*_MU_SUITES_H_*/
+using namespace std;
+
+struct ListNode {
+     int val;
+     ListNode *next;
+     ListNode(int x) : val(x), next(NULL) {}
+};
+
+ListNode* init_list(vector<int>& nums);
+
+// leetcode 2
+ListNode* add_two_numbers(ListNode* l1, ListNode* l2);
+
+#endif

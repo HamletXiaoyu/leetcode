@@ -8,11 +8,14 @@ CXX  = g++
 CXXFLAGS += -c -w
 
 OBJS =  $(BUILDDIR)/mu_main.o \
-	$(BUILDDIR)/mu_tree.o 
+	$(BUILDDIR)/mu_tree.o \
+	$(BUILDDIR)/mu_list.o
 
-LIB_OBJ = $(LIBDIR)/utl_tree.o
+LIB_OBJ = $(LIBDIR)/utl_tree.o \
+	  $(LIBDIR)/utl_list.o
 
-LIBS = $(LIBDIR)/libutltree.so
+LIBS  = $(LIBDIR)/libutltree.so \
+	$(LIBDIR)/libutllist.so
 
 DEPS = 
 MKDIR_P = mkdir -p
@@ -33,7 +36,7 @@ dir :
 
 
 $(BIN) : $(OBJS)
-	$(CXX) $(OBJS) -o $@ -Llib  -lutltree
+	$(CXX) $(OBJS) -o $@ -Llib  -lutltree -lutllist
 
 $(BUILDDIR)/%.o : %.c
 	$(CXX)  $(CXXFLAGS) -o $@ $<
