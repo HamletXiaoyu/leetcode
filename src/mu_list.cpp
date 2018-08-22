@@ -69,10 +69,27 @@ char* mu_add_two_numbers()
     return 0;
 }
 
+char* mu_swap_pairs()
+{
+    vector<int> nums;
+    nums.push_back(1);
+    nums.push_back(2);
+    nums.push_back(3);
+    nums.push_back(4);
+    ListNode* head1 = init_list(nums);
+    ListNode* ret = swap_pairs(head1);
+    mu_assert(2 == ret->val, "");
+    mu_assert(1 == ret->next->val, "");
+    mu_assert(4 == ret->next->next->val, "");
+    mu_assert(3 == ret->next->next->next->val, "");
+    return 0;
+}
+
 char* list_suits()
 {
     mu_run_test(mu_init_list);
     mu_run_test(mu_add_two_numbers);
+    mu_run_test(mu_swap_pairs);
     
     return 0;
 }

@@ -46,4 +46,7 @@ struct ListNode* remove_nth_from_end(struct ListNode* head, int n);
 ListNode *reverse_kgroup(ListNode *head, int k);
 ListNode *reverse_one_group(ListNode *pre, ListNode *next);
 
+// leetcode 24
+ListNode* swap_pairs(ListNode* head);
+
 #endif
