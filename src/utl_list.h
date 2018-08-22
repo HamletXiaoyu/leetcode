@@ -42,4 +42,8 @@ ListNode* merge_two_sorted_lists(ListNode* l1, ListNode* l2);
 // leetcode 19
 struct ListNode* remove_nth_from_end(struct ListNode* head, int n);
 
+// leetcode 25
+ListNode *reverse_kgroup(ListNode *head, int k);
+ListNode *reverse_one_group(ListNode *pre, ListNode *next);
+
 #endif
