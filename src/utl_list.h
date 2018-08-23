@@ -37,18 +37,16 @@ ListNode* init_list(vector<int>& nums);
 ListNode* add_two_numbers(ListNode* l1, ListNode* l2);
 // leetcode 445
 ListNode* add_two_numbers2(ListNode* l1, ListNode* l2);
-
 // leetcode 21
 ListNode* merge_two_sorted_lists(ListNode* l1, ListNode* l2);
-
 // leetcode 19
 struct ListNode* remove_nth_from_end(struct ListNode* head, int n);
-
 // leetcode 25
 ListNode *reverse_kgroup(ListNode *head, int k);
 ListNode *reverse_one_group(ListNode *pre, ListNode *next);
-
 // leetcode 24
 ListNode* swap_pairs(ListNode* head);
+// leetcode 148
+ListNode* sort_list(ListNode* head);
 
 #endif

@@ -110,12 +110,30 @@ char* mu_add_two_numbers2()
     return 0;
 }
 
+char* mu_sort_list()
+{
+    vector<int> nums;
+    nums.push_back(7);
+    nums.push_back(2);
+    nums.push_back(4);
+    nums.push_back(3);
+    ListNode* head = init_list(nums);
+    ListNode* ret = sort_list(head);
+    mu_assert(NULL != ret, "");
+    mu_assert(2 == ret->val, "");
+    mu_assert(3 == ret->next->val, "");
+    mu_assert(4 == ret->next->next->val, "");
+    mu_assert(7 == ret->next->next->next->val, "");
+
+    return 0;
+}
 char* list_suits()
 {
     mu_run_test(mu_init_list);
     mu_run_test(mu_add_two_numbers);
     mu_run_test(mu_add_two_numbers2);
     mu_run_test(mu_swap_pairs);
+    mu_run_test(mu_sort_list);
     
     return 0;
 }
