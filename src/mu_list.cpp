@@ -51,6 +51,7 @@ char* mu_add_two_numbers()
     nums.push_back(4);
     ListNode* head2 = init_list(nums);
     ListNode* ret = add_two_numbers(head1, head2);
+    // 7->0->8
     mu_assert(NULL != ret, "");
     mu_assert(7 == ret->val, "");
     mu_assert(0 == ret->next->val, "");
@@ -85,10 +86,35 @@ char* mu_swap_pairs()
     return 0;
 }
 
+char* mu_add_two_numbers2()
+{
+    vector<int> nums;
+    nums.push_back(7);
+    nums.push_back(2);
+    nums.push_back(4);
+    nums.push_back(3);
+    ListNode* head1 = init_list(nums);
+    nums.clear();
+    nums.push_back(5);
+    nums.push_back(6);
+    nums.push_back(4);
+    ListNode* head2 = init_list(nums);
+    ListNode* ret = add_two_numbers2(head1, head2);
+    // 7->8->0->7
+    mu_assert(NULL != ret, "");
+    mu_assert(7 == ret->val, "");
+    mu_assert(8 == ret->next->val, "");
+    mu_assert(0 == ret->next->next->val, "");
+    mu_assert(7 == ret->next->next->next->val, "");
+    
+    return 0;
+}
+
 char* list_suits()
 {
     mu_run_test(mu_init_list);
     mu_run_test(mu_add_two_numbers);
+    mu_run_test(mu_add_two_numbers2);
     mu_run_test(mu_swap_pairs);
     
     return 0;

@@ -35,6 +35,8 @@ ListNode* init_list(vector<int>& nums);
 
 // leetcode 2
 ListNode* add_two_numbers(ListNode* l1, ListNode* l2);
+// leetcode 445
+ListNode* add_two_numbers2(ListNode* l1, ListNode* l2);
 
 // leetcode 21
 ListNode* merge_two_sorted_lists(ListNode* l1, ListNode* l2);
