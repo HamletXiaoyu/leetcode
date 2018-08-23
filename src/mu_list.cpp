@@ -127,6 +127,23 @@ char* mu_sort_list()
 
     return 0;
 }
+
+char* mu_rotate_right()
+{
+    vector<int> nums;
+    nums.push_back(0);
+    nums.push_back(1);
+    nums.push_back(2);
+    ListNode* head = init_list(nums);
+    ListNode* ret = rotate_right(head, 4);
+    mu_assert(NULL != ret, "");
+    mu_assert(2 == ret->val, "");
+    mu_assert(0 == ret->next->val, "");
+    mu_assert(1 == ret->next->next->val, "");
+    
+    return 0;
+}
+
 char* list_suits()
 {
     mu_run_test(mu_init_list);
@@ -134,6 +151,7 @@ char* list_suits()
     mu_run_test(mu_add_two_numbers2);
     mu_run_test(mu_swap_pairs);
     mu_run_test(mu_sort_list);
+    mu_run_test(mu_rotate_right);
     
     return 0;
 }
