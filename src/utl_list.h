@@ -31,7 +31,20 @@ struct ListNode {
      ListNode(int x) : val(x), next(NULL) {}
 };
 
+/* A utility function to create list from array */
 ListNode* init_list(vector<int>& nums);
+/* A utility function to insert a node at the beginning of linked list */
+void push(struct ListNode** head_ref, int val);
+/* A utility function to print linked list */
+void print_list(struct ListNode *node);
+/* quick sort list 
+ * usage: quick_sort_list1(head, head+node_cnt)
+ */
+void quick_sort_list1(ListNode* pBegin , ListNode* pEnd);
+/* quick sort list 
+ * usage: quick_sort_list1(head, NULL)
+ */
+void quick_sort_list2(ListNode* pBeign, ListNode* pEnd);
 
 // leetcode 2
 ListNode* add_two_numbers(ListNode* l1, ListNode* l2);

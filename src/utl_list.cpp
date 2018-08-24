@@ -38,6 +38,28 @@ ListNode* init_list(vector<int>& nums)
     return head;
 }
 
+void push(struct ListNode** head_ref, int val)
+{
+    /* allocate node */
+    struct ListNode* new_node = new ListNode(val);
+ 
+    /* link the old list off the new node */
+    new_node->next = (*head_ref);
+
+    /* move the head to point to the new node */
+    (*head_ref)    = new_node;
+}
+
+void print_list(struct ListNode *node)
+{
+    while (node != NULL)
+    {
+        printf("%d  ", node->val);
+        node = node->next;
+    }
+    printf("\n");
+}
+
 ListNode* add_two_numbers_helper(ListNode* l1, ListNode* l2, int carry)
 {
     ListNode* node = NULL;
@@ -302,4 +324,65 @@ ListNode *get_intersection_node(struct ListNode *head1,
         p2 = p2->next;
     }
     return ret;
+}
+
+void quick_sort_list1(ListNode* pBegin , ListNode* pEnd)
+{
+    if (NULL == pBegin ||
+        NULL == pEnd ||
+        pBegin == pEnd)
+    {
+        return;
+    }
+
+    ListNode* pFirst = pBegin;
+    ListNode* pSecond = pFirst->next;
+    
+    int nMidValue = pBegin->val;
+
+    while(pSecond != pEnd->next && pSecond != NULL)
+    {
+        if(pSecond->val < nMidValue)
+        {
+            pFirst = pFirst->next;
+            std::swap(pFirst->val, pSecond->val);
+        }
+
+        pSecond = pSecond->next;
+    }
+
+    std::swap(pBegin->val, pFirst->val);
+
+    quick_sort_list1(pBegin, pFirst);
+    quick_sort_list1(pFirst->next, pEnd);
+}
+
+ListNode* get_partion(ListNode* pBegin, ListNode* pEnd)
+{
+    int val = pBegin->val;
+    ListNode* p = pBegin;
+    ListNode* q = p->next;
+ 
+    while(q != pEnd)
+    {
+        if(q->val < val)
+        {
+            p = p->next;
+            swap(p->val, q->val);
+        }
+ 
+        q = q->next;
+    }
+    swap(p->val, pBegin->val);
+    return p;
+}
+ 
+void quick_sort_list2(ListNode* pBeign, ListNode* pEnd)
+{
+    if(pBeign != pEnd)
+    {
+        ListNode* partion = get_partion(pBeign, pEnd);
+        quick_sort_list2(pBeign, partion);
+        quick_sort_list2(partion->next, pEnd);
+    }
 }
