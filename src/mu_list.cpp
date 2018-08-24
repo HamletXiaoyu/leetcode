@@ -144,6 +144,22 @@ char* mu_rotate_right()
     return 0;
 }
 
+char* mu_has_cycle()
+{
+    vector<int> nums;
+    nums.push_back(0);
+    nums.push_back(1);
+    nums.push_back(2);
+    nums.push_back(3);
+    nums.push_back(4);
+    ListNode* head = init_list(nums);
+    mu_assert(false == has_cycle(head), "");
+    head->next->next->next->next->next = head->next->next;
+    mu_assert(true == has_cycle(head), "");
+    
+    return 0;
+}
+
 char* list_suits()
 {
     mu_run_test(mu_init_list);
@@ -152,6 +168,7 @@ char* list_suits()
     mu_run_test(mu_swap_pairs);
     mu_run_test(mu_sort_list);
     mu_run_test(mu_rotate_right);
+    mu_run_test(mu_has_cycle);
     
     return 0;
 }

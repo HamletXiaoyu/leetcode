@@ -50,5 +50,7 @@ ListNode* swap_pairs(ListNode* head);
 ListNode* sort_list(ListNode* head);
 // leetcode 61
 ListNode* rotate_right(ListNode* head, int k);
+// leetcode 141
+bool has_cycle(struct ListNode *head);
 
 #endif

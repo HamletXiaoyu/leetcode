@@ -253,3 +253,16 @@ ListNode* rotate_right(ListNode* head, int k)
     cur->next = NULL;
     return newhead;
 }
+
+bool has_cycle(struct ListNode *head)
+{
+    struct ListNode *p1 = head;
+    struct ListNode *p2 = head;
+    while (p2 && p2->next) {
+        p1 = p1->next;
+        p2 = p2->next->next;
+        if (p1 == p2)
+            return true;
+    }
+    return false;
+}
