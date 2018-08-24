@@ -294,7 +294,7 @@ ListNode *get_intersection_node(struct ListNode *head1,
             p2 = p2->next;
     }
     while (p1 && p2) {
-        if (p1->val == p2->val) {
+        if (p1 == p2) {
             ret = p1;
             break;
         }
