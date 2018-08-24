@@ -266,3 +266,40 @@ bool has_cycle(struct ListNode *head)
     }
     return false;
 }
+
+ListNode *get_intersection_node(struct ListNode *head1,
+                                struct ListNode *head2)
+{
+    if (!head1 || !head2)
+        return NULL;
+    struct ListNode *p1 = head1, *p2 = head2;
+    struct ListNode *ret = NULL;
+    int len1 = 0, len2 = 0;
+    int i;
+    while (p1->next) {
+        p1 = p1->next;
+        ++len1;
+    }
+    p1 = head1;
+    while (p2->next) {
+        p2 = p2->next;
+        ++len2;
+    }
+    p2 = head2;
+    if (len1 > len2) {
+        for (i=0; i<len1-len2; ++i)
+            p1 = p1->next;
+    } else {
+        for (i=0; i<len2-len1; ++i)
+            p2 = p2->next;
+    }
+    while (p1 && p2) {
+        if (p1->val == p2->val) {
+            ret = p1;
+            break;
+        }
+        p1 = p1->next;
+        p2 = p2->next;
+    }
+    return ret;
+}

@@ -52,5 +52,7 @@ ListNode* sort_list(ListNode* head);
 ListNode* rotate_right(ListNode* head, int k);
 // leetcode 141
 bool has_cycle(struct ListNode *head);
+// leetcode 160
+ListNode *get_intersection_node(struct ListNode *head1, struct ListNode *head2);
 
 #endif
