@@ -409,8 +409,18 @@ ListNode* reverse_list_r(ListNode* head)
     if (!head || !head->next) 
         return head;
     struct ListNode *p = head;
-    head = reverseList(p->next);
+    head = reverse_list_r(p->next);
     p->next->next = p;
     p->next = NULL;
     return head;
+}
+
+ListNode* middle_node(ListNode* head)
+{
+    ListNode* p1 = head, *p2 = head;
+    while (p1 && p2 && p2->next) {
+        p1 = p1->next;
+        p2 = p2->next->next;
+    }
+    return p1;
 }

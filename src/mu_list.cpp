@@ -160,6 +160,57 @@ char* mu_has_cycle()
     return 0;
 }
 
+char* mu_middle_node()
+{
+    vector<int> nums;
+    nums.push_back(0);
+    nums.push_back(1);
+    nums.push_back(2);
+    nums.push_back(3);
+    nums.push_back(4);
+    ListNode* head = init_list(nums);
+    ListNode* ret = middle_node(head);
+    mu_assert(2 == ret->val, "");
+    mu_assert(3 == ret->next->val, "");
+    mu_assert(4 == ret->next->next->val, "");
+
+    return 0;
+}
+
+char* mu_reverse_list()
+{
+    vector<int> nums;
+    nums.push_back(0);
+    nums.push_back(1);
+    nums.push_back(2);
+    nums.push_back(3);
+    nums.push_back(4);
+    ListNode* head = init_list(nums);
+    ListNode* ret = reverse_list(head);
+    mu_assert(4 == ret->val, "");
+    mu_assert(3 == ret->next->val, "");
+    mu_assert(2 == ret->next->next->val, "");
+
+    return 0;
+}
+
+char* mu_reverse_list_r()
+{
+    vector<int> nums;
+    nums.push_back(0);
+    nums.push_back(1);
+    nums.push_back(2);
+    nums.push_back(3);
+    nums.push_back(4);
+    ListNode* head = init_list(nums);
+    ListNode* ret = reverse_list_r(head);
+    mu_assert(4 == ret->val, "");
+    mu_assert(3 == ret->next->val, "");
+    mu_assert(2 == ret->next->next->val, "");
+
+    return 0;
+}
+
 char* list_suits()
 {
     mu_run_test(mu_init_list);
@@ -169,6 +220,9 @@ char* list_suits()
     mu_run_test(mu_sort_list);
     mu_run_test(mu_rotate_right);
     mu_run_test(mu_has_cycle);
+    mu_run_test(mu_middle_node);
+    mu_run_test(mu_reverse_list);
+    mu_run_test(mu_reverse_list_r);
     
     return 0;
 }

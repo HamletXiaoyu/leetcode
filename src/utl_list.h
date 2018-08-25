@@ -37,11 +37,13 @@ ListNode* init_list(vector<int>& nums);
 void push(struct ListNode** head_ref, int val);
 /* A utility function to print linked list */
 void print_list(struct ListNode *node);
-/* quick sort list 
+/**
+ * quick sort list 
  * usage: quick_sort_list1(head, head+node_cnt)
  */
 void quick_sort_list1(ListNode* pBegin , ListNode* pEnd);
-/* quick sort list 
+/**
+ * quick sort list 
  * usage: quick_sort_list1(head, NULL)
  */
 void quick_sort_list2(ListNode* pBeign, ListNode* pEnd);
@@ -70,5 +72,7 @@ ListNode *get_intersection_node(struct ListNode *head1, struct ListNode *head2);
 // leetcode 106
 ListNode* reverse_list_r(ListNode* head);
 ListNode* reverse_list(ListNode* head);
+// leetcode 876
+ListNode* middle_node(ListNode* head);
 
 #endif
