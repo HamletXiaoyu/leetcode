@@ -253,6 +253,27 @@ char* mu_delete_duplicates()
     return 0;
 }
 
+char* mu_delete_duplicates2()
+{
+    vector<int> nums;
+    nums.push_back(-1);
+    nums.push_back(0);
+    nums.push_back(0);
+    nums.push_back(0);
+    nums.push_back(2);
+    nums.push_back(3);
+    nums.push_back(3);
+    nums.push_back(4);
+    nums.push_back(4);    
+    ListNode* head = init_list(nums);
+    ListNode* ret = delete_duplicates2(head);
+    mu_assert(NULL != ret, "");
+    mu_assert(-1 == ret->val, "");
+    mu_assert(2 == ret->next->val, "");
+    
+    return 0;
+}
+
 char* list_suits()
 {
     mu_run_test(mu_init_list);
@@ -267,6 +288,7 @@ char* list_suits()
     mu_run_test(mu_reverse_list_r);
     mu_run_test(mu_insertion_sort_list);
     mu_run_test(mu_delete_duplicates);
+    mu_run_test(mu_delete_duplicates2);
     
     return 0;
 }

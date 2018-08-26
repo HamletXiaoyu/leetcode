@@ -476,3 +476,37 @@ ListNode* delete_duplicates(struct ListNode* head)
     cur->next = NULL;
     return dummy->next;
 }
+
+ListNode* delete_duplicates2(ListNode* head)
+{
+    if (!head)
+        return NULL;
+    struct ListNode* dummy = new ListNode(-1);
+    dummy->next = head;
+    struct ListNode* cur = head;
+    struct ListNode* pre = dummy;
+    head = head->next;
+    int flag = 0;
+    while (head) {
+        if (cur->val != head->val) {
+            if (flag == 0) {
+                cur->next = head;
+                cur = cur->next;
+                head = head->next;
+                pre = pre->next;
+            } else {
+                pre->next = head;
+                cur = head;
+                head = head->next;
+                flag = 0;
+            }
+        } else {
+            head = head->next;
+            flag = 1;
+        }
+    }
+    cur->next = NULL;
+    if (flag == 1)
+        pre->next = NULL;
+    return dummy->next;
+}

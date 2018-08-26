@@ -80,5 +80,7 @@ ListNode* reverse_list(ListNode* head);
 ListNode* middle_node(ListNode* head);
 // leetcode 83
 ListNode* delete_duplicates(struct ListNode* head);
+// leetcode 82
+ListNode* delete_duplicates2(ListNode* head);
 
 #endif
