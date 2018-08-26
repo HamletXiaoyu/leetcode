@@ -54,6 +54,8 @@ ListNode* add_two_numbers(ListNode* l1, ListNode* l2);
 ListNode* add_two_numbers2(ListNode* l1, ListNode* l2);
 // leetcode 21
 ListNode* merge_two_sorted_lists(ListNode* l1, ListNode* l2);
+// leetcode 23
+ListNode *merge_k_lists(vector<ListNode *> &lists);
 // leetcode 19
 struct ListNode* remove_nth_from_end(struct ListNode* head, int n);
 // leetcode 25

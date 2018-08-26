@@ -440,3 +440,18 @@ ListNode* insertion_sort_list(ListNode* head)
     }
     return dummy->next;
 }
+
+ListNode *merge_k_lists(vector<ListNode *> &lists)
+{
+    if (lists.size() == 0)
+        return NULL;
+    int n = lists.size();
+    while (n > 1) {
+        int k = (n + 1) / 2;
+        for (int i = 0; i < n / 2; ++i) {
+            lists[i] = merge_two_sorted_lists(lists[i], lists[i + k]);
+        }
+        n = k;
+    }
+    return lists[0];
+}
