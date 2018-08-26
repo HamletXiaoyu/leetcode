@@ -455,3 +455,24 @@ ListNode *merge_k_lists(vector<ListNode *> &lists)
     }
     return lists[0];
 }
+
+ListNode* delete_duplicates(struct ListNode* head)
+{
+    if (!head)
+        return NULL;
+    struct ListNode* dummy = new ListNode(-1);
+    dummy->next = head;
+    struct ListNode* cur = head;
+    head = head->next;
+    while (head) {
+        if (cur->val != head->val) {
+            cur->next = head;
+            cur = cur->next;
+            head = head->next;
+        } else {
+            head = head->next;
+        }
+    }
+    cur->next = NULL;
+    return dummy->next;
+}
