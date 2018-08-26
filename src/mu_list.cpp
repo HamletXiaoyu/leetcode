@@ -118,7 +118,7 @@ char* mu_sort_list()
     nums.push_back(4);
     nums.push_back(3);
     ListNode* head = init_list(nums);
-    ListNode* ret = sort_list(head);
+    ListNode* ret = merge_sort_list(head);
     mu_assert(NULL != ret, "");
     mu_assert(2 == ret->val, "");
     mu_assert(3 == ret->next->val, "");
@@ -211,6 +211,24 @@ char* mu_reverse_list_r()
     return 0;
 }
 
+char* mu_insertion_sort_list()
+{
+    vector<int> nums;
+    nums.push_back(7);
+    nums.push_back(2);
+    nums.push_back(4);
+    nums.push_back(3);
+    ListNode* head = init_list(nums);
+    ListNode* ret = insertion_sort_list(head);
+    mu_assert(NULL != ret, "");
+    mu_assert(2 == ret->val, "");
+    mu_assert(3 == ret->next->val, "");
+    mu_assert(4 == ret->next->next->val, "");
+    mu_assert(7 == ret->next->next->next->val, "");
+
+    return 0;
+}
+
 char* list_suits()
 {
     mu_run_test(mu_init_list);
@@ -223,6 +241,7 @@ char* list_suits()
     mu_run_test(mu_middle_node);
     mu_run_test(mu_reverse_list);
     mu_run_test(mu_reverse_list_r);
+    mu_run_test(mu_insertion_sort_list);
     
     return 0;
 }

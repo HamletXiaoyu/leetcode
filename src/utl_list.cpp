@@ -242,7 +242,7 @@ ListNode* merge(ListNode* l1, ListNode* l2)
     return dummy->next;
 }
 
-ListNode* sort_list(ListNode* head)
+ListNode* merge_sort_list(ListNode* head)
 {
     if (!head || !head->next)
         return head;
@@ -253,7 +253,7 @@ ListNode* sort_list(ListNode* head)
         fast = fast->next->next;
     }
     pre->next = NULL;
-    return merge(sort_list(head), sort_list(slow));
+    return merge(merge_sort_list(head), merge_sort_list(slow));
 }
 
 ListNode* rotate_right(ListNode* head, int k)
@@ -423,4 +423,20 @@ ListNode* middle_node(ListNode* head)
         p2 = p2->next->next;
     }
     return p1;
+}
+
+ListNode* insertion_sort_list(ListNode* head)
+{
+    ListNode *dummy = new ListNode(-1), *cur = dummy;
+    while (head) {
+        ListNode *t = head->next;
+        cur = dummy;
+        while (cur->next && cur->next->val <= head->val) {
+            cur = cur->next;
+        }
+        head->next = cur->next;
+        cur->next = head;
+        head = t;
+    }
+    return dummy->next;
 }

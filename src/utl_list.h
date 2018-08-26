@@ -61,8 +61,10 @@ ListNode *reverse_kgroup(ListNode *head, int k);
 ListNode *reverse_one_group(ListNode *pre, ListNode *next);
 // leetcode 24
 ListNode* swap_pairs(ListNode* head);
+// leetcode 147
+ListNode* insertion_sort_list(ListNode* head);
 // leetcode 148
-ListNode* sort_list(ListNode* head);
+ListNode* merge_sort_list(ListNode* head);
 // leetcode 61
 ListNode* rotate_right(ListNode* head, int k);
 // leetcode 141
