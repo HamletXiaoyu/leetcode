@@ -73,9 +73,11 @@ ListNode* rotate_right(ListNode* head, int k);
 bool has_cycle(struct ListNode *head);
 // leetcode 160
 ListNode *get_intersection_node(struct ListNode *head1, struct ListNode *head2);
-// leetcode 106
+// leetcode 206
 ListNode* reverse_list_r(ListNode* head);
 ListNode* reverse_list(ListNode* head);
+// leetcode 92
+ListNode* reverse_between(ListNode* head, int m, int n);
 // leetcode 876
 ListNode* middle_node(ListNode* head);
 // leetcode 83
