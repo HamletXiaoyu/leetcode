@@ -82,5 +82,7 @@ ListNode* middle_node(ListNode* head);
 ListNode* delete_duplicates(struct ListNode* head);
 // leetcode 82
 ListNode* delete_duplicates2(ListNode* head);
+// leetcode 85
+ListNode* partition(ListNode* head, int x);
 
 #endif
