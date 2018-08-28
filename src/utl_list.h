@@ -88,5 +88,7 @@ ListNode* delete_duplicates2(ListNode* head);
 ListNode* partition(ListNode* head, int x);
 // leetcode 234
 bool is_palindrome(ListNode* head);
+// leetcode 328
+ListNode* odd_even_list(ListNode* head);
 
 #endif

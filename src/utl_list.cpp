@@ -579,3 +579,16 @@ bool is_palindrome(ListNode* head)
     }
     return true;
 }
+
+ListNode* odd_even_list(ListNode* head)
+{
+    if (!head || !head->next) 
+        return head;
+    ListNode *odd = head, *even = head->next, *even_head = even;
+    while (even && even->next) {
+        odd = odd->next = even->next;
+        even = even->next = odd->next;
+    }
+    odd->next = even_head;
+    return head;
+}
