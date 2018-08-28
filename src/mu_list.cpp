@@ -316,7 +316,7 @@ char* mu_odd_even_list()
     return 0;
 }
 
-char* list_suits()
+char* list_suites()
 {
     mu_run_test(mu_init_list);
     mu_run_test(mu_add_two_numbers);

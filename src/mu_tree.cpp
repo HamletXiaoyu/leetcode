@@ -461,7 +461,7 @@ char* mu_diameter_of_binarytree()
     return 0;
 }
 
-char* tree_suits()
+char* tree_suites()
 {
     mu_run_test(mu_init_tree);
     mu_run_test(mu_midorder_tree);

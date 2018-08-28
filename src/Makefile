@@ -9,13 +9,17 @@ CXXFLAGS += -c -w
 
 OBJS =  $(BUILDDIR)/mu_main.o \
 	$(BUILDDIR)/mu_tree.o \
-	$(BUILDDIR)/mu_list.o
+	$(BUILDDIR)/mu_list.o \
+	$(BUILDDIR)/mu_string.o
 
 LIB_OBJ = $(LIBDIR)/utl_tree.o \
-	  $(LIBDIR)/utl_list.o
+	  $(LIBDIR)/utl_list.o \
+	  $(LIBDIR)/utl_string.o
 
-LIBS  = $(LIBDIR)/libutltree.so \
-	$(LIBDIR)/libutllist.so
+#LIBS  = $(LIBDIR)/libutltree.so
+#	$(LIBDIR)/libutllist.so
+
+LIBS  = $(LIBDIR)/libutl.so
 
 DEPS = 
 MKDIR_P = mkdir -p
@@ -36,7 +40,7 @@ dir :
 
 
 $(BIN) : $(OBJS)
-	$(CXX) $(OBJS) -o $@ -Llib  -lutltree -lutllist
+	$(CXX) $(OBJS) -o $@ -Llib  -lutl
 
 $(BUILDDIR)/%.o : %.c
 	$(CXX)  $(CXXFLAGS) -o $@ $<

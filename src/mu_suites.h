@@ -22,7 +22,8 @@
 #ifndef _MU_SUITES_H_
 #define _MU_SUITES_H_
 
-char* tree_suits();
-char* list_suits();
+char* tree_suites();
+char* list_suites();
+char* string_suites();
 
 #endif /*_MU_SUITES_H_*/
