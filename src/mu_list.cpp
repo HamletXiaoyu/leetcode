@@ -274,6 +274,28 @@ char* mu_delete_duplicates2()
     return 0;
 }
 
+char* mu_is_palindrome()
+{
+    {//1->2
+        vector<int> nums;
+        nums.push_back(1);
+        nums.push_back(2);
+        ListNode* head = init_list(nums);
+        mu_assert(false == is_palindrome(head), "");
+    }
+    {//1->2->2->1
+        vector<int> nums;
+        nums.push_back(1);
+        nums.push_back(2);
+        nums.push_back(2);
+        nums.push_back(1);
+        ListNode* head = init_list(nums);
+        mu_assert(true == is_palindrome(head), "");
+    }
+
+    return 0;
+}
+
 char* list_suits()
 {
     mu_run_test(mu_init_list);
@@ -289,6 +311,7 @@ char* list_suits()
     mu_run_test(mu_insertion_sort_list);
     mu_run_test(mu_delete_duplicates);
     mu_run_test(mu_delete_duplicates2);
+    mu_run_test(mu_is_palindrome);
     
     return 0;
 }

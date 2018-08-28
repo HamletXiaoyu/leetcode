@@ -86,5 +86,7 @@ ListNode* delete_duplicates(struct ListNode* head);
 ListNode* delete_duplicates2(ListNode* head);
 // leetcode 85
 ListNode* partition(ListNode* head, int x);
+// leetcode 234
+bool is_palindrome(ListNode* head);
 
 #endif
