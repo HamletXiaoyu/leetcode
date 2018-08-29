@@ -23,5 +23,7 @@
 
 #include <string>
 
+// leetcode 6
+std::string z_convert(std::string& s, int rows);
 
 #endif

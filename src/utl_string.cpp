@@ -21,3 +21,21 @@
 
 #include "utl_string.h"
 
+using namespace std;
+
+string z_convert(string& s, int rows)
+{
+    if (rows <= 1)
+        return s;
+    string res = "";
+    int size = 2 * rows - 2;
+    for (int i = 0; i < rows; ++i) {
+        for (int j = i; j < s.size(); j += size) {
+            res += s[j];
+            int tmp = j + size - 2 * i;
+            if (i != 0 && i != rows - 1 && tmp < s.size())
+                res += s[tmp];
+        }
+    }
+    return res;
+}

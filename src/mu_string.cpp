@@ -23,8 +23,22 @@
 #include "mu_suites.h"
 #include "utl_string.h"
 
+using namespace std;
+
+char* mu_z_convert()
+{
+    string s = "PAYPALISHIRING";
+    string ret = z_convert(s, 3);
+    mu_assert(ret == "PAHNAPLSIIGYIR", "");
+    ret = z_convert(s, 4);
+    mu_assert(ret == "PINALSIGYAHRPI", "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
-
+    mu_run_test(mu_z_convert);
+    
     return 0;
 }
