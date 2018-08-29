@@ -47,10 +47,21 @@ char* mu_roman_to_int()
     return 0;
 }
 
+char* mu_int_to_roman()
+{
+    string s = int_to_roman(3);
+    mu_assert(s == "III", "");
+    s = int_to_roman(1994);
+    mu_assert(s == "MCMXCIV", "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
     mu_run_test(mu_roman_to_int);
+    mu_run_test(mu_int_to_roman);
     
     return 0;
 }

@@ -25,6 +25,9 @@
 
 // leetcode 6
 std::string z_convert(std::string& s, int rows);
+// leetcode 12
+std::string int_to_roman(int num);
 // leetcode 13
 int roman_to_int(std::string s);
+
 #endif

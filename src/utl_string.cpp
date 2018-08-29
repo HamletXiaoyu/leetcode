@@ -20,6 +20,7 @@
 // 
 
 #include "utl_string.h"
+#include <vector>
 
 using namespace std;
 
@@ -93,4 +94,14 @@ int roman_to_int(string s)
         }
     }
     return ret;
+}
+
+string int_to_roman(int num)
+{
+    string res = "";
+    string v1[] = {"", "M", "MM", "MMM"};
+    string v2[] = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
+    string v3[] = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+    string v4[] = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+    return v1[num / 1000] + v2[(num % 1000) / 100] + v3[(num % 100) / 10] + v4[num % 10];
 }
