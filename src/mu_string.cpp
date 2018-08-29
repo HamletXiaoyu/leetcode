@@ -36,9 +36,21 @@ char* mu_z_convert()
     return 0;
 }
 
+char* mu_roman_to_int()
+{
+    string s = "III";
+    int ret = roman_to_int(s);
+    mu_assert(3 == ret, "expect 3, but get %d", ret);
+    ret = roman_to_int("MCMXCIV");
+    mu_assert(1994 == ret, "expect 1994, but get %d", ret);
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
+    mu_run_test(mu_roman_to_int);
     
     return 0;
 }

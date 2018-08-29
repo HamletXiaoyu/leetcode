@@ -39,3 +39,58 @@ string z_convert(string& s, int rows)
     }
     return res;
 }
+
+int roman_to_int(string s)
+{
+    int ret = 0, i = 0;
+    int cnt = s.size();
+    while (i < cnt) {
+        if (s[i] == 'M') {
+            ret += 1000;
+            i += 1;
+        } else if ( s[i] == 'D') {
+            ret += 500;
+            i += 1;
+        } else if ( s[i] == 'C') {
+            if ( i != cnt -1 && s[i+1] == 'D') {
+                ret += 400;
+                i += 2;
+            } else if ( i != cnt -1 && s[i+1] == 'M') {
+                ret += 900;
+                i += 2;
+            } else {
+                ret += 100;
+                i += 1;
+            }
+        }else if (s[i] == 'L') {
+            ret += 50;
+            i += 1;
+        } else if ( s[i] == 'X') {
+            if ( i != cnt -1 && s[i+1] == 'L') {
+                ret += 40;
+                i += 2;
+            } else if ( i != cnt -1 && s[i+1] == 'C') {
+                ret += 90;
+                i += 2;
+            } else {
+                ret += 10;
+                i += 1;
+            }
+        } else if ( s[i] == 'V') {
+            ret += 5;
+            i += 1;
+        } else if ( s[i] == 'I') {
+            if ( i != cnt -1 && s[i+1] == 'V') {
+                ret += 4;
+                i += 2;
+            } else if ( i != cnt -1 && s[i+1] == 'X') {
+                ret += 9;
+                i += 2;
+            } else {
+                ret += 1;
+                i += 1;
+            }
+        }
+    }
+    return ret;
+}
