@@ -73,6 +73,16 @@ char* mu_multiply()
     return 0;
 }
 
+char* mu_add_strings()
+{
+    mu_assert(add_strings("2", "3") == "5", "");
+    mu_assert(add_strings("12", "12") == "24", "");
+    mu_assert(add_strings("15", "15") == "30", "");
+    mu_assert(add_strings("10", "90") == "100", "");
+    mu_assert(add_strings("0", "0") == "0", "");
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -80,6 +90,7 @@ char* string_suites()
     mu_run_test(mu_int_to_roman);
     mu_run_test(mu_length_of_lastword);
     mu_run_test(mu_multiply);
+    mu_run_test(mu_add_strings);
     
     return 0;
 }
