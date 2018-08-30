@@ -35,5 +35,7 @@ int length_of_lastword(std::string s);
 std::string multiply(std::string num1, std::string num2);
 // leetcode 415
 std::string add_strings(std::string num1, std::string num2);
+// leetcode 14
+std::string longest_common_prefix(std::vector<std::string>& strs);
 
 #endif

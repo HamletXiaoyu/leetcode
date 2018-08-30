@@ -22,6 +22,7 @@
 #include "minunit.h"
 #include "mu_suites.h"
 #include "utl_string.h"
+#include <vector>
 
 using namespace std;
 
@@ -83,6 +84,17 @@ char* mu_add_strings()
     return 0;
 }
 
+char* mu_longest_common_prefix()
+{
+    vector<string> strs;
+    strs.push_back("fly");
+    strs.push_back("flower");
+    strs.push_back("flow");
+    mu_assert(longest_common_prefix(strs) == "fl", "");
+
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -91,6 +103,7 @@ char* string_suites()
     mu_run_test(mu_length_of_lastword);
     mu_run_test(mu_multiply);
     mu_run_test(mu_add_strings);
-    
+    mu_run_test(mu_longest_common_prefix);
+
     return 0;
 }
