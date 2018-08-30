@@ -29,5 +29,7 @@ std::string z_convert(std::string& s, int rows);
 std::string int_to_roman(int num);
 // leetcode 13
 int roman_to_int(std::string s);
+// leetcode 58
+int length_of_lastword(std::string s);
 
 #endif

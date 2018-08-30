@@ -105,3 +105,15 @@ string int_to_roman(int num)
     string v4[] = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
     return v1[num / 1000] + v2[(num % 1000) / 100] + v3[(num % 100) / 10] + v4[num % 10];
 }
+
+int length_of_lastword(string s)
+{
+    int right = s.size() - 1, res = 0;
+    while (right >= 0 && s[right] == ' ')
+        --right;
+    while (right >= 0 && s[right] != ' ' ) {
+        --right; 
+        ++res;
+    }
+    return res;
+}

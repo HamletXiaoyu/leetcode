@@ -57,11 +57,20 @@ char* mu_int_to_roman()
     return 0;
 }
 
+char* mu_length_of_lastword()
+{
+    string s = "hello world  ";
+    mu_assert(length_of_lastword(s) == 5, "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
     mu_run_test(mu_roman_to_int);
     mu_run_test(mu_int_to_roman);
+    mu_run_test(mu_length_of_lastword);
     
     return 0;
 }
