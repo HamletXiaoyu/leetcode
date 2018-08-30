@@ -65,12 +65,21 @@ char* mu_length_of_lastword()
     return 0;
 }
 
+char* mu_multiply()
+{
+    mu_assert(multiply("2", "3") == "6", "");
+    mu_assert(multiply("12", "12") == "144", "");
+    mu_assert(multiply("15", "15") == "225", "");
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
     mu_run_test(mu_roman_to_int);
     mu_run_test(mu_int_to_roman);
     mu_run_test(mu_length_of_lastword);
+    mu_run_test(mu_multiply);
     
     return 0;
 }

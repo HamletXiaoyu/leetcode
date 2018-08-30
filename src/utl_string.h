@@ -31,5 +31,7 @@ std::string int_to_roman(int num);
 int roman_to_int(std::string s);
 // leetcode 58
 int length_of_lastword(std::string s);
+// leetcode 43
+std::string multiply(std::string num1, std::string num2);
 
 #endif
