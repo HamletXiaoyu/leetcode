@@ -174,3 +174,22 @@ string longest_common_prefix(vector<string>& strs)
     }
     return res;
 }
+
+bool judge_circle(string moves)
+{
+    int a[] = {0, 0};
+    for (int i = 0; i< moves.size(); ++i) {
+        if (moves[i] == 'L')
+            a[0] -= 1;
+        else if (moves[i] == 'R')
+            a[0] += 1;
+        else if (moves[i] == 'U')
+            a[1] += 1;
+        else if (moves[i] == 'D')
+            a[1] -= 1;
+    }
+    if (a[0] == 0 && a[1] == 0)
+        return true;
+    else
+        return false;
+}

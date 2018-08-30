@@ -37,5 +37,7 @@ std::string multiply(std::string num1, std::string num2);
 std::string add_strings(std::string num1, std::string num2);
 // leetcode 14
 std::string longest_common_prefix(std::vector<std::string>& strs);
+// leetcode 657
+bool judge_circle(std::string moves);
 
 #endif
