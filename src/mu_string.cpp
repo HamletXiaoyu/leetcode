@@ -103,6 +103,17 @@ char* mu_add_binary()
     return 0;
 }
 
+char* mu_restore_ips()
+{
+    string s = "25525511135";
+    std::vector<std::string> ret = restore_ips(s);
+    mu_assert(2 == ret.size(), "");
+    mu_assert("255.255.11.135" == ret[0], "");
+    mu_assert("255.255.111.35" == ret[1], "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -113,6 +124,7 @@ char* string_suites()
     mu_run_test(mu_add_strings);
     mu_run_test(mu_longest_common_prefix);
     mu_run_test(mu_add_binary);
+    mu_run_test(mu_restore_ips);
     
     return 0;
 }
