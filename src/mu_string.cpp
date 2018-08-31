@@ -122,6 +122,15 @@ char* mu_first_uniq_char()
     return 0;
 }
 
+char* mu_is_palindrome_str()
+{
+    string s = "A man, a plan, a canal: Panama";
+    mu_assert(true == is_palindrome_str(s), "");
+    mu_assert(false == is_palindrome_str("race a car"), "");
+
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -134,6 +143,7 @@ char* string_suites()
     mu_run_test(mu_add_binary);
     mu_run_test(mu_restore_ips);
     mu_run_test(mu_first_uniq_char);
+    mu_run_test(mu_is_palindrome_str);
     
     return 0;
 }

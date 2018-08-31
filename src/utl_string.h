@@ -45,5 +45,7 @@ std::string add_binary(std::string a, std::string b);
 std::vector<std::string> restore_ips(std::string s);
 // leetcode 387
 int first_uniq_char(std::string s);
+// leetcode 125
+bool is_palindrome_str(std::string s);
 
 #endif

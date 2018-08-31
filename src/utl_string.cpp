@@ -246,3 +246,44 @@ int first_uniq_char(string s)
     }
     return -1;
 }
+
+bool is_number(char c)
+{
+    if (c >= '0' && c <= '9')
+        return true;
+    else
+        return false;
+}
+
+bool is_letter(char c)
+{
+    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+        return true;
+    else
+        return false;
+}
+
+bool is_palindrome_str(string s)
+{
+    int i = 0, j = s.size() - 1;
+    while (i < j) {
+        if (!is_number(s[i]) && !is_letter(s[i])) {
+            i++;
+            continue;
+        }
+        if (!is_number(s[j]) && !is_letter(s[j])) {
+            j--;
+            continue;
+        }
+        if (s[i] == s[j] ||
+            s[i] - ('a' - 'A') == s[j] ||
+            s[i] + ('a' - 'A') == s[j]) {
+            i++;
+            j--;
+            continue;
+        } else {
+            return false;
+        }
+    }
+    return true;
+}
