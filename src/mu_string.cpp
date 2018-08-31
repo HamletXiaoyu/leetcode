@@ -95,6 +95,14 @@ char* mu_longest_common_prefix()
     return 0;
 }
 
+char* mu_add_binary()
+{
+    mu_assert(add_binary("1", "11") == "100", "");
+    mu_assert(add_binary("1010", "1011") == "10101", "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -104,6 +112,7 @@ char* string_suites()
     mu_run_test(mu_multiply);
     mu_run_test(mu_add_strings);
     mu_run_test(mu_longest_common_prefix);
-
+    mu_run_test(mu_add_binary);
+    
     return 0;
 }
