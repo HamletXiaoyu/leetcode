@@ -43,5 +43,7 @@ bool judge_circle(std::string moves);
 std::string add_binary(std::string a, std::string b);
 // leetcode 93
 std::vector<std::string> restore_ips(std::string s);
+// leetcode 387
+int first_uniq_char(std::string s);
 
 #endif

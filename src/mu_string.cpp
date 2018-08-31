@@ -114,6 +114,14 @@ char* mu_restore_ips()
     return 0;
 }
 
+char* mu_first_uniq_char()
+{
+    string s = "leetcode";
+    mu_assert(0 == first_uniq_char(s), "");
+
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -125,6 +133,7 @@ char* string_suites()
     mu_run_test(mu_longest_common_prefix);
     mu_run_test(mu_add_binary);
     mu_run_test(mu_restore_ips);
+    mu_run_test(mu_first_uniq_char);
     
     return 0;
 }

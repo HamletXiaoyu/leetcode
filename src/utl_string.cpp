@@ -233,3 +233,16 @@ vector<string> restore_ips(string s)
     return res;
 }
 
+int first_uniq_char(string s)
+{
+    vector<int> m(26, 0);
+    // int a[26] = {0};
+    for (int i = 0; i < s.size(); ++i)
+        m[s[i] - 'a']++;
+            
+    for (int i = 0; i < s.size(); ++i) {
+        if (m[s[i] - 'a'] == 1) 
+            return i;
+    }
+    return -1;
+}
