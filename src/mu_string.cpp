@@ -159,6 +159,15 @@ char* mu_compress()
     return 0;
 }
 
+char* mu_compare_version()
+{
+    mu_assert(compare_version("1.0", "1.0.1") == -1, "");
+    mu_assert(compare_version("1.0.7.5.2.4", "1.0.7.5.1") == 1, "");
+    mu_assert(compare_version("1.0.7", "1.0.7") == 0, "");
+
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -174,6 +183,7 @@ char* string_suites()
     mu_run_test(mu_is_palindrome_str);
     mu_run_test(mu_count_segments);
     mu_run_test(mu_compress);
+    mu_run_test(mu_compare_version);
     
     return 0;
 }
