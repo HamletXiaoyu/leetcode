@@ -49,5 +49,7 @@ int first_uniq_char(std::string s);
 bool is_palindrome_str(std::string s);
 // leetcode 434
 int count_segments(std::string s);
+// leetcode 443
+int compress(std::vector<char>& chars);
 
 #endif

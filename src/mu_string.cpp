@@ -140,6 +140,25 @@ char* mu_count_segments()
     return 0;
 }
 
+char* mu_compress()
+{
+    vector<char> chars;
+    chars.push_back('a');
+    chars.push_back('a');
+    chars.push_back('a');
+    chars.push_back('b');
+    chars.push_back('b');
+    chars.push_back('b');
+    chars.push_back('b');
+    mu_assert(compress(chars) == 4, "");
+    mu_assert(chars[0] == 'a', "");
+    mu_assert(chars[1] == '3', "");
+    mu_assert(chars[2] == 'b', "");
+    mu_assert(chars[3] == '4', "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -154,6 +173,7 @@ char* string_suites()
     mu_run_test(mu_first_uniq_char);
     mu_run_test(mu_is_palindrome_str);
     mu_run_test(mu_count_segments);
+    mu_run_test(mu_compress);
     
     return 0;
 }
