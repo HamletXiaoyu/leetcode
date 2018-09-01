@@ -131,6 +131,15 @@ char* mu_is_palindrome_str()
     return 0;
 }
 
+char* mu_count_segments()
+{
+    mu_assert(count_segments("hello, my name is hamlet") == 5, "");
+    mu_assert(count_segments("       ") == 0, "");
+    mu_assert(count_segments("  , , , , ,    aiyoubucuo ") == 6, "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -144,6 +153,7 @@ char* string_suites()
     mu_run_test(mu_restore_ips);
     mu_run_test(mu_first_uniq_char);
     mu_run_test(mu_is_palindrome_str);
+    mu_run_test(mu_count_segments);
     
     return 0;
 }

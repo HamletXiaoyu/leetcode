@@ -47,5 +47,7 @@ std::vector<std::string> restore_ips(std::string s);
 int first_uniq_char(std::string s);
 // leetcode 125
 bool is_palindrome_str(std::string s);
+// leetcode 434
+int count_segments(std::string s);
 
 #endif
