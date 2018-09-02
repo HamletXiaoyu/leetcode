@@ -53,5 +53,7 @@ int count_segments(std::string s);
 int compress(std::vector<char>& chars);
 // leetcode 165
 int compare_version(std::string version1, std::string version2);
+// leetcode 345
+std::string reverse_vowels(std::string s);
 
 #endif

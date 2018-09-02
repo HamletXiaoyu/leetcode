@@ -343,3 +343,26 @@ int compare_version(string version1, string version2)
     }
     return 0;
 }
+
+bool is_vowel(char c)
+{
+    return (c == 'a' || c == 'e' || c == 'i' ||
+            c == 'o' || c == 'u' ||
+            c == 'A' || c == 'E' ||
+            c == 'I' || c == 'O' || c == 'U');
+}
+
+string reverse_vowels(string s)
+{
+    int left = 0, right= s.size() - 1;
+    while (left < right) {
+        if (is_vowel(s[left]) && is_vowel(s[right])) {
+            swap(s[left++], s[right--]);
+        } else if (is_vowel(s[left])) {
+            --right;
+        } else {
+            ++left;
+        }
+    }
+    return s;
+}

@@ -168,6 +168,14 @@ char* mu_compare_version()
     return 0;
 }
 
+char* mu_reverse_vowels()
+{
+    mu_assert(reverse_vowels("hello") == "holle", "");
+    mu_assert(reverse_vowels("leetcode") == "leotcede", "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -184,6 +192,7 @@ char* string_suites()
     mu_run_test(mu_count_segments);
     mu_run_test(mu_compress);
     mu_run_test(mu_compare_version);
+    mu_run_test(mu_reverse_vowels);
     
     return 0;
 }
