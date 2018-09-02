@@ -57,5 +57,7 @@ int compare_version(std::string version1, std::string version2);
 std::string reverse_vowels(std::string s);
 // leetcode 383
 bool can_construct(std::string ransom_note, std::string magazine);
+// leetcode 520
+bool detect_capitaluse(std::string word);
 
 #endif

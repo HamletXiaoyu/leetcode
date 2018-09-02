@@ -184,6 +184,15 @@ char* mu_can_construct()
     return 0;
 }
 
+char* mu_detect_capitaluse()
+{
+    mu_assert(detect_capitaluse("China") == true, "");
+    mu_assert(detect_capitaluse("USA") == true, "");
+    mu_assert(detect_capitaluse("GooglE") == false, "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -202,6 +211,7 @@ char* string_suites()
     mu_run_test(mu_compare_version);
     mu_run_test(mu_reverse_vowels);
     mu_run_test(mu_can_construct);
+    mu_run_test(mu_detect_capitaluse);
     
     return 0;
 }

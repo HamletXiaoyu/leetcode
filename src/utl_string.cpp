@@ -380,3 +380,12 @@ bool can_construct(string ransom_note, string magazine)
     }
     return true;
 }
+
+bool detect_capitaluse(string word)
+{
+    int cnt = 0, n = word.size();
+    for (int i = 0; i < n; ++i) {
+        if (word[i] <= 'Z') ++cnt;
+    }
+    return cnt == 0 || cnt == n || (cnt == 1 && word[0] <= 'Z');
+}
