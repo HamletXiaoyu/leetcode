@@ -176,6 +176,14 @@ char* mu_reverse_vowels()
     return 0;
 }
 
+char* mu_can_construct()
+{
+    mu_assert(false == can_construct("aa", "ab"), "");
+    mu_assert(true == can_construct("aa", "aab"), "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -193,6 +201,7 @@ char* string_suites()
     mu_run_test(mu_compress);
     mu_run_test(mu_compare_version);
     mu_run_test(mu_reverse_vowels);
+    mu_run_test(mu_can_construct);
     
     return 0;
 }

@@ -55,5 +55,7 @@ int compress(std::vector<char>& chars);
 int compare_version(std::string version1, std::string version2);
 // leetcode 345
 std::string reverse_vowels(std::string s);
+// leetcode 383
+bool can_construct(std::string ransom_note, std::string magazine);
 
 #endif

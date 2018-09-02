@@ -21,6 +21,7 @@
 
 #include "utl_string.h"
 #include <vector>
+#include <map>
 
 using namespace std;
 
@@ -365,4 +366,17 @@ string reverse_vowels(string s)
         }
     }
     return s;
+}
+
+bool can_construct(string ransom_note, string magazine)
+{
+    map<char, int> dict;
+    for (int i = 0; i < magazine.size(); ++i) {
+        dict[magazine[i]] += 1;
+    }
+    for (int i = 0; i < ransom_note.size(); ++i) {
+        if (--dict[ransom_note[i]] < 0)
+            return false;
+    }
+    return true;
 }
