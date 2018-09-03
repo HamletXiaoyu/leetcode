@@ -215,6 +215,14 @@ char* mu_check_record()
     return 0;
 }
 
+char* mu_reverse_words()
+{
+    mu_assert("s'teL ekat edoCteeL tsetnoc" ==
+              reverse_words("Let's take LeetCode contest"), "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -237,6 +245,7 @@ char* string_suites()
     mu_run_test(mu_reverse_str);
     mu_run_test(mu_find_lus_length);
     mu_run_test(mu_check_record);
+    mu_run_test(mu_reverse_words);
     
     return 0;
 }

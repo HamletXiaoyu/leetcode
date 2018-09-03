@@ -65,5 +65,7 @@ std::string reverse_str(std::string s, int k);
 int find_lus_length(std::string a, std::string b);
 // leetcode 551
 bool check_record(std::string s);
+// leetcode 557
+std::string reverse_words(std::string s);
 
 #endif
