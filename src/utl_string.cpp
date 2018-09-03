@@ -397,3 +397,8 @@ string reverse_str(string s, int k)
     }
     return s;
 }
+
+int find_lus_length(string a, string b)
+{
+    return a == b ? -1 : max(a.size(), b.size());
+}

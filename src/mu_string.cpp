@@ -200,6 +200,13 @@ char* mu_reverse_str()
     return 0;
 }
 
+char* mu_find_lus_length()
+{
+    mu_assert(3 == find_lus_length("abc", "adc"), "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -220,6 +227,7 @@ char* string_suites()
     mu_run_test(mu_can_construct);
     mu_run_test(mu_detect_capitaluse);
     mu_run_test(mu_reverse_str);
+    mu_run_test(mu_find_lus_length);
     
     return 0;
 }

@@ -61,5 +61,7 @@ bool can_construct(std::string ransom_note, std::string magazine);
 bool detect_capitaluse(std::string word);
 // leetcode 541
 std::string reverse_str(std::string s, int k);
+// leetcode 521
+int find_lus_length(std::string a, std::string b);
 
 #endif
