@@ -193,6 +193,13 @@ char* mu_detect_capitaluse()
     return 0;
 }
 
+char* mu_reverse_str()
+{
+    mu_assert("bacdfeg" == reverse_str("abcdefg", 2), "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -212,6 +219,7 @@ char* string_suites()
     mu_run_test(mu_reverse_vowels);
     mu_run_test(mu_can_construct);
     mu_run_test(mu_detect_capitaluse);
+    mu_run_test(mu_reverse_str);
     
     return 0;
 }

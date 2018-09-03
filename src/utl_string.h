@@ -59,5 +59,7 @@ std::string reverse_vowels(std::string s);
 bool can_construct(std::string ransom_note, std::string magazine);
 // leetcode 520
 bool detect_capitaluse(std::string word);
+// leetcode 541
+std::string reverse_str(std::string s, int k);
 
 #endif

@@ -389,3 +389,11 @@ bool detect_capitaluse(string word)
     }
     return cnt == 0 || cnt == n || (cnt == 1 && word[0] <= 'Z');
 }
+
+string reverse_str(string s, int k)
+{
+    for (int i = 0; i < s.size(); i += 2 * k) {
+        reverse(s.begin() + i, min(s.begin() + i + k, s.end()));
+    }
+    return s;
+}
