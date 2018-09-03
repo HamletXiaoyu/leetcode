@@ -63,5 +63,7 @@ bool detect_capitaluse(std::string word);
 std::string reverse_str(std::string s, int k);
 // leetcode 521
 int find_lus_length(std::string a, std::string b);
+// leetcode 551
+bool check_record(std::string s);
 
 #endif

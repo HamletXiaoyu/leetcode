@@ -207,6 +207,14 @@ char* mu_find_lus_length()
     return 0;
 }
 
+char* mu_check_record()
+{
+    mu_assert(true == check_record("PPALLP"), "");
+    mu_assert(false == check_record("PPALLPLLL"), "");
+
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -228,6 +236,7 @@ char* string_suites()
     mu_run_test(mu_detect_capitaluse);
     mu_run_test(mu_reverse_str);
     mu_run_test(mu_find_lus_length);
+    mu_run_test(mu_check_record);
     
     return 0;
 }
