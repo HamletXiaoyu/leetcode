@@ -453,3 +453,33 @@ void reverse_words1(string &s)
     }
     s.resize(storeIndex);
 }
+
+string convert_hundred(int num)
+{
+    string v1[] = {"", "One", "Two", "Three", "Four",
+                         "Five", "Six", "Seven", "Eight",
+                         "Nine", "Ten", "Eleven", "Twelve",
+                         "Thirteen", "Fourteen", "Fifteen", "Sixteen",
+                         "Seventeen", "Eighteen", "Nineteen"};
+    string v2[] = {"", "", "Twenty", "Thirty", "Forty", "Fifty",
+                         "Sixty", "Seventy", "Eighty", "Ninety"};
+    string res;
+    int a = num / 100, b = num % 100, c = num % 10;
+    res = b < 20 ? v1[b] : v2[b / 10] + (c ? " " + v1[c] : "");
+    if (a > 0) res = v1[a] + " Hundred" + (b ? " " + res : "");
+    return res;
+}
+
+string number_to_words(int num)
+{
+    string res = convert_hundred(num % 1000);
+    string v[] = {"Thousand", "Million", "Billion"};
+    for (int i = 0; i < 3; ++i) {
+        num /= 1000;
+        res = num % 1000 ? convert_hundred(num % 1000) + " " + v[i] + " " + res : res;
+    }
+    while (res.back() == ' ')
+        res.pop_back();
+    return res.empty() ? "Zero" : res;
+}
+

@@ -69,5 +69,7 @@ bool check_record(std::string s);
 std::string reverse_words(std::string s);
 // leetcode 151
 void reverse_words1(std::string &s);
+// leetcode 273
+std::string number_to_words(int num);
 
 #endif

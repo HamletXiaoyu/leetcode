@@ -231,6 +231,15 @@ char* mu_reverse_words1()
     return 0;
 }
 
+char* mu_number_to_words()
+{
+    mu_assert("One Hundred Twenty Three" == number_to_words(123), "");
+    mu_assert("One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven"
+              == number_to_words(1234567), "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -255,6 +264,7 @@ char* string_suites()
     mu_run_test(mu_check_record);
     mu_run_test(mu_reverse_words);
     mu_run_test(mu_reverse_words1);
+    mu_run_test(mu_number_to_words);
     
     return 0;
 }
