@@ -73,5 +73,7 @@ void reverse_words1(std::string &s);
 std::string number_to_words(int num);
 // leetcode 709
 std::string to_lower_case(std::string str);
+// leetcode 788
+int rotated_digits(int N);
 
 #endif

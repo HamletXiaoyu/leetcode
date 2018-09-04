@@ -247,6 +247,13 @@ char* mu_to_lower_case()
     return 0;
 }
 
+char* mu_rotated_digits()
+{
+    mu_assert(4 == rotated_digits(10), "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -273,6 +280,7 @@ char* string_suites()
     mu_run_test(mu_reverse_words1);
     mu_run_test(mu_number_to_words);
     mu_run_test(mu_to_lower_case);
+    mu_run_test(mu_rotated_digits);
     
     return 0;
 }
