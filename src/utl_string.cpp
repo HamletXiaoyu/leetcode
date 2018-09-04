@@ -483,3 +483,15 @@ string number_to_words(int num)
     return res.empty() ? "Zero" : res;
 }
 
+string to_lower_case(string str)
+{
+    string ret;
+    for (int i = 0; i < str.size(); ++i) {
+        if (str[i] >= 'A' && str[i] <= 'Z') {
+            ret.push_back(str[i] + 'a' - 'A');
+        } else {
+            ret.push_back(str[i]);
+        }
+    }
+    return ret;
+}

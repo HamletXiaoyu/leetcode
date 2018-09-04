@@ -240,6 +240,13 @@ char* mu_number_to_words()
     return 0;
 }
 
+char* mu_to_lower_case()
+{
+    mu_assert("hello" == to_lower_case("HeLLO"), "");
+
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -265,6 +272,7 @@ char* string_suites()
     mu_run_test(mu_reverse_words);
     mu_run_test(mu_reverse_words1);
     mu_run_test(mu_number_to_words);
+    mu_run_test(mu_to_lower_case);
     
     return 0;
 }
