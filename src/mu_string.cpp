@@ -223,6 +223,14 @@ char* mu_reverse_words()
     return 0;
 }
 
+char* mu_reverse_words1()
+{
+    string s = "the sky is blue";
+    reverse_words1(s);
+    mu_assert(s == "blue is sky the", "");
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -246,6 +254,7 @@ char* string_suites()
     mu_run_test(mu_find_lus_length);
     mu_run_test(mu_check_record);
     mu_run_test(mu_reverse_words);
+    mu_run_test(mu_reverse_words1);
     
     return 0;
 }
