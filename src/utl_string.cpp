@@ -563,3 +563,18 @@ bool is_number(string s)
     }
     return num && numAfterE;
 }
+
+bool repeated_substring_pattern(string str)
+{
+    int i = 1, j = 0, n = str.size();
+    vector<int> dp(n + 1, 0);
+    while (i < n) {
+        if (str[i] == str[j])
+            dp[++i] = ++j;
+        else if (j == 0)
+            ++i;
+        else
+            j = dp[j];
+    }
+    return dp[n] && (dp[n] % (n - dp[n]) == 0);
+}

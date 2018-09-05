@@ -79,5 +79,7 @@ int rotated_digits(int N);
 std::string optimal_division(std::vector<int>& nums);
 // leetcode 65
 bool is_number(std::string s);
+// leetcode 459
+bool repeated_substring_pattern(std::string str);
 
 #endif

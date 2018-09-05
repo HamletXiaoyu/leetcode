@@ -280,6 +280,16 @@ char* mu_is_number()
     return 0;
 }
 
+char* mu_repeated_substring_pattern()
+{
+    mu_assert(true == repeated_substring_pattern("abab"), "");
+    mu_assert(true == repeated_substring_pattern("abcabc"), "");
+    mu_assert(false == repeated_substring_pattern("abc"), "");
+    mu_assert(false == repeated_substring_pattern("aba"), "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -309,6 +319,7 @@ char* string_suites()
     mu_run_test(mu_rotated_digits);
     mu_run_test(mu_optimal_division);
     mu_run_test(mu_is_number);
+    mu_run_test(mu_repeated_substring_pattern);
     
     return 0;
 }
