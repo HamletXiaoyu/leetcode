@@ -77,5 +77,7 @@ std::string to_lower_case(std::string str);
 int rotated_digits(int N);
 // leetcode 553
 std::string optimal_division(std::vector<int>& nums);
+// leetcode 65
+bool is_number(std::string s);
 
 #endif

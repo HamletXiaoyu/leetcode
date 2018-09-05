@@ -266,6 +266,20 @@ char* mu_optimal_division()
     return 0;
 }
 
+char* mu_is_number()
+{
+    mu_assert(true == is_number("0"), "");
+    mu_assert(true == is_number("0.1"), "");
+    mu_assert(true == is_number("2e10"), "");
+    mu_assert(false == is_number("abc"), "");
+    mu_assert(false == is_number("e9"), "");
+    mu_assert(false == is_number("3.e"), "");
+    mu_assert(true == is_number("3.e9"), "");
+    mu_assert(true == is_number(" 32.34506"), "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -294,6 +308,7 @@ char* string_suites()
     mu_run_test(mu_to_lower_case);
     mu_run_test(mu_rotated_digits);
     mu_run_test(mu_optimal_division);
+    mu_run_test(mu_is_number);
     
     return 0;
 }
