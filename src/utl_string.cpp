@@ -578,3 +578,33 @@ bool repeated_substring_pattern(string str)
     }
     return dp[n] && (dp[n] % (n - dp[n]) == 0);
 }
+
+bool buddy_strings(string a, string b)
+{
+    if (a.size() != b.size())
+        return false;
+    int cnt = 0;
+    string da, db;
+    for (int i=0; i<a.size(); ++i) {
+        if (a[i] == b[i]) {
+            continue;
+        } else {
+            cnt += 1;
+            if (cnt > 2)
+                return false;
+            da.push_back(a[i]);
+            db.push_back(b[i]);
+        }
+    }
+    if (cnt == 2) {
+        if (da[0] == db[1] && da[1] == db[0])
+            return true;
+    }     
+    if (cnt == 0) {
+        for (int i = 1; i<a.size(); ++i){
+            if (a[i] == a[0])
+                return true;
+        }
+    }
+    return false;            
+}

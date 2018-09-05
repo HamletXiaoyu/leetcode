@@ -290,6 +290,16 @@ char* mu_repeated_substring_pattern()
     return 0;
 }
 
+char* mu_buddy_strings()
+{
+    mu_assert(true == buddy_strings("aa", "aa"), "");
+    mu_assert(false == buddy_strings("ba", "ba"), "");
+    mu_assert(true == buddy_strings("aaaaabc", "aaaaacb"), "");
+    mu_assert(false == buddy_strings("aaaadbc", "aaaaacb"), "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -320,6 +330,7 @@ char* string_suites()
     mu_run_test(mu_optimal_division);
     mu_run_test(mu_is_number);
     mu_run_test(mu_repeated_substring_pattern);
+    mu_run_test(mu_buddy_strings);
     
     return 0;
 }

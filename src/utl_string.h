@@ -81,5 +81,7 @@ std::string optimal_division(std::vector<int>& nums);
 bool is_number(std::string s);
 // leetcode 459
 bool repeated_substring_pattern(std::string str);
+// leetcode 859
+bool buddy_strings(std::string a, std::string b);
 
 #endif
