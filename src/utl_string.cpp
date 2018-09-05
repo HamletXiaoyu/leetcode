@@ -518,3 +518,19 @@ int rotated_digits(int N)
     }
     return res;
 }
+
+string optimal_division(vector<int>& nums)
+{
+    string res = "";
+    int n = nums.size();
+    for (int i = 0; i < n; ++i) {
+        if (i > 0)
+            res += "/";
+        if (i == 1 && n > 2)
+            res += "(";
+        res += to_string(nums[i]);
+        if (i == n - 1 && n > 2)
+            res += ")";
+    }
+    return res;
+}

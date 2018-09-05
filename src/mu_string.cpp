@@ -254,6 +254,18 @@ char* mu_rotated_digits()
     return 0;
 }
 
+char* mu_optimal_division()
+{
+    vector<int> nums;
+    nums.push_back(1000);
+    nums.push_back(100);
+    nums.push_back(10);
+    nums.push_back(2);
+    mu_assert("1000/(100/10/2)" == optimal_division(nums), "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -281,6 +293,7 @@ char* string_suites()
     mu_run_test(mu_number_to_words);
     mu_run_test(mu_to_lower_case);
     mu_run_test(mu_rotated_digits);
+    mu_run_test(mu_optimal_division);
     
     return 0;
 }
