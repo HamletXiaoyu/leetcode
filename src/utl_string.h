@@ -83,5 +83,7 @@ bool is_number(std::string s);
 bool repeated_substring_pattern(std::string str);
 // leetcode 859
 bool buddy_strings(std::string a, std::string b);
+// leetcode 767
+std::string reorganize_string(std::string S);
 
 #endif
