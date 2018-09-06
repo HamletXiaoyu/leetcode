@@ -649,3 +649,28 @@ vector<string> letter_combinations(string digits)
     }
     return res;
 }
+
+string simplify_path(string path)
+{
+    vector<string> v;
+    char *cstr = new char[path.length() + 1];
+    strcpy(cstr, path.c_str());
+    char *pch = strtok(cstr, "/");
+    while (pch != NULL) {
+        string p = string(pch);
+        if (p == "..") {
+            if (!v.empty())
+                v.pop_back();
+        } else if (p != ".") {
+            v.push_back(p);
+        }
+        pch = strtok(NULL, "/");
+    }
+    if (v.empty())
+        return "/";
+    string res;
+    for (int i = 0; i < v.size(); ++i) {
+        res += '/' + v[i];
+    }
+    return res;
+}

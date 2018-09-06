@@ -87,5 +87,7 @@ bool buddy_strings(std::string a, std::string b);
 std::string reorganize_string(std::string S);
 // leetcode 17
 std::vector<std::string> letter_combinations(std::string digits);
+// leetcode 71
+std::string simplify_path(std::string path);
 
 #endif

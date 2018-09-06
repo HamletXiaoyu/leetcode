@@ -317,6 +317,14 @@ char* mu_letter_combinations()
     return 0;
 }
 
+char* mu_simplify_path()
+{
+    mu_assert("/home" == simplify_path("/home/"), "");
+    mu_assert("/home/a" == simplify_path("/home/a/b/./../"), "");
+    mu_assert("/" == simplify_path("//a//./../"), "");
+    
+    return 0;
+}
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -349,6 +357,7 @@ char* string_suites()
     mu_run_test(mu_repeated_substring_pattern);
     mu_run_test(mu_buddy_strings);
     mu_run_test(mu_letter_combinations);
+    mu_run_test(mu_simplify_path);
     
     return 0;
 }
