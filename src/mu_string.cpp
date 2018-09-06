@@ -300,6 +300,23 @@ char* mu_buddy_strings()
     return 0;
 }
 
+char* mu_letter_combinations()
+{
+    vector<std::string> ret = letter_combinations("23");
+    mu_assert(9 == ret.size(), "");
+    mu_assert("ad" == ret[0], "");
+    mu_assert("ae" == ret[1], "");
+    mu_assert("af" == ret[2], "");
+    mu_assert("bd" == ret[3], "");
+    mu_assert("be" == ret[4], "");
+    mu_assert("bf" == ret[5], "");
+    mu_assert("cd" == ret[6], "");
+    mu_assert("ce" == ret[7], "");
+    mu_assert("cf" == ret[8], "");
+
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -331,6 +348,7 @@ char* string_suites()
     mu_run_test(mu_is_number);
     mu_run_test(mu_repeated_substring_pattern);
     mu_run_test(mu_buddy_strings);
+    mu_run_test(mu_letter_combinations);
     
     return 0;
 }

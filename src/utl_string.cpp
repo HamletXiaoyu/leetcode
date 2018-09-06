@@ -628,3 +628,24 @@ string reorganize_string(string S)
     }
     return S;
 }
+
+vector<string> letter_combinations(string digits)
+{
+    vector<string> res;
+    if (digits.empty())
+        return res;
+    string dict[] = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    res.push_back("");
+    for (int i = 0; i < digits.size(); ++i) {
+        int n = res.size();
+        string str = dict[digits[i] - '2'];
+        for (int j = 0; j < n; ++j) {
+            string tmp = res.front();
+            res.erase(res.begin());
+            for (int k = 0; k < str.size(); ++k) {
+                res.push_back(tmp + str[k]);
+            }
+        }
+    }
+    return res;
+}

@@ -85,5 +85,7 @@ bool repeated_substring_pattern(std::string str);
 bool buddy_strings(std::string a, std::string b);
 // leetcode 767
 std::string reorganize_string(std::string S);
+// leetcode 17
+std::vector<std::string> letter_combinations(std::string digits);
 
 #endif
