@@ -25,5 +25,6 @@
 char* tree_suites();
 char* list_suites();
 char* string_suites();
+char* algorithm_suites();
 
 #endif /*_MU_SUITES_H_*/

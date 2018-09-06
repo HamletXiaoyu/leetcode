@@ -1,10 +1,9 @@
-/* mu_main.c --- 
- * Filename: mu_main.c
- * Author: Hamlet zheng
- * Created: Sun Apr  8 22:10:45 2018 (+0800)
+/* utl_algorithm.h --- 
+ * Filename: utl_algorithm.h
+ * Created: Thu Sep  6 21:53:44 2018 (+0800)
  */
 
-/* Copyright zhengdf.
+/* Copyright Hamlet zheng.
  * 
  * 允许免费使用，拷贝，修改，发布，但在所有的拷贝上必须保留上述
  * copyright部分和本使用声明部分，除非显示声明，copyright的持有者
@@ -19,25 +18,12 @@
  * OF THIS SOFTWARE.
  */
 
+#ifndef UTL_ALGORITHM_H_
+#define UTL_ALGORITHM_H_
 
-#include "minunit.h"
-#include "mu_suites.h"
-#include <stdio.h>
+#include <vector>
 
-int tests_number; 
-int failed_number;
-int suites_number;
-char error_msg[256];
+// leetcode 136
+int single_number(std::vector<int>& nums);
 
-int main( void )
-{
-    mu_run_suite(tree_suites);
-    mu_run_suite(list_suites);
-    mu_run_suite(string_suites);
-    mu_run_suite(algorithm_suites);
-    if(0==failed_number)
-        printf ( "total run %d suites, %d test, ALL PASSED\n", suites_number, tests_number );
-    else
-        printf ( "total run %d suites, %d test, %d failed\n", suites_number, tests_number, failed_number );
-    return 0;
-}
+#endif 

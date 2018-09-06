@@ -10,11 +10,13 @@ CXXFLAGS += -c -w
 OBJS =  $(BUILDDIR)/mu_main.o \
 	$(BUILDDIR)/mu_tree.o \
 	$(BUILDDIR)/mu_list.o \
-	$(BUILDDIR)/mu_string.o
+	$(BUILDDIR)/mu_string.o \
+	$(BUILDDIR)/mu_algorithm.o
 
 LIB_OBJ = $(LIBDIR)/utl_tree.o \
 	  $(LIBDIR)/utl_list.o \
-	  $(LIBDIR)/utl_string.o
+	  $(LIBDIR)/utl_string.o \
+	  $(LIBDIR)/utl_algorithm.o
 
 #LIBS  = $(LIBDIR)/libutltree.so
 #	$(LIBDIR)/libutllist.so
