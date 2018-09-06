@@ -40,9 +40,26 @@ char* mu_single_number()
     return 0;
 }
 
+char* mu_single_number2()
+{
+    vector<int> nums;
+    nums.push_back(1);
+    nums.push_back(1);
+    nums.push_back(1);
+    nums.push_back(2);
+    mu_assert(2 == single_number2(nums), "");
+    nums.push_back(2);
+    nums.push_back(2);
+    nums.push_back(3);
+    mu_assert(3 == single_number2(nums), "");
+
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
+    mu_run_test(mu_single_number2);
 
     return 0;
 }

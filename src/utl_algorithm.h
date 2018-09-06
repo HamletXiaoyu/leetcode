@@ -25,5 +25,7 @@
 
 // leetcode 136
 int single_number(std::vector<int>& nums);
+// leetcode 137
+int single_number2(std::vector<int>& nums);
 
 #endif 
