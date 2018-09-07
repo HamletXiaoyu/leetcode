@@ -44,3 +44,8 @@ int single_number2(vector<int>& nums)
     }
     return res;
 }
+
+bool is_power_of_two(int n)
+{
+    return (n > 0) && ((n & (n-1)) == 0);
+}

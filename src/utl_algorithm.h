@@ -27,5 +27,7 @@
 int single_number(std::vector<int>& nums);
 // leetcode 137
 int single_number2(std::vector<int>& nums);
+// leetcode 231
+bool is_power_of_two(int n);
 
 #endif 

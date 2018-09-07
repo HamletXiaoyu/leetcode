@@ -56,10 +56,20 @@ char* mu_single_number2()
     return 0;
 }
 
+char* mu_is_power_of_two()
+{
+    mu_assert(true == is_power_of_two(1), "");
+    mu_assert(true == is_power_of_two(16), "");
+    mu_assert(false == is_power_of_two(100), "");
+    
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
     mu_run_test(mu_single_number2);
-
+    mu_run_test(mu_is_power_of_two);
+    
     return 0;
 }
