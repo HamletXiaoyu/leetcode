@@ -23,6 +23,7 @@
 #include "mu_suites.h"
 #include "utl_algorithm.h"
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -113,6 +114,13 @@ char* mu_count_bits()
     return 0;
 }
 
+char* mu_to_hex()
+{
+    mu_assert("1a" == to_hex(26), "");
+
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
@@ -122,6 +130,7 @@ char* algorithm_suites()
     mu_run_test(mu_is_power_of_three);
     mu_run_test(mu_count_one);
     mu_run_test(mu_count_bits);
+    mu_run_test(mu_to_hex);
 
     return 0;
 }

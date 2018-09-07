@@ -38,5 +38,7 @@ std::vector<int> count_bits(int num);
 // leetcode 191
 int count_one(int num); //hamming weight
 int count_one2(int num);
+// leetcode 405
+std::string to_hex(int num);
 
 #endif 
