@@ -31,5 +31,7 @@ int single_number2(std::vector<int>& nums);
 bool is_power_of_two(int n);
 // leetcode 342
 bool is_power_of_four(int num);
+// leetcode 326
+bool is_power_of_three(int n);
 
 #endif 

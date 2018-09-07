@@ -76,12 +76,24 @@ char* mu_is_power_of_four()
     return 0;
 }
 
+char* mu_is_power_of_three()
+{
+    mu_assert(true == is_power_of_three(1), "");
+    mu_assert(true == is_power_of_three(27), "");
+    mu_assert(true == is_power_of_three(81), "");
+    mu_assert(false == is_power_of_three(15), "");
+    mu_assert(false == is_power_of_three(100), "");
+    
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
     mu_run_test(mu_single_number2);
     mu_run_test(mu_is_power_of_two);
     mu_run_test(mu_is_power_of_four);
+    mu_run_test(mu_is_power_of_three);
     
     return 0;
 }

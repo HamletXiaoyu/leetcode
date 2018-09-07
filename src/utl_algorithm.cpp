@@ -54,3 +54,9 @@ bool is_power_of_four(int num)
 {
     return num > 0 && !(num & (num - 1)) && (num - 1) % 3 == 0;
 }
+
+bool is_power_of_three(int n)
+{
+    // power(3, 19) == 1162261467
+    return (n > 0 && 1162261467 % n == 0);
+}
