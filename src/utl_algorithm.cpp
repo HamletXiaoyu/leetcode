@@ -60,3 +60,33 @@ bool is_power_of_three(int n)
     // power(3, 19) == 1162261467
     return (n > 0 && 1162261467 % n == 0);
 }
+
+vector<int> count_bits(int num)
+{
+    vector<int> res(num + 1, 0);
+    for (int i = 1; i <= num; ++i) {
+        res[i] = res[i & (i - 1)] + 1;
+    }
+    return res;
+}
+
+int count_one(int num)
+{
+    int ret = 0;
+    while (num) {
+        if (num & 1)
+            ret++;
+        num >>= 1;
+    }
+    return ret;
+}
+
+int count_one2(int num)
+{
+    int ret = 0;
+    while (num) {
+        num = num & (num - 1);
+        ret++;
+    }
+    return ret;
+}

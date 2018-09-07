@@ -87,6 +87,32 @@ char* mu_is_power_of_three()
     return 0;
 }
 
+char* mu_count_one()
+{
+    mu_assert(1 == count_one(8), "");
+    mu_assert(1 == count_one2(8), "");
+    mu_assert(4 == count_one(15), "");
+    mu_assert(4 == count_one2(15), "");
+    mu_assert(1 == count_one(16), "");
+    mu_assert(1 == count_one2(16), "");
+    
+    return 0;
+}
+
+char* mu_count_bits()
+{
+    vector<int> ret = count_bits(5);
+    mu_assert(6 == ret.size(), "");
+    mu_assert(0 == ret[0], "");
+    mu_assert(1 == ret[1], "");
+    mu_assert(1 == ret[2], "");
+    mu_assert(2 == ret[3], "");
+    mu_assert(1 == ret[4], "");
+    mu_assert(2 == ret[5], "");
+
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
@@ -94,6 +120,8 @@ char* algorithm_suites()
     mu_run_test(mu_is_power_of_two);
     mu_run_test(mu_is_power_of_four);
     mu_run_test(mu_is_power_of_three);
-    
+    mu_run_test(mu_count_one);
+    mu_run_test(mu_count_bits);
+
     return 0;
 }
