@@ -35,7 +35,8 @@ bool is_power_of_four(int num);
 bool is_power_of_three(int n);
 // leetcode 338
 std::vector<int> count_bits(int num);
-int count_one(int num);
+// leetcode 191
+int count_one(int num); //hamming weight
 int count_one2(int num);
 
 #endif 
