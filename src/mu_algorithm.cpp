@@ -128,6 +128,14 @@ char* mu_hamming_distance()
     return 0;
 }
 
+char* mu_integer_replacement()
+{
+    mu_assert(3 == integer_replacement(8), "");
+    mu_assert(4 == integer_replacement(7), "");
+
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
@@ -139,6 +147,7 @@ char* algorithm_suites()
     mu_run_test(mu_count_bits);
     mu_run_test(mu_to_hex);
     mu_run_test(mu_hamming_distance);
+    mu_run_test(mu_integer_replacement);
 
     return 0;
 }

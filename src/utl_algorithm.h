@@ -42,5 +42,7 @@ int count_one2(int num);
 std::string to_hex(int num);
 // leetcode 461
 int hamming_distance(int x, int y);
+// leetcode 397
+int integer_replacement(int n);
 
 #endif 
