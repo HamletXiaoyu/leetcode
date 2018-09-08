@@ -145,6 +145,17 @@ char* mu_find_the_difference()
     return 0;
 }
 
+char* mu_total_hamming_distance()
+{
+    vector<int> nums;
+    nums.push_back(4);
+    nums.push_back(12);
+    nums.push_back(2);
+    mu_assert(6 == total_hamming_distance(nums), "");
+
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
@@ -158,6 +169,7 @@ char* algorithm_suites()
     mu_run_test(mu_hamming_distance);
     mu_run_test(mu_integer_replacement);
     mu_run_test(mu_find_the_difference);
+    mu_run_test(mu_total_hamming_distance);
 
     return 0;
 }

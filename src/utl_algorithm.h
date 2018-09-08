@@ -46,5 +46,7 @@ int hamming_distance(int x, int y);
 int integer_replacement(int n);
 // leetcode 389
 char find_the_difference(std::string s, std::string t);
+// leetcode 477
+int total_hamming_distance(std::vector<int>& nums);
 
 #endif 

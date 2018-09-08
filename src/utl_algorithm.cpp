@@ -142,3 +142,17 @@ char find_the_difference(string s, string t)
         res ^= c;
     return res;
 }
+
+int total_hamming_distance(vector<int>& nums)
+{
+    int res = 0, n = nums.size();
+    for (int i = 0; i < 32; ++i) {
+        int cnt = 0;
+        for (int num : nums) {
+            if (num & (1 << i))
+                ++cnt;
+        }
+        res += cnt * (n - cnt);
+    }
+    return res;
+}
