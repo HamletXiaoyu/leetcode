@@ -44,5 +44,7 @@ std::string to_hex(int num);
 int hamming_distance(int x, int y);
 // leetcode 397
 int integer_replacement(int n);
+// leetcode 389
+char find_the_difference(std::string s, std::string t);
 
 #endif 

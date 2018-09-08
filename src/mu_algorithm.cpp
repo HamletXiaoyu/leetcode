@@ -136,6 +136,15 @@ char* mu_integer_replacement()
     return 0;
 }
 
+char* mu_find_the_difference()
+{
+    mu_assert('e' == find_the_difference("abcd", "abcde"), "");
+    mu_assert('a' == find_the_difference("a", "aa"), "");
+    mu_assert('a' == find_the_difference("abcde", "abcade"), "");
+
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
@@ -148,6 +157,7 @@ char* algorithm_suites()
     mu_run_test(mu_to_hex);
     mu_run_test(mu_hamming_distance);
     mu_run_test(mu_integer_replacement);
+    mu_run_test(mu_find_the_difference);
 
     return 0;
 }

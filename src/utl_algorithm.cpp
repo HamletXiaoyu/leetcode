@@ -132,3 +132,13 @@ int integer_replacement(int n)
     }
     return cnt;
 }
+
+char find_the_difference(string s, string t)
+{
+    char res = 0;
+    for (char c : s)
+        res ^= c;
+    for (char c : t)
+        res ^= c;
+    return res;
+}
