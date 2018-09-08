@@ -121,6 +121,13 @@ char* mu_to_hex()
     return 0;
 }
 
+char* mu_hamming_distance()
+{
+    mu_assert(2 == hamming_distance(2, 4), "");
+
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
@@ -131,6 +138,7 @@ char* algorithm_suites()
     mu_run_test(mu_count_one);
     mu_run_test(mu_count_bits);
     mu_run_test(mu_to_hex);
+    mu_run_test(mu_hamming_distance);
 
     return 0;
 }

@@ -103,3 +103,14 @@ string to_hex(int num)
     }
     return res.empty() ? "0" : res;
 }
+
+int hamming_distance(int x, int y)
+{
+    int tmp = x ^ y;
+    int ret = 0;
+    while (tmp) {
+        tmp = tmp & (tmp - 1);
+        ret++;
+    }
+    return ret;
+}

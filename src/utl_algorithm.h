@@ -40,5 +40,7 @@ int count_one(int num); //hamming weight
 int count_one2(int num);
 // leetcode 405
 std::string to_hex(int num);
+// leetcode 461
+int hamming_distance(int x, int y);
 
 #endif 
