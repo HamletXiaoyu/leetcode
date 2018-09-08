@@ -205,7 +205,7 @@ bool symmetric_func(TreeNode *left, TreeNode *right)
 {
     if (!left && !right)
         return true;
-    if (left && !right || !left && right || left->val != right->val)
+    if ((left && !right) || (!left && right) || left->val != right->val)
         return false;
     return symmetric_func(left->left, right->right) && symmetric_func(left->right, right->left);
 }

@@ -5,7 +5,7 @@ LIBDIR = ./lib/
 
 CXX  = g++
 
-CXXFLAGS += -c -w
+CXXFLAGS += -c -w 
 
 OBJS =  $(BUILDDIR)/mu_main.o \
 	$(BUILDDIR)/mu_tree.o \
@@ -13,10 +13,10 @@ OBJS =  $(BUILDDIR)/mu_main.o \
 	$(BUILDDIR)/mu_string.o \
 	$(BUILDDIR)/mu_algorithm.o
 
-LIB_OBJ = $(LIBDIR)/utl_tree.o \
-	  $(LIBDIR)/utl_list.o \
-	  $(LIBDIR)/utl_string.o \
-	  $(LIBDIR)/utl_algorithm.o
+LIB_OBJ = utl_tree.cpp \
+	  utl_list.cpp \
+	  utl_string.cpp \
+	  utl_algorithm.cpp
 
 #LIBS  = $(LIBDIR)/libutltree.so
 #	$(LIBDIR)/libutllist.so
@@ -55,7 +55,7 @@ $(LIBDIR)/%.o : %.cpp
 
 
 $(LIBS): $(LIB_OBJ)
-	$(CXX) -shared -o $@ $(LIB_OBJ)
+	$(CXX) -std=c++11 -shared -fPIC -o $@ $(LIB_OBJ)
 
 clean :
 	rm -rf $(BIN) $(OBJS) $(LIBS)
