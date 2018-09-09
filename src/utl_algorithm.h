@@ -55,5 +55,7 @@ int majority_element(std::vector<int>& nums); // moore voting
 int majority_element2(std::vector<int>& nums); // bit op
 // leetcode 784
 std::vector<std::string> letter_case_permutation(std::string S);
+// leetcode 693
+bool has_alternating_bits(int n);
 
 #endif 

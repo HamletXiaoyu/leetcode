@@ -225,3 +225,8 @@ vector<string> letter_case_permutation(string S)
     }
     return res;
 }
+
+bool has_alternating_bits(int n)
+{
+    return ((n + (n >> 1) + 1) & (n + (n >> 1))) == 0;
+}

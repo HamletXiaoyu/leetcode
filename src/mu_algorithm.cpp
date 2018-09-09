@@ -204,6 +204,15 @@ char* mu_letter_case_permutation()
     return 0;
 }
 
+char* mu_has_alternating_bits()
+{
+    mu_assert(true == has_alternating_bits(5), "");
+    mu_assert(true == has_alternating_bits(10), "");
+    mu_assert(false == has_alternating_bits(11), "");
+
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
@@ -221,6 +230,7 @@ char* algorithm_suites()
     mu_run_test(mu_missing_number);
     mu_run_test(mu_majority_element);
     mu_run_test(mu_letter_case_permutation);
+    mu_run_test(mu_has_alternating_bits);
 
     return 0;
 }
