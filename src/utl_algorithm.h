@@ -53,5 +53,7 @@ int missing_number(std::vector<int>& nums);
 // leetcode 169
 int majority_element(std::vector<int>& nums); // moore voting
 int majority_element2(std::vector<int>& nums); // bit op
+// leetcode 784
+std::vector<std::string> letter_case_permutation(std::string S);
 
 #endif 

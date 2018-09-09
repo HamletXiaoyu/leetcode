@@ -198,3 +198,30 @@ int majority_element2(std::vector<int>& nums)
     }
     return res;
 }
+
+vector<string> letter_case_permutation(string S)
+{
+    vector<string> res;
+    int cnt = 0;
+    for (char c : S) {
+        if (c > '9')
+            ++cnt;
+    }
+    for (int i = 0; i < (1 << cnt); ++i) {
+        int j = 0;
+        string word = "";
+        for (char c : S) {
+            if (c > '9') {
+                if (((i >> j++) & 1) == 1) {
+                    word.push_back(tolower(c));
+                } else {
+                    word.push_back(toupper(c));
+                }
+            } else {
+                word.push_back(c);
+            }
+        }
+        res.push_back(word);
+    }
+    return res;
+}

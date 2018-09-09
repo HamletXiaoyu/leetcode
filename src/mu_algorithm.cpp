@@ -190,6 +190,20 @@ char* mu_majority_element()
 
     return 0;
 }
+
+char* mu_letter_case_permutation()
+{
+    vector<std::string> ret;
+    ret = letter_case_permutation("a1b2");
+    mu_assert(4 == ret.size(), "");
+    mu_assert("A1B2" == ret[0], "");
+    mu_assert("a1B2" == ret[1], "");
+    mu_assert("A1b2" == ret[2], "");
+    mu_assert("a1b2" == ret[3], "");
+
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
@@ -206,6 +220,7 @@ char* algorithm_suites()
     mu_run_test(mu_total_hamming_distance);
     mu_run_test(mu_missing_number);
     mu_run_test(mu_majority_element);
+    mu_run_test(mu_letter_case_permutation);
 
     return 0;
 }
