@@ -156,6 +156,24 @@ char* mu_total_hamming_distance()
     return 0;
 }
 
+char* mu_missing_number()
+{
+    vector<int> nums;
+    nums.push_back(3);
+    nums.push_back(1);
+    nums.push_back(0);
+    mu_assert(2 == missing_number(nums), "");
+    nums.push_back(2);
+    nums.push_back(5);
+    nums.push_back(4);
+    nums.push_back(9);
+    nums.push_back(7);
+    nums.push_back(6);
+    mu_assert(8 == missing_number(nums), "");
+
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
@@ -170,6 +188,7 @@ char* algorithm_suites()
     mu_run_test(mu_integer_replacement);
     mu_run_test(mu_find_the_difference);
     mu_run_test(mu_total_hamming_distance);
+    mu_run_test(mu_missing_number);
 
     return 0;
 }

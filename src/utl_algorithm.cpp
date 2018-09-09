@@ -156,3 +156,12 @@ int total_hamming_distance(vector<int>& nums)
     }
     return res;
 }
+
+int missing_number(vector<int>& nums)
+{
+    int res = 0;
+    for (int i = 0; i < nums.size(); ++i) {
+        res ^= (i + 1) ^ nums[i];
+    }
+    return res;
+}

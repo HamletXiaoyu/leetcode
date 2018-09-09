@@ -21,7 +21,7 @@
 #ifndef UTL_ALGORITHM_H_
 #define UTL_ALGORITHM_H_
 
-#include <vector>
+#include <iostream>
 
 // leetcode 136
 int single_number(std::vector<int>& nums);
@@ -48,5 +48,7 @@ int integer_replacement(int n);
 char find_the_difference(std::string s, std::string t);
 // leetcode 477
 int total_hamming_distance(std::vector<int>& nums);
+// leetcode 268
+int missing_number(std::vector<int>& nums);
 
 #endif 
