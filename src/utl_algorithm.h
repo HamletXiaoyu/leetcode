@@ -50,5 +50,8 @@ char find_the_difference(std::string s, std::string t);
 int total_hamming_distance(std::vector<int>& nums);
 // leetcode 268
 int missing_number(std::vector<int>& nums);
+// leetcode 169
+int majority_element(std::vector<int>& nums); // moore voting
+int majority_element2(std::vector<int>& nums); // bit op
 
 #endif 
