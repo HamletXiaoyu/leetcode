@@ -237,6 +237,13 @@ char* mu_get_sum()
     return 0;
 }
 
+char* mu_reverse_bits()
+{
+    mu_assert(964176192 == reverse_bits(43261596), "");
+
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
@@ -258,6 +265,7 @@ char* algorithm_suites()
     mu_run_test(mu_find_complement);
     mu_run_test(mu_range_bitwise_and);
     mu_run_test(mu_get_sum);
+    mu_run_test(mu_reverse_bits);
 
     return 0;
 }

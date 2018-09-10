@@ -63,5 +63,7 @@ int find_complement(int num);
 int range_bitwise_and(int m, int n);
 // leetcode 371
 int get_sum(int a, int b);
+// leetcode 190
+uint32_t reverse_bits(uint32_t n);
 
 #endif 
