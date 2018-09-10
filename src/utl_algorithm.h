@@ -59,5 +59,7 @@ std::vector<std::string> letter_case_permutation(std::string S);
 bool has_alternating_bits(int n);
 // leetcode 476
 int find_complement(int num);
+// leetcode 206
+int range_bitwise_and(int m, int n);
 
 #endif 

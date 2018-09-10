@@ -221,6 +221,14 @@ char* mu_find_complement()
     return 0;
 }
 
+char* mu_range_bitwise_and()
+{
+    mu_assert(4 == range_bitwise_and(5, 7), "");
+    mu_assert(0 == range_bitwise_and(0, 1), "");
+
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
@@ -240,6 +248,7 @@ char* algorithm_suites()
     mu_run_test(mu_letter_case_permutation);
     mu_run_test(mu_has_alternating_bits);
     mu_run_test(mu_find_complement);
+    mu_run_test(mu_range_bitwise_and);
 
     return 0;
 }
