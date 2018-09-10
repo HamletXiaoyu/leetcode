@@ -65,5 +65,7 @@ int range_bitwise_and(int m, int n);
 int get_sum(int a, int b);
 // leetcode 190
 uint32_t reverse_bits(uint32_t n);
+// leetcode 318
+int max_product(std::vector<std::string>& words);
 
 #endif 
