@@ -61,5 +61,7 @@ bool has_alternating_bits(int n);
 int find_complement(int num);
 // leetcode 206
 int range_bitwise_and(int m, int n);
+// leetcode 371
+int get_sum(int a, int b);
 
 #endif 

@@ -229,6 +229,14 @@ char* mu_range_bitwise_and()
     return 0;
 }
 
+char* mu_get_sum()
+{
+    mu_assert(3 == get_sum(1, 2), "");
+    mu_assert(1 == get_sum(2, -1), "");
+
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
@@ -249,6 +257,7 @@ char* algorithm_suites()
     mu_run_test(mu_has_alternating_bits);
     mu_run_test(mu_find_complement);
     mu_run_test(mu_range_bitwise_and);
+    mu_run_test(mu_get_sum);
 
     return 0;
 }

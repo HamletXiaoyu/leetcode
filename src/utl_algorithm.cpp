@@ -253,3 +253,12 @@ int range_bitwise_and(int m, int n)
     }
     return (m << i);   
 }
+
+int get_sum(int a, int b)
+{
+    if (b == 0)
+        return a;
+    int sum = a ^ b;
+    int carry = (a & b) << 1;
+    return get_sum(sum, carry);
+}
