@@ -67,5 +67,7 @@ int get_sum(int a, int b);
 uint32_t reverse_bits(uint32_t n);
 // leetcode 318
 int max_product(std::vector<std::string>& words);
+// leetcode 421
+int find_maximum_xor(vector<int>& nums);
 
 #endif 
