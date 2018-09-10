@@ -213,6 +213,14 @@ char* mu_has_alternating_bits()
     return 0;
 }
 
+char* mu_find_complement()
+{
+    mu_assert(2 == find_complement(5), "");
+    mu_assert(0 == find_complement(1), "");
+
+    return 0;
+}
+
 char* algorithm_suites()
 {
     mu_run_test(mu_single_number);
@@ -231,6 +239,7 @@ char* algorithm_suites()
     mu_run_test(mu_majority_element);
     mu_run_test(mu_letter_case_permutation);
     mu_run_test(mu_has_alternating_bits);
+    mu_run_test(mu_find_complement);
 
     return 0;
 }

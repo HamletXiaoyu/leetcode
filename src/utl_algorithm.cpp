@@ -230,3 +230,15 @@ bool has_alternating_bits(int n)
 {
     return ((n + (n >> 1) + 1) & (n + (n >> 1))) == 0;
 }
+
+int find_complement(int num)
+{
+    bool start = false;
+    for (int i = 31; i >= 0; --i) {
+        if (num & (1 << i)) 
+            start = true;
+        if (start) 
+            num ^= (1 << i);
+    }
+    return num;
+}

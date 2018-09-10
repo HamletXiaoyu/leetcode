@@ -57,5 +57,7 @@ int majority_element2(std::vector<int>& nums); // bit op
 std::vector<std::string> letter_case_permutation(std::string S);
 // leetcode 693
 bool has_alternating_bits(int n);
+// leetcode 476
+int find_complement(int num);
 
 #endif 
