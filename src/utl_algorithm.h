@@ -68,6 +68,6 @@ uint32_t reverse_bits(uint32_t n);
 // leetcode 318
 int max_product(std::vector<std::string>& words);
 // leetcode 421
-int find_maximum_xor(vector<int>& nums);
+int find_maximum_xor(std::vector<int>& nums);
 
 #endif 

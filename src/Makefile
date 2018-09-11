@@ -11,12 +11,14 @@ OBJS =  $(BUILDDIR)/mu_main.o \
 	$(BUILDDIR)/mu_tree.o \
 	$(BUILDDIR)/mu_list.o \
 	$(BUILDDIR)/mu_string.o \
-	$(BUILDDIR)/mu_algorithm.o
+	$(BUILDDIR)/mu_algorithm.o \
+	$(BUILDDIR)/mu_math.o
 
 LIB_OBJ = utl_tree.cpp \
 	  utl_list.cpp \
 	  utl_string.cpp \
-	  utl_algorithm.cpp
+	  utl_algorithm.cpp \
+	  utl_math.cpp 
 
 #LIBS  = $(LIBDIR)/libutltree.so
 #	$(LIBDIR)/libutllist.so
