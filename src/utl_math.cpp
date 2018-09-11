@@ -21,6 +21,7 @@
 
 #include "utl_math.h"
 #include <vector>
+#include <math.h>
 
 using namespace std;
 
@@ -54,4 +55,16 @@ vector<int> plus_one(vector<int>& digits)
         ret.push_back(1);
     reverse(ret.begin(), ret.end());
     return ret;
+}
+
+int my_sqrt(int x)
+{
+    if (x == 0) 
+        return 0;
+    double res = 1, pre = 0;
+    while (fabs(res - pre) > 1e-6) {
+        pre = res;
+        res = (res + x / res) / 2;
+    }
+    return int(res);   
 }

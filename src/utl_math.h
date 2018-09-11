@@ -27,5 +27,7 @@
 int reverse_int(int x);
 // leetcode 66
 std::vector<int> plus_one(std::vector<int>& digits);
+// leetcode 69
+int my_sqrt(int x);
 
 #endif

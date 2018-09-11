@@ -59,10 +59,21 @@ char* mu_plus_one()
     return 0;
 }
 
+char* mu_my_sqrt()
+{
+    mu_assert(2 == my_sqrt(8), "");
+    mu_assert(2 == my_sqrt(4), "");
+    mu_assert(3 == my_sqrt(15), "");
+    mu_assert(4 == my_sqrt(20), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
     mu_run_test(mu_plus_one);
+    mu_run_test(mu_my_sqrt);
     
     return 0;
 }
