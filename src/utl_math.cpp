@@ -20,7 +20,9 @@
 // 
 
 #include "utl_math.h"
+#include <vector>
 
+using namespace std;
 
 int reverse_int(int x)
 {
@@ -32,4 +34,24 @@ int reverse_int(int x)
         x /= 10;
     }
     return res;   
+}
+
+vector<int> plus_one(vector<int>& digits)
+{
+    int n = digits.size();
+    vector<int> ret;
+    int carry = 0;
+    for (int i = n-1; i >= 0; --i) {
+        if (i == n-1) {
+            ret.push_back((digits[i] + 1) % 10);
+            carry = (digits[i] + 1) / 10;
+        } else {
+            ret.push_back((digits[i] + carry) % 10);
+            carry = (digits[i] + carry) / 10;
+        }
+    }
+    if (carry != 0)
+        ret.push_back(1);
+    reverse(ret.begin(), ret.end());
+    return ret;
 }

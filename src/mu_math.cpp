@@ -22,6 +22,9 @@
 #include "minunit.h"
 #include "mu_suites.h"
 #include "utl_math.h"
+#include <vector>
+
+using namespace std;
 
 char* mu_reverse_int()
 {
@@ -32,9 +35,34 @@ char* mu_reverse_int()
     return 0;
 }
 
+char* mu_plus_one()
+{
+    vector<int> num;
+    num.push_back(1);
+    num.push_back(2);
+    num.push_back(3);
+    vector<int> ret;
+    ret = plus_one(num);
+    mu_assert(3 == ret.size(), "");
+    mu_assert(1 == ret[0], "");
+    mu_assert(2 == ret[1], "");
+    mu_assert(4 == ret[2], "");
+
+    num.push_back(9);
+    ret = plus_one(num);
+    mu_assert(4 == ret.size(), "");
+    mu_assert(1 == ret[0], "");
+    mu_assert(2 == ret[1], "");
+    mu_assert(4 == ret[2], "");
+    mu_assert(0 == ret[3], "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
+    mu_run_test(mu_plus_one);
     
     return 0;
 }
