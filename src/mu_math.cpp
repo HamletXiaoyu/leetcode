@@ -69,11 +69,21 @@ char* mu_my_sqrt()
     return 0;
 }
 
+char* mu_my_pow()
+{
+    mu_assert(EQUAL_F(4, my_pow(2, 2)), "");
+    mu_assert(EQUAL_F(9.26100, my_pow(2.1, 3)), "");
+    mu_assert(EQUAL_F(0.25, my_pow(2, -2)), "");
+              
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
     mu_run_test(mu_plus_one);
     mu_run_test(mu_my_sqrt);
+    mu_run_test(mu_my_pow);
     
     return 0;
 }

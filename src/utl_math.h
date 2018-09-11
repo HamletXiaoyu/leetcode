@@ -22,6 +22,9 @@
 #define UTL_MATH_H_
 
 #include <iostream>
+#include <math.h>
+
+#define EQUAL_F(a, b) (fabs((a) - (b)) < 1e-6)
 
 // leetcode 7
 int reverse_int(int x);
@@ -29,5 +32,7 @@ int reverse_int(int x);
 std::vector<int> plus_one(std::vector<int>& digits);
 // leetcode 69
 int my_sqrt(int x);
+// leetcode 50
+double my_pow(double x, int n);
 
 #endif
