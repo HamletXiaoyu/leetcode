@@ -86,6 +86,14 @@ char* mu_find_nth_digit()
     return 0;
 }
 
+char* mu_arrange_coins()
+{
+    mu_assert(2 == arrange_coins(5), "");
+    mu_assert(3 == arrange_coins(8), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -93,6 +101,7 @@ char* math_suites()
     mu_run_test(mu_my_sqrt);
     mu_run_test(mu_my_pow);
     mu_run_test(mu_find_nth_digit);
+    mu_run_test(mu_arrange_coins);
     
     return 0;
 }

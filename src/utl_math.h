@@ -36,5 +36,7 @@ int my_sqrt(int x);
 double my_pow(double x, int n);
 // leetcode 400
 int find_nth_digit(int n);
+// leetcode 441
+int arrange_coins(int n);
 
 #endif
