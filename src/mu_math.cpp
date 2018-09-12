@@ -94,6 +94,15 @@ char* mu_arrange_coins()
     return 0;
 }
 
+char* mu_check_perfect_number()
+{
+    mu_assert(true == check_perfect_number(6), "");
+    mu_assert(true == check_perfect_number(28), "");
+    mu_assert(false == check_perfect_number(36), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -102,6 +111,7 @@ char* math_suites()
     mu_run_test(mu_my_pow);
     mu_run_test(mu_find_nth_digit);
     mu_run_test(mu_arrange_coins);
+    mu_run_test(mu_check_perfect_number);
     
     return 0;
 }

@@ -38,5 +38,7 @@ double my_pow(double x, int n);
 int find_nth_digit(int n);
 // leetcode 441
 int arrange_coins(int n);
+// leetcode 507
+bool check_perfect_number(int num);
 
 #endif
