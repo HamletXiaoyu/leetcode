@@ -103,6 +103,21 @@ char* mu_check_perfect_number()
     return 0;
 }
 
+char* mu_maximum_product()
+{
+    vector<int> num;
+    num.push_back(1);
+    num.push_back(2);
+    num.push_back(3);
+    mu_assert(6 == maximum_product(num), "");
+    num.push_back(-1);
+    num.push_back(-2);
+    num.push_back(-3);
+    mu_assert(18 == maximum_product(num), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -112,6 +127,7 @@ char* math_suites()
     mu_run_test(mu_find_nth_digit);
     mu_run_test(mu_arrange_coins);
     mu_run_test(mu_check_perfect_number);
+    mu_run_test(mu_maximum_product);
     
     return 0;
 }
