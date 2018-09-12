@@ -118,6 +118,15 @@ char* mu_maximum_product()
     return 0;
 }
 
+char* mu_add_digits()
+{
+    mu_assert(2 == add_digits(38), "");
+    mu_assert(2 == add_digits(20), "");
+    mu_assert(2 == add_digits(11), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -128,6 +137,7 @@ char* math_suites()
     mu_run_test(mu_arrange_coins);
     mu_run_test(mu_check_perfect_number);
     mu_run_test(mu_maximum_product);
+    mu_run_test(mu_add_digits);
     
     return 0;
 }

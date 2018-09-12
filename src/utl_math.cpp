@@ -145,3 +145,8 @@ int maximum_product(vector<int>& nums)
     }
     return max(mx1 * mx2 * mx3, mx1 * mn1 * mn2);
 }
+
+int add_digits(int num)
+{
+    return (num - 1) % 9 + 1;
+}

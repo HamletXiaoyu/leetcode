@@ -42,5 +42,7 @@ int arrange_coins(int n);
 bool check_perfect_number(int num);
 // leetcode 628
 int maximum_product(std::vector<int>& nums);
+// leetcode 258
+int add_digits(int num);
 
 #endif
