@@ -78,12 +78,21 @@ char* mu_my_pow()
     return 0;
 }
 
+char* mu_find_nth_digit()
+{
+    mu_assert(3 == find_nth_digit(3), "");
+    mu_assert(0 == find_nth_digit(11), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
     mu_run_test(mu_plus_one);
     mu_run_test(mu_my_sqrt);
     mu_run_test(mu_my_pow);
+    mu_run_test(mu_find_nth_digit);
     
     return 0;
 }

@@ -34,5 +34,7 @@ std::vector<int> plus_one(std::vector<int>& digits);
 int my_sqrt(int x);
 // leetcode 50
 double my_pow(double x, int n);
+// leetcode 400
+int find_nth_digit(int n);
 
 #endif
