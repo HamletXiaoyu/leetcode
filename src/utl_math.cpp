@@ -160,3 +160,13 @@ int min_moves(vector<int>& nums)
         res += num - mn;
     return res;
 }
+
+int min_moves2(vector<int>& nums)
+{
+    sort(nums.begin(), nums.end());
+    int res = 0, mid = nums[nums.size() / 2];
+    for (int num : nums) {
+        res += abs(num - mid);
+    }
+    return res;
+}

@@ -134,6 +134,7 @@ char* mu_min_moves()
     nums.push_back(2);
     nums.push_back(3);
     mu_assert(3 == min_moves(nums), "");
+    mu_assert(2 == min_moves2(nums), "");
     
     return 0;
 }

@@ -46,5 +46,7 @@ int maximum_product(std::vector<int>& nums);
 int add_digits(int num);
 // leetcode 453
 int min_moves(std::vector<int>& nums);
+// leetcode 462
+int min_moves2(std::vector<int>& nums);
 
 #endif
