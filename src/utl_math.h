@@ -44,5 +44,7 @@ bool check_perfect_number(int num);
 int maximum_product(std::vector<int>& nums);
 // leetcode 258
 int add_digits(int num);
+// leetcode 453
+int min_moves(std::vector<int>& nums);
 
 #endif

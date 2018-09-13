@@ -150,3 +150,13 @@ int add_digits(int num)
 {
     return (num - 1) % 9 + 1;
 }
+
+int min_moves(vector<int>& nums)
+{
+    int mn = INT_MAX, res = 0;
+    for (int num : nums)
+        mn = min(mn, num);
+    for (int num : nums)
+        res += num - mn;
+    return res;
+}

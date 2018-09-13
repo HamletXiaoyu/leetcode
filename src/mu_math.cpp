@@ -127,6 +127,17 @@ char* mu_add_digits()
     return 0;
 }
 
+char* mu_min_moves()
+{
+    vector<int> nums;
+    nums.push_back(1);
+    nums.push_back(2);
+    nums.push_back(3);
+    mu_assert(3 == min_moves(nums), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -138,6 +149,7 @@ char* math_suites()
     mu_run_test(mu_check_perfect_number);
     mu_run_test(mu_maximum_product);
     mu_run_test(mu_add_digits);
+    mu_run_test(mu_min_moves);
     
     return 0;
 }
