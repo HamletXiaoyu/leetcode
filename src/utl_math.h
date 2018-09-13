@@ -48,5 +48,7 @@ int add_digits(int num);
 int min_moves(std::vector<int>& nums);
 // leetcode 462
 int min_moves2(std::vector<int>& nums);
+// leetcode 423
+std::string original_digits(std::string s);
 
 #endif

@@ -139,6 +139,14 @@ char* mu_min_moves()
     return 0;
 }
 
+char* mu_original_digits()
+{
+    mu_assert("45" == original_digits("fviefuro"), "");
+    mu_assert("012" == original_digits("owoztneoer"), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -151,6 +159,7 @@ char* math_suites()
     mu_run_test(mu_maximum_product);
     mu_run_test(mu_add_digits);
     mu_run_test(mu_min_moves);
+    mu_run_test(mu_original_digits);
     
     return 0;
 }
