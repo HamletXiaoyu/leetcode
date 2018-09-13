@@ -52,5 +52,7 @@ int min_moves2(std::vector<int>& nums);
 std::string original_digits(std::string s);
 // leetcode 396
 int max_rotate_function(std::vector<int>& A);
+// leetcode 372
+int super_pow(int a, std::vector<int>& b);
 
 #endif

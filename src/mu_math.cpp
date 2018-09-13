@@ -147,6 +147,15 @@ char* mu_original_digits()
     return 0;
 }
 
+char* mu_super_pow()
+{
+    vector<int> b;
+    b.push_back(3);
+    mu_assert(8 == super_pow(2, b), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -160,6 +169,7 @@ char* math_suites()
     mu_run_test(mu_add_digits);
     mu_run_test(mu_min_moves);
     mu_run_test(mu_original_digits);
+    mu_run_test(mu_super_pow);
     
     return 0;
 }

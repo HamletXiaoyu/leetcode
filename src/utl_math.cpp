@@ -209,3 +209,22 @@ int max_rotate_function(vector<int>& A)
     }
     return res;
 }
+
+int super_pow_helper(int x, int n)
+{
+    if (n == 0)
+        return 1;
+    if (n == 1)
+        return x % 1337;
+    return super_pow_helper(x % 1337, n / 2) * super_pow_helper(x % 1337, n - n / 2) % 1337;
+}
+
+int super_pow(int a, vector<int>& b)
+{
+    long long res = 1;
+    for (int i = 0; i < b.size(); ++i) {
+        res = (super_pow_helper(res, 10) * super_pow_helper(a, b[i])) % 1337;
+    }
+    return res;
+}
+
