@@ -50,5 +50,7 @@ int min_moves(std::vector<int>& nums);
 int min_moves2(std::vector<int>& nums);
 // leetcode 423
 std::string original_digits(std::string s);
+// leetcode 396
+int max_rotate_function(std::vector<int>& A);
 
 #endif
