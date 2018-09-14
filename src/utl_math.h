@@ -60,5 +60,7 @@ std::vector<int> self_dividing_numbers(int left, int right);
 bool is_happy_number(int n);
 // leetcode 263
 bool is_ugly_number(int num);
+// leetcode 264
+int nth_ugly_number(int n);
 
 #endif

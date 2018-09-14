@@ -188,6 +188,13 @@ char* mu_is_ugly_number()
     return 0;
 }
 
+char* mu_nth_ugly_number()
+{
+    mu_assert(12 == nth_ugly_number(10), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -205,6 +212,7 @@ char* math_suites()
     mu_run_test(mu_self_dividing_numbers);
     mu_run_test(mu_is_happy_number);
     mu_run_test(mu_is_ugly_number);
+    mu_run_test(mu_nth_ugly_number);
     
     return 0;
 }
