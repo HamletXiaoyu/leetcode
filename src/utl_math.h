@@ -54,5 +54,7 @@ std::string original_digits(std::string s);
 int max_rotate_function(std::vector<int>& A);
 // leetcode 372
 int super_pow(int a, std::vector<int>& b);
+// leetcode 728
+std::vector<int> self_dividing_numbers(int left, int right);
 
 #endif

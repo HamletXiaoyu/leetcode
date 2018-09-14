@@ -156,6 +156,19 @@ char* mu_super_pow()
     return 0;
 }
 
+char* mu_self_dividing_numbers()
+{
+    vector<int> ret;
+    ret = self_dividing_numbers(1, 22);
+    int exp[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22};
+    mu_assert(13 == ret.size(), "");
+    for (int i = 0; i<13; ++i) {
+        mu_assert(ret[i] == exp[i], "");
+    }
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -170,6 +183,7 @@ char* math_suites()
     mu_run_test(mu_min_moves);
     mu_run_test(mu_original_digits);
     mu_run_test(mu_super_pow);
+    mu_run_test(mu_self_dividing_numbers);
     
     return 0;
 }
