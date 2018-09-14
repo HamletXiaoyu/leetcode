@@ -56,5 +56,7 @@ int max_rotate_function(std::vector<int>& A);
 int super_pow(int a, std::vector<int>& b);
 // leetcode 728
 std::vector<int> self_dividing_numbers(int left, int right);
+// leetcode 202
+bool is_happy_number(int n);
 
 #endif
