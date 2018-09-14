@@ -58,5 +58,7 @@ int super_pow(int a, std::vector<int>& b);
 std::vector<int> self_dividing_numbers(int left, int right);
 // leetcode 202
 bool is_happy_number(int n);
+// leetcode 263
+bool is_ugly_number(int num);
 
 #endif

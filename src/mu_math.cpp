@@ -177,6 +177,17 @@ char* mu_is_happy_number()
     return 0;
 }
 
+char* mu_is_ugly_number()
+{
+    mu_assert(true == is_ugly_number(6), "");
+    mu_assert(true == is_ugly_number(8), "");
+    mu_assert(true == is_ugly_number(10), "");
+    mu_assert(false == is_ugly_number(14), "");
+    mu_assert(false == is_ugly_number(35), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -193,6 +204,7 @@ char* math_suites()
     mu_run_test(mu_super_pow);
     mu_run_test(mu_self_dividing_numbers);
     mu_run_test(mu_is_happy_number);
+    mu_run_test(mu_is_ugly_number);
     
     return 0;
 }

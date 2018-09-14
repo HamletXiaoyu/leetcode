@@ -254,3 +254,16 @@ bool is_happy_number(int n)
     }
     return n == 1;
 }
+
+bool is_ugly_number(int num)
+{
+    if (num <= 0)
+        return false;
+    while (num % 2 == 0)
+        num /= 2;
+    while (num % 3 == 0)
+        num /= 3;
+    while (num % 5 == 0)
+        num /= 5;
+    return num == 1;
+}
