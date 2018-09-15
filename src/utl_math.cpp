@@ -303,3 +303,22 @@ bool is_perfect_square(int num)
     }
     return false;
 }
+
+vector<int> find_error_nums(vector<int>& nums)
+{
+    int n = nums.size();
+    vector<int> ret;
+    vector<int> flag(n, 0);
+    for (int i = 0; i < n; ++i) {
+        if (++flag[nums[i]-1] > 1)
+            ret.push_back(nums[i]);
+    }
+    for (int i = 0; i < n; ++i) {
+        if (flag[i] == 0) {
+            ret.push_back(i+1);
+            break;
+        }
+    } 
+        
+    return ret;
+}

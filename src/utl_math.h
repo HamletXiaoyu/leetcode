@@ -66,5 +66,7 @@ int nth_ugly_number(int n);
 bool judge_square_sum(int c);
 // leetcode 367
 bool is_perfect_square(int num);
+// leetcode 645
+std::vector<int> find_error_nums(std::vector<int>& nums);
 
 #endif

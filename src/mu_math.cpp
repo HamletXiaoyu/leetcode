@@ -215,6 +215,21 @@ char* mu_is_perfect_square()
     return 0;
 }
 
+char* mu_find_error_nums()
+{
+    vector<int> nums;
+    nums.push_back(1);
+    nums.push_back(4);
+    nums.push_back(2);
+    nums.push_back(2);
+    vector<int> ret = find_error_nums(nums);
+    mu_assert(2 == ret.size(), "");
+    mu_assert(2 == ret[0], "");
+    mu_assert(3 == ret[1], "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -235,6 +250,7 @@ char* math_suites()
     mu_run_test(mu_nth_ugly_number);
     mu_run_test(mu_judge_square_sum);
     mu_run_test(mu_is_perfect_square);
+    mu_run_test(mu_find_error_nums);
     
     return 0;
 }
