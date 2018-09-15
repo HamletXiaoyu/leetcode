@@ -203,6 +203,18 @@ char* mu_judge_square_sum()
     return 0;
 }
 
+char* mu_is_perfect_square()
+{
+    mu_assert(true == is_perfect_square(49), "");
+    mu_assert(true == is_perfect_square(64), "");
+    mu_assert(true == is_perfect_square(81), "");
+    mu_assert(false == is_perfect_square(80), "");
+    mu_assert(false == is_perfect_square(180), "");
+    mu_assert(false == is_perfect_square(101), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -222,6 +234,7 @@ char* math_suites()
     mu_run_test(mu_is_ugly_number);
     mu_run_test(mu_nth_ugly_number);
     mu_run_test(mu_judge_square_sum);
+    mu_run_test(mu_is_perfect_square);
     
     return 0;
 }

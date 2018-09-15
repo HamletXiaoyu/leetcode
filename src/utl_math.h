@@ -64,5 +64,7 @@ bool is_ugly_number(int num);
 int nth_ugly_number(int n);
 // leetcode 633
 bool judge_square_sum(int c);
+// leetcode 367
+bool is_perfect_square(int num);
 
 #endif
