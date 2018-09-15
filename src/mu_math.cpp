@@ -195,6 +195,14 @@ char* mu_nth_ugly_number()
     return 0;
 }
 
+char* mu_judge_square_sum()
+{
+    mu_assert(true == judge_square_sum(5), "");
+    mu_assert(false == judge_square_sum(3), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -213,6 +221,7 @@ char* math_suites()
     mu_run_test(mu_is_happy_number);
     mu_run_test(mu_is_ugly_number);
     mu_run_test(mu_nth_ugly_number);
+    mu_run_test(mu_judge_square_sum);
     
     return 0;
 }

@@ -62,5 +62,7 @@ bool is_happy_number(int n);
 bool is_ugly_number(int num);
 // leetcode 264
 int nth_ugly_number(int n);
+// leetcode 633
+bool judge_square_sum(int c);
 
 #endif
