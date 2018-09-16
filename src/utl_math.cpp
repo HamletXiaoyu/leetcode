@@ -341,3 +341,13 @@ string convert_to_title(int n)
     }
     return string(res.rbegin(), res.rend());
 }
+
+int title_to_number(string s)
+{
+    int ret = 0, carry = 1;
+    for (int i = s.size()-1; i>=0; --i){
+        ret += carry * (s[i] - 'A' + 1);
+        carry *= 26;
+    }
+    return ret;
+}

@@ -72,5 +72,7 @@ std::vector<int> find_error_nums(std::vector<int>& nums);
 std::string complex_number_multiply(std::string a, std::string b);
 // leetcode 168
 std::string convert_to_title(int n);
+// leetcode 171
+int title_to_number(std::string s);
 
 #endif

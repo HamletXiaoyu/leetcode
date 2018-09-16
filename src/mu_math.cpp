@@ -246,6 +246,15 @@ char* mu_convert_to_title()
     return 0;
 }
 
+char* mu_title_to_number()
+{
+    mu_assert(2 == title_to_number("B"), "");
+    mu_assert(28 == title_to_number("AB"), "");
+    mu_assert(701 == title_to_number("ZY"), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -269,6 +278,7 @@ char* math_suites()
     mu_run_test(mu_find_error_nums);
     mu_run_test(mu_complex_number_multiply);
     mu_run_test(mu_convert_to_title);
+    mu_run_test(mu_title_to_number);
     
     return 0;
 }
