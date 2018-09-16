@@ -230,6 +230,13 @@ char* mu_find_error_nums()
     return 0;
 }
 
+char* mu_complex_number_multiply()
+{
+    mu_assert("0+2i" == complex_number_multiply("1+1i", "1+1i"), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -251,6 +258,7 @@ char* math_suites()
     mu_run_test(mu_judge_square_sum);
     mu_run_test(mu_is_perfect_square);
     mu_run_test(mu_find_error_nums);
+    mu_run_test(mu_complex_number_multiply);
     
     return 0;
 }

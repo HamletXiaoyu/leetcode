@@ -68,5 +68,7 @@ bool judge_square_sum(int c);
 bool is_perfect_square(int num);
 // leetcode 645
 std::vector<int> find_error_nums(std::vector<int>& nums);
+// leetcode 537
+std::string complex_number_multiply(std::string a, std::string b);
 
 #endif

@@ -322,3 +322,12 @@ vector<int> find_error_nums(vector<int>& nums)
         
     return ret;
 }
+
+string complex_number_multiply(string a, string b)
+{
+    int a1, a2, b1, b2, r1, r2;
+    sscanf(a.c_str(), "%d+%di", &a1, &a2);
+    sscanf(b.c_str(), "%d+%di", &b1, &b2);
+    r1 = a1 * b1 - a2 * b2, r2 = a1 * b2 + a2 * b1;
+    return to_string(r1) + "+" + to_string(r2) + "i";
+}
