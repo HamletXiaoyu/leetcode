@@ -331,3 +331,13 @@ string complex_number_multiply(string a, string b)
     r1 = a1 * b1 - a2 * b2, r2 = a1 * b2 + a2 * b1;
     return to_string(r1) + "+" + to_string(r2) + "i";
 }
+
+string convert_to_title(int n)
+{
+    string res;
+    while (n) {
+        res += --n % 26 + 'A';
+        n /= 26;
+    }
+    return string(res.rbegin(), res.rend());
+}

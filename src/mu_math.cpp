@@ -237,6 +237,15 @@ char* mu_complex_number_multiply()
     return 0;
 }
 
+char* mu_convert_to_title()
+{
+    mu_assert("B" == convert_to_title(2), "");
+    mu_assert("AB" == convert_to_title(28), "");
+    mu_assert("ZY" == convert_to_title(701), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -259,6 +268,7 @@ char* math_suites()
     mu_run_test(mu_is_perfect_square);
     mu_run_test(mu_find_error_nums);
     mu_run_test(mu_complex_number_multiply);
+    mu_run_test(mu_convert_to_title);
     
     return 0;
 }

@@ -70,5 +70,7 @@ bool is_perfect_square(int num);
 std::vector<int> find_error_nums(std::vector<int>& nums);
 // leetcode 537
 std::string complex_number_multiply(std::string a, std::string b);
+// leetcode 168
+std::string convert_to_title(int n);
 
 #endif
