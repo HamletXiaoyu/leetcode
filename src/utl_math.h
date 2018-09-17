@@ -76,5 +76,7 @@ std::string convert_to_title(int n);
 int title_to_number(std::string s);
 // leetcode 29
 int divide(int dividend, int divisor);
+// leetcode 60
+std::string get_permutation(int n, int k);
 
 #endif

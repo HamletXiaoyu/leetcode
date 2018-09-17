@@ -370,3 +370,20 @@ int divide(int dividend, int divisor)
         res = -res;
     return res > INT_MAX ? INT_MAX : res;
 }
+
+string get_permutation(int n, int k)
+{
+    string res;
+    string num = "123456789";
+    vector<int> f(n, 1);
+    for (int i = 1; i < n; ++i)
+        f[i] = f[i - 1] * i;
+    --k;
+    for (int i = n; i >= 1; --i) {
+        int j = k / f[i - 1];
+        k %= f[i - 1];
+        res.push_back(num[j]);
+        num.erase(j, 1);
+    }
+    return res;
+}

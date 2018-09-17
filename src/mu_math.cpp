@@ -264,6 +264,14 @@ char* mu_divide()
     return 0;
 }
 
+char* mu_get_permutation()
+{
+    mu_assert("213" == get_permutation(3, 3), "");
+    mu_assert("2314" == get_permutation(4, 9), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -289,6 +297,7 @@ char* math_suites()
     mu_run_test(mu_convert_to_title);
     mu_run_test(mu_title_to_number);
     mu_run_test(mu_divide);
+    mu_run_test(mu_get_permutation);
     
     return 0;
 }
