@@ -272,6 +272,14 @@ char* mu_get_permutation()
     return 0;
 }
 
+char* mu_fraction_addition()
+{
+    mu_assert("1/3" == fraction_addition("-1/2+1/2+1/3"), "");
+    mu_assert("-1/6" == fraction_addition("1/3-1/2"), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -298,6 +306,7 @@ char* math_suites()
     mu_run_test(mu_title_to_number);
     mu_run_test(mu_divide);
     mu_run_test(mu_get_permutation);
+    mu_run_test(mu_fraction_addition);
     
     return 0;
 }

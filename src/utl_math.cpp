@@ -22,6 +22,7 @@
 #include "utl_math.h"
 #include <vector>
 #include <math.h>
+#include <sstream>
 
 using namespace std;
 
@@ -386,4 +387,25 @@ string get_permutation(int n, int k)
         num.erase(j, 1);
     }
     return res;
+}
+
+// greatest common divisor
+int gcd(int a, int b)
+{
+    return (b == 0) ? a : gcd(b, a % b);
+}
+
+string fraction_addition(string expression)
+{
+    istringstream is(expression);
+    int num = 0, dem = 0, A = 0, B = 1; 
+    char c;
+    while (is >> num >> c >> dem) {
+        A = A * dem + num * B;
+        B *= dem;
+        int g = abs(gcd(A, B));
+        A /= g;
+        B /= g;
+    }
+    return to_string(A) + "/" + to_string(B);
 }

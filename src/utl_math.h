@@ -78,5 +78,7 @@ int title_to_number(std::string s);
 int divide(int dividend, int divisor);
 // leetcode 60
 std::string get_permutation(int n, int k);
+// leetcode 592
+std::string fraction_addition(std::string expression);
 
 #endif
