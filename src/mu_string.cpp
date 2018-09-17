@@ -325,6 +325,17 @@ char* mu_simplify_path()
     
     return 0;
 }
+
+char* mu_my_atoi()
+{
+    mu_assert(42 == my_atoi("42"), "");
+    mu_assert(-42 == my_atoi("-42"), "");
+    mu_assert(4193 == my_atoi("4193 with words"), "");
+    mu_assert(0 == my_atoi("with words 4193"), "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -358,6 +369,7 @@ char* string_suites()
     mu_run_test(mu_buddy_strings);
     mu_run_test(mu_letter_combinations);
     mu_run_test(mu_simplify_path);
+    mu_run_test(mu_my_atoi);
     
     return 0;
 }

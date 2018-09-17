@@ -89,5 +89,7 @@ std::string reorganize_string(std::string S);
 std::vector<std::string> letter_combinations(std::string digits);
 // leetcode 71
 std::string simplify_path(std::string path);
+// leetcode 8
+int my_atoi(std::string str);
 
 #endif
