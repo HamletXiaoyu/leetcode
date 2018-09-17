@@ -255,6 +255,15 @@ char* mu_title_to_number()
     return 0;
 }
 
+char* mu_divide()
+{
+    mu_assert(3 == divide(10, 3), "");
+    mu_assert(5 == divide(10, 2), "");
+    mu_assert(-2 == divide(7, -3), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -279,6 +288,7 @@ char* math_suites()
     mu_run_test(mu_complex_number_multiply);
     mu_run_test(mu_convert_to_title);
     mu_run_test(mu_title_to_number);
+    mu_run_test(mu_divide);
     
     return 0;
 }

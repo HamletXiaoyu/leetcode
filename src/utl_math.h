@@ -74,5 +74,7 @@ std::string complex_number_multiply(std::string a, std::string b);
 std::string convert_to_title(int n);
 // leetcode 171
 int title_to_number(std::string s);
+// leetcode 29
+int divide(int dividend, int divisor);
 
 #endif
