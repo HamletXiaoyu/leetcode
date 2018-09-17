@@ -80,5 +80,13 @@ int divide(int dividend, int divisor);
 std::string get_permutation(int n, int k);
 // leetcode 592
 std::string fraction_addition(std::string expression);
+// leetcode 149
+struct Point {
+     int x;
+     int y;
+     Point() : x(0), y(0) {}
+     Point(int a, int b) : x(a), y(b) {}
+};
+int max_points(std::vector<Point>& points);
 
 #endif
