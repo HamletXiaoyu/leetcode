@@ -88,5 +88,7 @@ struct Point {
      Point(int a, int b) : x(a), y(b) {}
 };
 int max_points(std::vector<Point>& points);
+// leetcode 781
+int num_rabbits(std::vector<int>& answers);
 
 #endif
