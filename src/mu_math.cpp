@@ -304,6 +304,14 @@ char* mu_count_digit_one()
     return 0;
 }
 
+char* mu_maximum_swap()
+{
+    mu_assert(7236 == maximum_swap(2736), "");
+    mu_assert(9916 == maximum_swap(1996), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -334,6 +342,7 @@ char* math_suites()
     mu_run_test(mu_bulb_switch);
     mu_run_test(mu_flip_lights);
     mu_run_test(mu_count_digit_one);
+    mu_run_test(mu_maximum_swap);
     
     return 0;
 }

@@ -96,5 +96,7 @@ int bulb_switch(int n);
 int flip_lights(int n, int m);
 // leetcode 233
 int count_digit_one(int n);
+// leetcode 670
+int maximum_swap(int num);
 
 #endif
