@@ -448,3 +448,11 @@ int num_rabbits(vector<int>& answers)
     }
     return res + answers.size();
 }
+
+int bulb_switch(int n)
+{
+    int res = 1;
+    while (res * res <= n) 
+        ++res;
+    return res - 1;   
+}

@@ -280,6 +280,14 @@ char* mu_fraction_addition()
     return 0;
 }
 
+char* mu_bulb_switch()
+{
+    mu_assert(1 == bulb_switch(3), "");
+    mu_assert(2 == bulb_switch(5), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -307,6 +315,7 @@ char* math_suites()
     mu_run_test(mu_divide);
     mu_run_test(mu_get_permutation);
     mu_run_test(mu_fraction_addition);
+    mu_run_test(mu_bulb_switch);
     
     return 0;
 }

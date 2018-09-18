@@ -90,5 +90,7 @@ struct Point {
 int max_points(std::vector<Point>& points);
 // leetcode 781
 int num_rabbits(std::vector<int>& answers);
+// leetcode 319
+int bulb_switch(int n);
 
 #endif
