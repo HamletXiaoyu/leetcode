@@ -94,5 +94,7 @@ int num_rabbits(std::vector<int>& answers);
 int bulb_switch(int n);
 // leetcode 672
 int flip_lights(int n, int m);
+// leetcode 233
+int count_digit_one(int n);
 
 #endif

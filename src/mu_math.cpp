@@ -297,6 +297,13 @@ char* mu_flip_lights()
     return 0;
 }
 
+char* mu_count_digit_one()
+{
+    mu_assert(6 == count_digit_one(13), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -326,6 +333,7 @@ char* math_suites()
     mu_run_test(mu_fraction_addition);
     mu_run_test(mu_bulb_switch);
     mu_run_test(mu_flip_lights);
+    mu_run_test(mu_count_digit_one);
     
     return 0;
 }
