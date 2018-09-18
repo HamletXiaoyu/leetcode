@@ -288,6 +288,15 @@ char* mu_bulb_switch()
     return 0;
 }
 
+char* mu_flip_lights()
+{
+    mu_assert(2 == flip_lights(1, 1), "");
+    mu_assert(3 == flip_lights(2, 1), "");
+    mu_assert(4 == flip_lights(3, 1), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -316,6 +325,7 @@ char* math_suites()
     mu_run_test(mu_get_permutation);
     mu_run_test(mu_fraction_addition);
     mu_run_test(mu_bulb_switch);
+    mu_run_test(mu_flip_lights);
     
     return 0;
 }

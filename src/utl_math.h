@@ -92,5 +92,7 @@ int max_points(std::vector<Point>& points);
 int num_rabbits(std::vector<int>& answers);
 // leetcode 319
 int bulb_switch(int n);
+// leetcode 672
+int flip_lights(int n, int m);
 
 #endif
