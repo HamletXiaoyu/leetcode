@@ -98,5 +98,7 @@ int flip_lights(int n, int m);
 int count_digit_one(int n);
 // leetcode 670
 int maximum_swap(int num);
+// leetcode 357
+int count_numbers_with_unique_digits(int n);
 
 #endif

@@ -497,3 +497,15 @@ int maximum_swap(int num)
     }
     return num;
 }
+
+int count_numbers_with_unique_digits(int n)
+{
+    if (n == 0)
+        return 1;
+    int res = 10, cnt = 9;
+    for (int i = 2; i <= n; ++i) {
+        cnt *= (11 - i);
+        res += cnt;
+    }
+    return res;
+}

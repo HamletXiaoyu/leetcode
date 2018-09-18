@@ -312,6 +312,13 @@ char* mu_maximum_swap()
     return 0;
 }
 
+char* mu_count_numbers_with_unique_digits()
+{
+    mu_assert(91 == count_numbers_with_unique_digits(2), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -343,6 +350,7 @@ char* math_suites()
     mu_run_test(mu_flip_lights);
     mu_run_test(mu_count_digit_one);
     mu_run_test(mu_maximum_swap);
+    mu_run_test(mu_count_numbers_with_unique_digits);
     
     return 0;
 }
