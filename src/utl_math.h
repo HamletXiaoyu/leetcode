@@ -108,5 +108,7 @@ std::string solve_equation(std::string equation);
 std::string smallest_good_base(std::string n);
 // leetcode 279
 int num_squares(int n);
+// leetcode 365
+bool can_measure_water(int x, int y, int z);
 
 #endif

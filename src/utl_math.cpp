@@ -609,3 +609,8 @@ int num_squares(int n)
     }
     return 3;
 }
+
+bool can_measure_water(int x, int y, int z)
+{
+    return z == 0 || (x + y >= z && z % gcd(x, y) == 0);
+}
