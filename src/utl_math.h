@@ -106,5 +106,7 @@ std::string fraction_to_decimal(int numerator, int denominator);
 std::string solve_equation(std::string equation);
 // leetcode 483
 std::string smallest_good_base(std::string n);
+// leetcode 279
+int num_squares(int n);
 
 #endif

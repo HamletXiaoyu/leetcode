@@ -339,6 +339,13 @@ char* mu_solve_equation()
     return 0;
 }
 
+char* mu_num_squares()
+{
+    mu_assert(3 == num_squares(12), "");
+    mu_assert(2 == num_squares(13), "");
+    
+    return 0;
+}
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -373,6 +380,7 @@ char* math_suites()
     mu_run_test(mu_count_numbers_with_unique_digits);
     mu_run_test(mu_fraction_to_decimal);
     mu_run_test(mu_solve_equation);
+    mu_run_test(mu_num_squares);
     
     return 0;
 }
