@@ -104,5 +104,7 @@ int count_numbers_with_unique_digits(int n);
 std::string fraction_to_decimal(int numerator, int denominator);
 // leetcode 640
 std::string solve_equation(std::string equation);
+// leetcode 483
+std::string smallest_good_base(std::string n);
 
 #endif
