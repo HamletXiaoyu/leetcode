@@ -328,6 +328,17 @@ char* mu_fraction_to_decimal()
     return 0;
 }
 
+char* mu_solve_equation()
+{
+    mu_assert("x=2" == solve_equation("x+5-3+x=6+x-2"), "");
+    mu_assert("x=0" == solve_equation("2x=x"), "");
+    mu_assert("Infinite solutions" == solve_equation("x=x"), "");
+    mu_assert("x=-1" == solve_equation("2x+3x-6x=x+2"), "");
+    mu_assert("No solution" == solve_equation("x=x+2"), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -361,6 +372,7 @@ char* math_suites()
     mu_run_test(mu_maximum_swap);
     mu_run_test(mu_count_numbers_with_unique_digits);
     mu_run_test(mu_fraction_to_decimal);
+    mu_run_test(mu_solve_equation);
     
     return 0;
 }
