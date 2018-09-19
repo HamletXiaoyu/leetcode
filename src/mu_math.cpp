@@ -319,6 +319,15 @@ char* mu_count_numbers_with_unique_digits()
     return 0;
 }
 
+char* mu_fraction_to_decimal()
+{
+    mu_assert("0.5" == fraction_to_decimal(1, 2), "");
+    mu_assert("2" == fraction_to_decimal(2, 1), "");
+    mu_assert("0.(6)" == fraction_to_decimal(2, 3), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -351,6 +360,7 @@ char* math_suites()
     mu_run_test(mu_count_digit_one);
     mu_run_test(mu_maximum_swap);
     mu_run_test(mu_count_numbers_with_unique_digits);
+    mu_run_test(mu_fraction_to_decimal);
     
     return 0;
 }

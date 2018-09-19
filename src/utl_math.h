@@ -100,5 +100,7 @@ int count_digit_one(int n);
 int maximum_swap(int num);
 // leetcode 357
 int count_numbers_with_unique_digits(int n);
+// leetcode 166
+std::string fraction_to_decimal(int numerator, int denominator);
 
 #endif
