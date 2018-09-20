@@ -114,5 +114,7 @@ bool can_measure_water(int x, int y, int z);
 int integer_break(int n);
 // leetcode 224
 int calculate(std::string s);
+// leetcode 223
+int compute_area(int A, int B, int C, int D, int E, int F, int G, int H);
 
 #endif
