@@ -614,3 +614,15 @@ bool can_measure_water(int x, int y, int z)
 {
     return z == 0 || (x + y >= z && z % gcd(x, y) == 0);
 }
+
+int integer_break(int n)
+{
+    if (n == 2 || n == 3) 
+        return n - 1;
+    int res = 1;
+    while (n > 4) {
+        res *= 3;
+        n -= 3;
+    }
+    return res * n;
+}
