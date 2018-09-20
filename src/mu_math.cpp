@@ -362,6 +362,14 @@ char* mu_integer_break()
     return 0;
 }
 
+char* mu_calculate()
+{
+    mu_assert(23 == calculate("(1+(4+5+2)-3)+(6+8)"), "");
+    mu_assert(23 == calculate("1 +2 -1+20 + 1"), "");
+    
+    return 0;
+}
+
 char* math_suites()
 {
     mu_run_test(mu_reverse_int);
@@ -399,6 +407,7 @@ char* math_suites()
     mu_run_test(mu_num_squares);
     mu_run_test(mu_can_measure_water);
     mu_run_test(mu_integer_break);
+    mu_run_test(mu_calculate);
     
     return 0;
 }

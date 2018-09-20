@@ -112,5 +112,7 @@ int num_squares(int n);
 bool can_measure_water(int x, int y, int z);
 // leetcode 343
 int integer_break(int n);
+// leetcode 224
+int calculate(std::string s);
 
 #endif
