@@ -27,5 +27,6 @@ char* list_suites();
 char* string_suites();
 char* algorithm_suites();
 char* math_suites();
+char* greedy_suites();
 
 #endif /*_MU_SUITES_H_*/
