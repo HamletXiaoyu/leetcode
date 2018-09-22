@@ -336,6 +336,15 @@ char* mu_my_atoi()
     return 0;
 }
 
+char* mu_length_of_longest_substring()
+{
+    mu_assert(3 == length_of_longest_substring("abcabcbb"), "");
+    mu_assert(1 == length_of_longest_substring("bbbbbbbb"), "");
+    mu_assert(4 == length_of_longest_substring("pwwkewbb"), "");
+    
+    return 0;
+}
+
 char* string_suites()
 {
     mu_run_test(mu_z_convert);
@@ -370,6 +379,7 @@ char* string_suites()
     mu_run_test(mu_letter_combinations);
     mu_run_test(mu_simplify_path);
     mu_run_test(mu_my_atoi);
+    mu_run_test(mu_length_of_longest_substring);
     
     return 0;
 }

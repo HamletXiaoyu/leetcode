@@ -91,5 +91,7 @@ std::vector<std::string> letter_combinations(std::string digits);
 std::string simplify_path(std::string path);
 // leetcode 8
 int my_atoi(std::string str);
+// leetcode 3
+int length_of_longest_substring(std::string s);
 
 #endif
