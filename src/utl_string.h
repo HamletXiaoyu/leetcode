@@ -93,5 +93,7 @@ std::string simplify_path(std::string path);
 int my_atoi(std::string str);
 // leetcode 3
 int length_of_longest_substring(std::string s);
+// leetcode 539
+int find_min_difference(std::vector<std::string>& timePoints);
 
 #endif
