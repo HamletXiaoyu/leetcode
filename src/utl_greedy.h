@@ -24,6 +24,6 @@
 #include <iostream>
 
 // leetcode 44
-
+bool is_match(char* s, char* p);
 
 #endif

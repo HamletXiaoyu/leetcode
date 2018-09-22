@@ -25,9 +25,18 @@
 
 using namespace std;
 
+char* mu_is_match()
+{
+    char s[] = "adceb";
+    char p[] = "*a*b";
+    mu_assert(true == is_match(s, p), "");
+    
+    return 0;
+}
 
 char* greedy_suites()
 {
-
+    mu_run_test(mu_is_match);
+    
     return 0;
 }
