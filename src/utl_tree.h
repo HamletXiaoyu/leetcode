@@ -119,5 +119,7 @@ void recover_bst(TreeNode *root);
 bool is_valid_bst(TreeNode *root);
 // leetcode 543
 int diameter_of_binarytree(TreeNode* root);
+// leetcode 606
+string tree2str(TreeNode* t);
 
 #endif

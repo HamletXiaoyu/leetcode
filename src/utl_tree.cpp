@@ -761,3 +761,16 @@ int diameter_of_binarytree(TreeNode* root)
     diameter_of_binarytree_helper(root, res);
     return res;
 }
+
+string tree2str(TreeNode* t)
+{
+    if (!t)
+        return "";
+    string res = to_string(t->val);
+    if (!t->left && !t->right)
+        return res;
+    res += "(" + tree2str(t->left) + ")";
+    if (t->right)
+        res += "(" + tree2str(t->right) + ")";
+    return res;
+}
