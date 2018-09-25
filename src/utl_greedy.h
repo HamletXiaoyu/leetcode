@@ -27,5 +27,9 @@
 bool is_match(char* s, char* p);
 // leetcode 738
 int monotone_increasing_digits(int N);
+// leetcode 55
+bool can_jump(int* nums, int numsSize);
+// leetcode 45
+int jump(int* nums, int n);
 
 #endif

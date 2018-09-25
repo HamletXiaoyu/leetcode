@@ -42,10 +42,28 @@ char* mu_monotone_increasing_digits()
     return 0;
 }
 
+char* mu_can_jump()
+{
+    int nums[] = {2, 3, 1, 1, 4};
+    mu_assert(true == can_jump(nums, 5), "");
+    
+    return 0;
+}
+
+char* mu_jump()
+{
+    int nums[] = {2, 3, 1, 1, 4};
+    mu_assert(2 == jump(nums, 5), "");
+    
+    return 0;
+}
+
 char* greedy_suites()
 {
     mu_run_test(mu_is_match);
     mu_run_test(mu_monotone_increasing_digits);
+    mu_run_test(mu_can_jump);
+    mu_run_test(mu_jump);
     
     return 0;
 }

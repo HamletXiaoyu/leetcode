@@ -61,3 +61,27 @@ int monotone_increasing_digits(int N)
     }
     return stoi(str);
 }
+
+bool can_jump(int* nums, int numsSize)
+{
+    int reach = 0;
+    for (int i = 0; i < numsSize; ++i) {
+        if (i > reach || reach >= numsSize - 1) 
+            break;
+        reach = reach > i + nums[i] ? reach : i + nums[i];
+    }
+    return reach >= numsSize - 1;
+}
+
+int jump(int* nums, int n)
+{
+    int res = 0, i = 0, cur = 0;
+    while (cur < n - 1) {
+        ++res;
+        int pre = cur;
+        for (; i <= pre; ++i) {
+            cur = max(cur, i + nums[i]);
+        }
+    }
+    return res;
+}
