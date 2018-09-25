@@ -34,9 +34,18 @@ char* mu_is_match()
     return 0;
 }
 
+char* mu_monotone_increasing_digits()
+{
+    mu_assert(1234 == monotone_increasing_digits(1234), "");
+    mu_assert(299 == monotone_increasing_digits(332), "");
+    
+    return 0;
+}
+
 char* greedy_suites()
 {
     mu_run_test(mu_is_match);
+    mu_run_test(mu_monotone_increasing_digits);
     
     return 0;
 }

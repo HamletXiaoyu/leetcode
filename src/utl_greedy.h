@@ -25,5 +25,7 @@
 
 // leetcode 44
 bool is_match(char* s, char* p);
+// leetcode 738
+int monotone_increasing_digits(int N);
 
 #endif
