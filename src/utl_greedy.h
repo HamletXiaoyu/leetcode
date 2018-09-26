@@ -31,5 +31,7 @@ int monotone_increasing_digits(int N);
 bool can_jump(int* nums, int numsSize);
 // leetcode 45
 int jump(int* nums, int n);
+// leetcode 122
+int max_profit(int* prices, int n);
 
 #endif

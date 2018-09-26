@@ -58,12 +58,21 @@ char* mu_jump()
     return 0;
 }
 
+char* mu_max_profit()
+{
+    int nums[] = {7, 1, 5, 3, 6, 4};
+    mu_assert(7 == max_profit(nums, 6), "");
+    
+    return 0;
+}
+
 char* greedy_suites()
 {
     mu_run_test(mu_is_match);
     mu_run_test(mu_monotone_increasing_digits);
     mu_run_test(mu_can_jump);
     mu_run_test(mu_jump);
+    mu_run_test(mu_max_profit);
     
     return 0;
 }
