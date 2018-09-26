@@ -75,6 +75,15 @@ char* mu_max_profit_with_fee()
     return 0;
 }
 
+char* mu_can_complete_circuit()
+{
+    int gas[] = {1, 2, 3, 4, 5};
+    int cost[] = {3, 4, 5, 1, 2};
+    mu_assert(3 == can_complete_circuit(gas, 5, cost, 5), "");
+    
+    return 0;
+}
+
 char* greedy_suites()
 {
     mu_run_test(mu_is_match);
@@ -83,6 +92,7 @@ char* greedy_suites()
     mu_run_test(mu_jump);
     mu_run_test(mu_max_profit);
     mu_run_test(mu_max_profit_with_fee);
+    mu_run_test(mu_can_complete_circuit);
     
     return 0;
 }

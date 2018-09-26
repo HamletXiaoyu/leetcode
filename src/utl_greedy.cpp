@@ -117,3 +117,17 @@ int max_profit_with_fee(int* prices, int n, int fee)
     }
     return sold;
 }
+
+int can_complete_circuit(int* gas, int gas_size, int* cost, int cost_size)
+{
+    int total = 0, sum = 0, start = 0;
+    for (int i = 0; i < gas_size; ++i) {
+        total += gas[i] - cost[i];
+        sum += gas[i] - cost[i];
+        if (sum < 0) {
+            start = i + 1;
+            sum = 0;
+        }
+    }
+    return (total < 0) ? -1 : start;
+}

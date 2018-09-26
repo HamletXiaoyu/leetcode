@@ -37,5 +37,7 @@ int max_profit(int* prices, int n);
 int max_profit1(int* prices, int n);
 // leetcode 714
 int max_profit_with_fee(int* prices, int n, int fee);
+// leetcode 134
+int can_complete_circuit(int* gas, int gas_size, int* cost, int cost_size);
 
 #endif
