@@ -106,3 +106,14 @@ int max_profit1(int* prices, int n)
     }
     return res;
 }
+
+int max_profit_with_fee(int* prices, int n, int fee)
+{
+    int sold = 0, hold = -prices[0];
+    for (int i = 0; i < n; ++i) {
+        int t = sold, price = prices[i];
+        sold = sold > hold + price - fee ? sold : hold + price - fee;
+        hold = hold > t - price ? hold : t - price;
+    }
+    return sold;
+}

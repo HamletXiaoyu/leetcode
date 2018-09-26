@@ -67,6 +67,14 @@ char* mu_max_profit()
     return 0;
 }
 
+char* mu_max_profit_with_fee()
+{
+    int nums[] = {1, 3, 2, 8, 4, 9};
+    mu_assert(8 == max_profit_with_fee(nums, 6, 2), "");
+    
+    return 0;
+}
+
 char* greedy_suites()
 {
     mu_run_test(mu_is_match);
@@ -74,6 +82,7 @@ char* greedy_suites()
     mu_run_test(mu_can_jump);
     mu_run_test(mu_jump);
     mu_run_test(mu_max_profit);
+    mu_run_test(mu_max_profit_with_fee);
     
     return 0;
 }
