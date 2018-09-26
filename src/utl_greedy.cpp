@@ -96,3 +96,13 @@ int max_profit(int* prices, int n)
     }
     return res;
 }
+
+int max_profit1(int* prices, int n)
+{
+    int res = 0, buy = INT_MAX;
+    for (int i = 0; i < n; ++i) {
+        buy = buy > prices[i] ? prices[i] : buy;
+        res = res > prices[i] - buy ? res : prices[i] - buy;
+    }
+    return res;
+}

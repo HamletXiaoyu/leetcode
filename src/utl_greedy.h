@@ -33,5 +33,7 @@ bool can_jump(int* nums, int numsSize);
 int jump(int* nums, int n);
 // leetcode 122
 int max_profit(int* prices, int n);
+// leetcode 121
+int max_profit1(int* prices, int n);
 
 #endif

@@ -62,6 +62,7 @@ char* mu_max_profit()
 {
     int nums[] = {7, 1, 5, 3, 6, 4};
     mu_assert(7 == max_profit(nums, 6), "");
+    mu_assert(5 == max_profit1(nums, 6), "");
     
     return 0;
 }
