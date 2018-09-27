@@ -103,6 +103,14 @@ char* mu_assign_candy()
     return 0;
 }
 
+char* mu_is_subsequence()
+{
+    mu_assert(true == is_subsequence("abc", "ahbgdc"), "");
+    mu_assert(false == is_subsequence("axc", "ahbgdc"), "");
+    
+    return 0;
+}
+
 char* greedy_suites()
 {
     mu_run_test(mu_is_match);
@@ -114,6 +122,7 @@ char* greedy_suites()
     mu_run_test(mu_can_complete_circuit);
     mu_run_test(mu_find_content_children);
     mu_run_test(mu_assign_candy);
+    mu_run_test(mu_is_subsequence);
     
     return 0;
 }

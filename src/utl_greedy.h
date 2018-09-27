@@ -44,5 +44,7 @@ int find_content_children(int* g, int g_size, int* s, int s_size);
 //int find_content_children(std::vector<int>& g, std::vector<int>& s);
 // leetcode 135
 int candy(int* ratings, int n);
+// leetcode 392
+bool is_subsequence(std::string s, std::string t);
 
 #endif
