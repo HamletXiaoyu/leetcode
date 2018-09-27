@@ -95,6 +95,14 @@ char* mu_find_content_children()
     return 0;
 }
 
+char* mu_assign_candy()
+{
+    int ratings[] = {1, 0, 2};
+    mu_assert(5 == candy(ratings, 3), "");
+    
+    return 0;
+}
+
 char* greedy_suites()
 {
     mu_run_test(mu_is_match);
@@ -105,6 +113,7 @@ char* greedy_suites()
     mu_run_test(mu_max_profit_with_fee);
     mu_run_test(mu_can_complete_circuit);
     mu_run_test(mu_find_content_children);
+    mu_run_test(mu_assign_candy);
     
     return 0;
 }
