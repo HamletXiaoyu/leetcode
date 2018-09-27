@@ -21,6 +21,7 @@
 
 #include "utl_greedy.h"
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -130,4 +131,75 @@ int can_complete_circuit(int* gas, int gas_size, int* cost, int cost_size)
         }
     }
     return (total < 0) ? -1 : start;
+}
+
+void quick_sort(int a[], int low, int high)
+{
+    int left = low, right = high, key = a[low];
+    if (left >= right)
+        return;
+    while (left != right) {
+        while (left != right && a[right] > key)
+            right--;
+        a[left] = a[right];
+        while (left != right && a[left] < key)
+            left++;
+        a[right] = a[left];
+    }
+    a[left] = key;
+    quick_sort(a, low, left-1);
+    quick_sort(a, left+1, high);
+}
+
+void insert_sort(int a[], int n)
+{
+    int i, j;
+    int pre, cur;
+    for (i = 1; i < n; ++i) {
+        pre = i - 1;
+        cur = a[i];
+        while (pre >= 0 && a[pre] > cur) {
+            a[pre+1] = a[pre];
+            pre--;
+        }
+        a[pre + 1] = cur;
+    }
+}
+
+int find_content_children(int* g, int g_size, int* s, int s_size)
+{
+    insert_sort(s, s_size);
+    int* flag = (int*)malloc(g_size * sizeof(int));
+    memset(flag, 0, g_size * sizeof(int));
+    int ret=0;
+    for (int i = 0; i < s_size; ++i) {
+        int target = -1;
+        for(int j = 0; j < g_size; ++j) {
+            if (flag[j] == 0 && s[i] >= g[j]) {
+                if (target == -1)
+                    target = j;
+                else {
+                    if (flag[target] < flag[j])
+                        target = j;
+                }
+            }
+        }
+        if (target != -1) {
+            flag[target] = 1;
+            ret++;
+        }
+    }
+    free(flag);
+    return ret;
+}
+
+int find_content_children(vector<int>& g, vector<int>& s)
+{
+    int j = 0;
+    sort(g.begin(), g.end());
+    sort(s.begin(), s.end());
+    for (int i = 0; i < s.size() && j < g.size(); ++i) {
+        if (s[i] >= g[j]) ++j;
+    }
+    return j;
 }

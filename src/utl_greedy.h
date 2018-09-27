@@ -39,5 +39,8 @@ int max_profit1(int* prices, int n);
 int max_profit_with_fee(int* prices, int n, int fee);
 // leetcode 134
 int can_complete_circuit(int* gas, int gas_size, int* cost, int cost_size);
+// leetcode 455
+int find_content_children(int* g, int g_size, int* s, int s_size);
+//int find_content_children(std::vector<int>& g, std::vector<int>& s);
 
 #endif
