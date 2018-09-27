@@ -111,6 +111,14 @@ char* mu_is_subsequence()
     return 0;
 }
 
+char* mu_remove_k_digits()
+{
+    mu_assert("1219" == remove_k_digits("1432219", 3), "");
+    mu_assert("200" == remove_k_digits("10200", 1), "");
+    
+    return 0;
+}
+
 char* greedy_suites()
 {
     mu_run_test(mu_is_match);
@@ -123,6 +131,7 @@ char* greedy_suites()
     mu_run_test(mu_find_content_children);
     mu_run_test(mu_assign_candy);
     mu_run_test(mu_is_subsequence);
+    mu_run_test(mu_remove_k_digits);
     
     return 0;
 }

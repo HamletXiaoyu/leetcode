@@ -46,5 +46,7 @@ int find_content_children(int* g, int g_size, int* s, int s_size);
 int candy(int* ratings, int n);
 // leetcode 392
 bool is_subsequence(std::string s, std::string t);
+// leetcode 402
+std::string remove_k_digits(std::string num, int k);
 
 #endif
