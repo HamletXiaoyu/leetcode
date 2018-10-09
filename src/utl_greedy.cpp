@@ -256,3 +256,21 @@ string remove_k_digits(string num, int k)
         res.erase(res.begin());
     return res.empty() ? "0" : res;
 }
+
+int min_swaps_couples(int* row, int n)
+{
+    int res = 0;
+    for (int i = 0; i < n; i += 2) {
+        if (row[i + 1] == (row[i] ^ 1))
+            continue;
+        ++res;
+        for (int j = i + 1; j < n; ++j) {
+            if (row[j] == (row[i] ^ 1)) {
+                row[j] = row[i + 1];
+                row[i + 1] = row[i] ^ 1;
+                break;
+            }
+        }
+    }
+    return res;
+}

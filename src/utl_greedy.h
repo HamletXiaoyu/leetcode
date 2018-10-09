@@ -48,5 +48,7 @@ int candy(int* ratings, int n);
 bool is_subsequence(std::string s, std::string t);
 // leetcode 402
 std::string remove_k_digits(std::string num, int k);
+// leetcode 765
+int min_swaps_couples(int* row, int n);
 
 #endif

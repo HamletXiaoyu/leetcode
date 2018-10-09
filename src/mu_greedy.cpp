@@ -119,6 +119,16 @@ char* mu_remove_k_digits()
     return 0;
 }
 
+char* mu_min_swaps_couples()
+{
+    int row[] = {0, 2, 1, 3};
+    mu_assert(1 == min_swaps_couples(row, 4), "");
+    int row2[] = {0, 1, 2, 3};
+    mu_assert(0 == min_swaps_couples(row2, 4), "");
+    
+    return 0;
+}
+
 char* greedy_suites()
 {
     mu_run_test(mu_is_match);
@@ -132,6 +142,7 @@ char* greedy_suites()
     mu_run_test(mu_assign_candy);
     mu_run_test(mu_is_subsequence);
     mu_run_test(mu_remove_k_digits);
+    mu_run_test(mu_min_swaps_couples);
     
     return 0;
 }
