@@ -37,5 +37,7 @@ void sort_colors(int* nums, int n);
 std::vector<int> intersect(std::vector<int>& nums1, std::vector<int>& nums2);
 // leetcode 242
 bool is_anagram(char* s, char* t);
+// leetcode 179
+std::string largestNumber(std::vector<int>& nums);
 
 #endif
