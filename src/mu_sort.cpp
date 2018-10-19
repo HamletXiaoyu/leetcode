@@ -46,9 +46,22 @@ char* mu_sort_colors()
     return 0;
 }
 
+char* mu_is_anagram()
+{
+    char *s = "anagram";
+    char *t = "rngaama";
+    mu_assert(true == is_anagram(s, t), "");
+    char *s1 = "rat";
+    char *t1 = "car";
+    mu_assert(false == is_anagram(s1, t1), "");
+
+    return 0;
+}
+
 char* sort_suites()
 {
     mu_run_test(mu_sort_colors);
+    mu_run_test(mu_is_anagram);
     
     return 0;
 }

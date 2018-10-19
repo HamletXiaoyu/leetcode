@@ -78,3 +78,18 @@ vector<int> intersect(vector<int>& nums1, vector<int>& nums2)
     }
     return res;
 }
+
+bool is_anagram(char* s, char* t)
+{
+    int len1 = strlen(s);
+    int len2 = strlen(t);
+    int m[26] = {0};
+    if (len1 != len2)
+        return false;
+    for (int i = 0; i<len1; ++i)
+        ++m[s[i] - 'a'];
+    for (int i = 0; i<len2; ++i)
+        if (--m[t[i] - 'a'] < 0)
+            return false;
+    return true;
+}

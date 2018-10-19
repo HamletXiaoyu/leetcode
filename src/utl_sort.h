@@ -35,5 +35,7 @@ std::vector<Interval> merge_interval(std::vector<Interval>& intervals);
 void sort_colors(int* nums, int n);
 // leetcode 350
 std::vector<int> intersect(std::vector<int>& nums1, std::vector<int>& nums2);
+// leetcode 242
+bool is_anagram(char* s, char* t);
 
 #endif
