@@ -106,3 +106,13 @@ string largestNumber(vector<int>& nums)
     }
     return res[0] == '0' ? "0" : res;
 }
+
+int h_index(vector<int>& citations)
+{
+    sort(citations.begin(), citations.end(), greater<int>());
+    for (int i = 0; i < citations.size(); ++i) {
+        if (i >= citations[i])
+            return i;
+    }
+    return citations.size();
+}

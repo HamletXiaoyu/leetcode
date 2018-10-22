@@ -39,5 +39,7 @@ std::vector<int> intersect(std::vector<int>& nums1, std::vector<int>& nums2);
 bool is_anagram(char* s, char* t);
 // leetcode 179
 std::string largestNumber(std::vector<int>& nums);
+// leetcode 274
+int h_index(std::vector<int>& citations);
 
 #endif
