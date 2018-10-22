@@ -95,7 +95,7 @@ bool is_anagram(char* s, char* t)
     return true;
 }
 
-string largestNumber(vector<int>& nums)
+string largest_number(vector<int>& nums)
 {
     string res;
     sort(nums.begin(), nums.end(), [](int a, int b) {
@@ -115,4 +115,14 @@ int h_index(vector<int>& citations)
             return i;
     }
     return citations.size();
+}
+
+void wiggle_sort(vector<int>& nums)
+{
+    vector<int> tmp = nums;
+    int n = nums.size(), k = (n + 1) / 2, j = n; 
+    sort(tmp.begin(), tmp.end());
+    for (int i = 0; i < n; ++i) {
+        nums[i] = i & 1 ? tmp[--j] : tmp[--k];
+    }
 }
