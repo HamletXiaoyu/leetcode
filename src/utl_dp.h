@@ -1,10 +1,9 @@
-/* mu_suites.h --- 
- * Filename: mu_suites.h
- * Author: Hamlet zheng
- * Created: Sun Apr  8 22:12:12 2018 (+0800)
+/* utl_dp.h --- 
+ * Filename: utl_dp.h
+ * Created: Wed Oct 24 22:53:54 2018 (+0800)
  */
 
-/* Copyright zhengdf.
+/* Copyright Hamlet zheng.
  * 
  * 允许免费使用，拷贝，修改，发布，但在所有的拷贝上必须保留上述
  * copyright部分和本使用声明部分，除非显示声明，copyright的持有者
@@ -19,16 +18,13 @@
  * OF THIS SOFTWARE.
  */
 
-#ifndef _MU_SUITES_H_
-#define _MU_SUITES_H_
+#ifndef UTL_SORT_H_
+#define UTL_SORT_H_
 
-char* tree_suites();
-char* list_suites();
-char* string_suites();
-char* algorithm_suites();
-char* math_suites();
-char* greedy_suites();
-char* sort_suites();
-char* dp_suites();
+#include <iostream>
+#include <stdlib.h>
 
-#endif /*_MU_SUITES_H_*/
+// leetcode 198
+int rob(int* num, int n);
+
+#endif

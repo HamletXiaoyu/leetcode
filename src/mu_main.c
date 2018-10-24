@@ -38,6 +38,7 @@ int main( void )
     mu_run_suite(math_suites);
     mu_run_suite(greedy_suites);
     mu_run_suite(sort_suites);
+    mu_run_suite(dp_suites);
     
     if(0==failed_number)
         printf ( "total run %d suites, %d test, ALL PASSED\n", suites_number, tests_number );

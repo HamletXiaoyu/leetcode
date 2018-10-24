@@ -14,6 +14,7 @@ OBJS =  $(BUILDDIR)/mu_main.o \
 	$(BUILDDIR)/mu_algorithm.o \
 	$(BUILDDIR)/mu_greedy.o \
 	$(BUILDDIR)/mu_sort.o \
+	$(BUILDDIR)/mu_dp.o \
 	$(BUILDDIR)/mu_math.o
 
 LIB_OBJ = utl_tree.cpp \
@@ -22,6 +23,7 @@ LIB_OBJ = utl_tree.cpp \
 	  utl_algorithm.cpp \
 	  utl_greedy.cpp \
 	  utl_sort.cpp \
+	  utl_dp.cpp \
 	  utl_math.cpp 
 
 #LIBS  = $(LIBDIR)/libutltree.so
