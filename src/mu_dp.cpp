@@ -33,9 +33,17 @@ char* mu_rob()
     return 0;
 }
 
+char* mu_unique_paths()
+{
+    mu_assert(3 == unique_paths(3, 2), "");
+    mu_assert(28 == unique_paths(7, 3), "");
+    return 0;
+}
+
 char* dp_suites()
 {
     mu_run_test(mu_rob);
+    mu_run_test(mu_unique_paths);
     
     return 0;
 }

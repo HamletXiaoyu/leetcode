@@ -38,3 +38,19 @@ int rob(int* num, int n)
 
     return ret;
 }
+
+int unique_paths(int m, int n)
+{
+    int *dp = (int*)malloc(sizeof(int) * n);
+
+    for (int i = 0; i < n; ++i)
+        dp[i] = 1;
+    for (int i = 1; i < m; ++i) {
+        for (int j = 1; j < n; ++j) {
+            dp[j] += dp[j - 1]; 
+        }
+    }
+    int ret = dp[n - 1];
+    free (dp);
+    return ret;
+}

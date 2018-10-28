@@ -26,5 +26,7 @@
 
 // leetcode 198
 int rob(int* num, int n);
+// leetcode 62
+int unique_paths(int m, int n);
 
 #endif
