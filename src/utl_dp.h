@@ -28,5 +28,7 @@
 int rob(int* num, int n);
 // leetcode 62
 int unique_paths(int m, int n);
+// leetcode 91
+int num_decodings(std::string s);
 
 #endif

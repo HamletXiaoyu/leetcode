@@ -22,6 +22,8 @@
 #include "minunit.h"
 #include "mu_suites.h"
 #include "utl_dp.h"
+#include <string>
+#include <vector>
 
 using namespace std;
 
@@ -40,10 +42,19 @@ char* mu_unique_paths()
     return 0;
 }
 
+char* mu_num_decodings()
+{
+    mu_assert(2 == num_decodings("12"), "");
+    mu_assert(3 == num_decodings("226"), "");
+    
+    return 0;
+}
+
 char* dp_suites()
 {
     mu_run_test(mu_rob);
     mu_run_test(mu_unique_paths);
+    mu_run_test(mu_num_decodings);
     
     return 0;
 }
