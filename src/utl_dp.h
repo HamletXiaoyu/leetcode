@@ -32,5 +32,7 @@ int unique_paths(int m, int n);
 int num_decodings(std::string s);
 // leetcode 474
 int find_max_form(std::vector<std::string>& strs, int m, int n);
+// leetcode 5
+std::string longest_palindrome(std::string s);
 
 #endif
