@@ -18,8 +18,8 @@
  * OF THIS SOFTWARE.
  */
 
-#ifndef UTL_SORT_H_
-#define UTL_SORT_H_
+#ifndef UTL_DP_H_
+#define UTL_DP_H_
 
 #include <iostream>
 #include <stdlib.h>
